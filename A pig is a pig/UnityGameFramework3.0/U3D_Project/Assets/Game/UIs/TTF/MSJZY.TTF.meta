@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: d1803769864537747bb6dbffdf65fd99
+timeCreated: 1496226514
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: CTZhon<
+  fontNames:
+  - FZCuSong-B09S
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName:
+  assetBundleVariant: 

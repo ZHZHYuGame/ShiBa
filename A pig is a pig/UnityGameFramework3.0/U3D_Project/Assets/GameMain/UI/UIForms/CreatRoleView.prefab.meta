@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 84fb9edaf385f3c438eec5b8b1aef8bc
+labels:
+- imported
+timeCreated: 1482461778
+licenseType: Pro
+NativeFormatImporter:
+  mainObjectFileID: -1
+  userData: HaveNested_true
+  assetBundleName: uis/views/login_prefab
+  assetBundleVariant: 
