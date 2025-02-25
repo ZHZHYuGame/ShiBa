@@ -1,0 +1,29 @@
+1、了解发什么消息，在packet文件夹下创建对应脚本，创建消息号
+2、服务器回客户端的消息（不止一条），原项目的Assets下的（Assets\Game\Lua\protocolcommon\userprotocol）寻找对应PB消息
+3、将lua代码转化为C#代码，CS（客户端发于服务器），SC（服务器发于客户端），通常伴随另一个脚本（Handler）
+	3/1、CS继承CSPacketBase，重写（id，Clear，Encode）三个方法（数据）
+	3/2、SC继承SCPacketBase，重写（id，Clear，Decode）三个方法（数据）
+	3/3、SCHandler继承PacketHandlerBase，重写（id，Handle）两个方法（处理逻辑）
+		3/3/1、（创建完Handler类后必须，必须，必须在Handler方法中发送）
+		消息派发（ StarForce.GameEntry.Event.Fire(SendRongluInfoEventArgs.EventId,SendRongluInfoEventArgs.Create(packetImpl));）（参数1是消息号，参数2是派发的数据）
+4、消息中心，在Event目录下创建对应的SC事件脚本（EventArgs）
+	4/1、继承GameEventArgs，重写（Eventid，Id）
+	4/2、实现该方法
+	必要：public  SCSendRongluInfo info（SCSendRongluInfo 是发送的数据）
+		{
+		get;
+		private set;
+		}
+	public static ChangeBagInfoEventArgs Create(SCKnapsackItemChange（是SC数据） change)
+	{
+        		ChangeBagInfoEventArgs changeSceneEventArgs = ReferencePool.Acquire<ChangeBagInfoEventArgs>();
+		changeSceneEventArgs.change = change;
+		return changeSceneEventArgs;
+	}
+5、侦听消息（考虑侦听消息的位置） GameEntry.Event.Subscribe(SendRongluInfoEventArgs.EventId,Mains);（参数1是消息号，参数2是接收的方法）
+	5/1、实现Mains方法
+		private void Mains(object sender, GameEventArgs e)
+   		 {
+       		 SendRongluInfoEventArgs s1 = e as SendRongluInfoEventArgs;（强转为需要的事件，s1.info就是SC这条数据，因为服务器给客户端发送消息节省流量，所以只会发送一些关键数据，因此需要在客户端进行Excel读表操作）
+   		 }
+	5/2、根据服务器发送来的数据进行Excel读表操作
