@@ -23,7 +23,7 @@ public class AssetBundleMD5Generator
             Debug.LogError("AssetBundle路径不存在:"+assetBundleOutputPath);
             return;
         }
-        //遍历AssetBundle文件夹中的所有文件
+        //遍历AssetBundle文件夹中的所有文件   
         //assetBundleOutputPath :文件路径  “*”: 匹配所有文件 SearchOption.AllDirectories：包括子文件夹中的路径
         string[] assetBundleFiles = Directory.GetFiles(assetBundleOutputPath,"*",SearchOption.AllDirectories);
         foreach (string file in assetBundleFiles)
