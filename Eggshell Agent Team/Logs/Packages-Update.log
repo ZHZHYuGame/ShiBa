@@ -187,10 +187,14 @@ The following packages were added:
   com.unity.ugui@1.0.0
 
 <<<<<<< HEAD
+=== Wed Feb 26 15:05:52 2025
+=======
+<<<<<<< HEAD
 === Wed Feb 26 13:31:20 2025
 =======
 === Wed Feb 26 13:08:44 2025
 >>>>>>> e07ed3fea1cf23a22a75b0669ee86c06eaf9a31e
+>>>>>>> 39a4f931d714824b093425fb146e67b856fbcd77
 
 Packages were changed.
 Update Mode: resetToDefaultDependencies
