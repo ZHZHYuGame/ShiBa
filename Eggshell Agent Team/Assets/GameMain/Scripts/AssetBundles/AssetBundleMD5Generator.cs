@@ -45,13 +45,17 @@ public class AssetBundleMD5Generator
     private static string CalculateMD5(string file)
     {
         //使用MD5计算文件的哈希值
+        //创建MD5实例
         using (var md5 = MD5.Create())
+        //以只读的方式打开指定路径的文件
         using (var stream = File.OpenRead(file))
         {
+            //计算当前文件的哈希值
             byte[]hashBytes = md5.ComputeHash(stream);
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < hashBytes.Length; i++)
             {
+                //将每个字节转换为两位的十六进制字符串。
                 sb.Append(hashBytes[i].ToString("x2"));
             }
             return sb.ToString();
