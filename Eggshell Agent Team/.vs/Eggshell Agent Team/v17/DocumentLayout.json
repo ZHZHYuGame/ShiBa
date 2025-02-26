@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git\\2206Git\\Eggshell Agent Team\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git\\2206git\\eggshell agent team\\assets\\gamemain\\scripts\\ui\\testdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\ui\\testdemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TestDemo.cs",
+              "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\UI\\TestDemo.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\UI\\TestDemo.cs",
+              "ToolTip": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\UI\\TestDemo.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\UI\\TestDemo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T02:41:54.46Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
