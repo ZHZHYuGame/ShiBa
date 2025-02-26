@@ -10,6 +10,7 @@ public class TestDemo : MonoBehaviour
         Debug.Log("Hello World");
         Debug.Log("超大猪");
         Debug.Log("是梁浩冉");
+        Debug.log("张恩浩");
     }
 
     // Update is called once per frame
