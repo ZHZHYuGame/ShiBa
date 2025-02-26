@@ -1,8 +1,0 @@
-D:\StreamingAssets\HotFix\HotFix_Project.dll
-D:\StreamingAssets\HotFix\HotFix_Project.pdb
-D:\Unity\sx\ShiBa\Eggshell Agent Team\HotFix_Projec\obj\Release\HotFix_Project.csproj.AssemblyReference.cache
-D:\Unity\sx\ShiBa\Eggshell Agent Team\HotFix_Projec\obj\Release\HotFix_Project.csproj.CoreCompileInputs.cache
-D:\Unity\sx\ShiBa\Eggshell Agent Team\HotFix_Projec\obj\Release\HotFix_Project.dll
-D:\Unity\sx\ShiBa\Eggshell Agent Team\HotFix_Projec\obj\Release\HotFix_Project.pdb
-D:\Unity\sx\ShiBa\Eggshell Agent Team\Assets\StreamingAssets\HotFix\HotFix_Project.dll
-D:\Unity\sx\ShiBa\Eggshell Agent Team\Assets\StreamingAssets\HotFix\HotFix_Project.pdb
