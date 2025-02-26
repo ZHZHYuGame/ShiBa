@@ -1,5 +1,19 @@
 {
+<<<<<<< HEAD
   "dependencies": {
+=======
+  "scopedRegistries": [
+    {
+      "name": "ILRuntime",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.ourpalm"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.ourpalm.ilruntime": "2.1.0",
+>>>>>>> pzy
     "com.unity.collab-proxy": "1.14.18",
     "com.unity.ide.rider": "1.2.1",
     "com.unity.ide.visualstudio": "2.0.15",
