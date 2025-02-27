@@ -203,10 +203,5 @@ public class MapEditor : EditorWindow
     {
         // 取消注册场景视图的回调
         SceneView.duringSceneGui -= OnSceneGUI;
-        //
-        if(mapParent!=null)
-        {
-            DestroyImmediate(mapParent);
-        }
     }
 }
