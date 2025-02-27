@@ -6,17 +6,9 @@
 //------------------------------------------------------------
 
 using GameFramework;
-using System;
-using UnityEngine;
-public enum IconType
-{
-    Common,
-    Icons,
-    Logos
-}
+
 namespace StarForce
 {
-    
     public static class AssetUtility
     {
         public static string GetConfigAsset(string assetName, bool fromBytes)
@@ -67,16 +59,6 @@ namespace StarForce
         public static string GetUISoundAsset(string assetName)
         {
             return Utility.Text.Format("Assets/GameMain/UI/UISounds/{0}.wav", assetName);
-        }
-
-        public static string GetSpritesAsset(IconType type,string name)
-        {
-            return Utility.Text.Format("Assets/GameMain/UI/UISprites/{0}/{1}.png",type.ToString() ,name);
-        }
-
-        public static string GetMaterialAsset(string name)
-        {
-            return Utility.Text.Format("Assets/GameMain/Materials/{0}.mat", name);
         }
     }
 }
