@@ -11,36 +11,36 @@ using UnityEngine;
 /// </summary>
 public class AssetBundleMD5Generator
 {
-    [MenuItem("Tools/Generate AssetBundle MD5")]
+    //[MenuItem("Tools/Generate AssetBundle MD5")]
 
-    public static void GenerateMD5ForAssetBundles()
-    {
-        //获取AB包文件夹的路径
-        string assetBundleOutputPath = Path.Combine(Application.streamingAssetsPath,"AssetBundels");
-        //检查assetBundleOutputPath路径是否存在
-        if (!Directory.Exists(assetBundleOutputPath))
-        {
-            Debug.LogError("AssetBundle路径不存在:"+assetBundleOutputPath);
-            return;
-        }
-        //遍历AssetBundle文件夹中的所有文件   
-        //assetBundleOutputPath :文件路径  “*”: 匹配所有文件 SearchOption.AllDirectories：包括子文件夹中的路径
-        string[] assetBundleFiles = Directory.GetFiles(assetBundleOutputPath,"*",SearchOption.AllDirectories);
-        foreach (string file in assetBundleFiles)
-        {
-            //跳过.meta和.md5文件
-            if (file.EndsWith(".meta") || file.EndsWith(".md5"))
-            {
-                continue;
-            }
-            //计算md5值
-            string md5Hash = CalculateMD5(file);
-            //保存md5值
-            string md5FilePath = file + ".md5";
-            //写入文件
-            File.WriteAllText(md5FilePath, file);
-        }
-    }
+    //public static void GenerateMD5ForAssetBundles()
+    //{
+    //    //获取AB包文件夹的路径
+    //    string assetBundleOutputPath = Path.Combine(Application.streamingAssetsPath,"AssetBundels");
+    //    //检查assetBundleOutputPath路径是否存在
+    //    if (!Directory.Exists(assetBundleOutputPath))
+    //    {
+    //        Debug.LogError("AssetBundle路径不存在:"+assetBundleOutputPath);
+    //        return;
+    //    }
+    //    //遍历AssetBundle文件夹中的所有文件   
+    //    //assetBundleOutputPath :文件路径  “*”: 匹配所有文件 SearchOption.AllDirectories：包括子文件夹中的路径
+    //    string[] assetBundleFiles = Directory.GetFiles(assetBundleOutputPath,"*",SearchOption.AllDirectories);
+    //    foreach (string file in assetBundleFiles)
+    //    {
+    //        //跳过.meta和.md5文件
+    //        if (file.EndsWith(".meta") || file.EndsWith(".md5"))
+    //        {
+    //            continue;
+    //        }
+    //        //计算md5值
+    //        string md5Hash = CalculateMD5(file);
+    //        //保存md5值
+    //        string md5FilePath = file + ".md5";
+    //        //写入文件
+    //        File.WriteAllText(md5FilePath, file);
+    //    }
+    //}
 
     private static string CalculateMD5(string file)
     {
