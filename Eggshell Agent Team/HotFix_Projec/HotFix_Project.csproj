@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\工程\专高六\ILRunTime\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\工程\专高六\ILRunTime\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -57,15 +57,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestJson.cs" />
-    <Compile Include="TestPerformance.cs" />
-    <Compile Include="TestValueType.cs" />
-    <Compile Include="TestMonoBehaviour.cs" />
-    <Compile Include="TestCoroutine.cs" />
-    <Compile Include="TestCLRBinding.cs" />
-    <Compile Include="TestCLRRedirection.cs" />
-    <Compile Include="TestInheritance.cs" />
-    <Compile Include="TestDelegate.cs" />
     <Compile Include="InstanceClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
