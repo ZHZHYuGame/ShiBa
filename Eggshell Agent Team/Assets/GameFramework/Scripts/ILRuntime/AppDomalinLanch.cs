@@ -17,8 +17,8 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
     }
     private void Start()
     { 
-      
-        LoadHotFixMgr.Instanct.OnLoadHotFix("HotFix_Project", (dllls, dpbs) =>
+       
+        LoadHotFixMgr.Instanct.OnLoadHotFix("HotFix_Project", (dllls, dpbs) => 
         {
 
             OnLoadAssembly(dllls, dpbs);
@@ -44,7 +44,7 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
         myFist.OnRuan(appdomain);
         
         MyTest myTest = new MyTest();
-        myTest.OnRun(appdomain);
+        myTest.OnRun(appdomain); 
         
     }
     void InitializeILRuntime()

@@ -9,9 +9,9 @@ public class MyTest
     //测试脚本
     public void OnRun(AppDomain AppDomain)
     {
-        AppDomain.Invoke("HotFix_Project.Strcips.Test", "TestA",null,null);
+        AppDomain.Invoke("HotFix_Project.Scripts.Test", "TestA",null,null);
 
-        ILTypeInstance type = AppDomain.Instantiate("HotFix_Project.Strcips.Test");
-        AppDomain.Invoke("HotFix_Project.Strcips.Test", "TestB",type,1);
+        ILTypeInstance type = AppDomain.Instantiate("HotFix_Project.Scripts.Test");
+        AppDomain.Invoke("HotFix_Project.Scripts.Test", "TestB",type,1);
     }
 }
