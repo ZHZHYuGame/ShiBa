@@ -1,20 +1,28 @@
-﻿using Codice.Client.BaseCommands;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
 
+
 public class WorldEditor : EditorWindow
 {
-    int[,] map;
-    int mapWidth = 20;
-    int mapHeight = 20;
+    enum MapType
+    {
+        World,
+        run,
+        small
+    }
+
+    Dictionary<int, Dictionary<int, int>> map; // 使用嵌套字典存储地图数据
+    int mapWidth = 1;
+    int mapHeight = 1;
     float zoomLevel = 1.0f;
 
     Stack<Action> undoStack = new Stack<Action>();
+
+    private GameObject mapParent; // 地图对象的父物体
 
     int selectedToolIndex = 0;
     string[] toolName = new string[] { "地图编辑", "种怪编辑" };
@@ -22,26 +30,22 @@ public class WorldEditor : EditorWindow
     int selectMonsterIndex = 0;
     string[] monsterName = new string[] { };
 
-    Texture2D mapTexture;
-    Vector2 scrollPostion;
+    Sprite mapIcon;
+    Vector2 scrollPosition;
+
 
     [MenuItem("Tools/自定义编辑器")]
     static public void Init()
     {
         GetWindow<WorldEditor>("自定义编辑器").Show();
     }
+
     private void OnEnable()
     {
-        // 加载地图图片
-        mapTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/UI/Texture2D/look.png");
-        if (mapTexture == null)
-        {
-            Debug.LogWarning("地图图片未找到，请确保路径正确：Assets / UI / Texture2D / look.png");
-        }
-
-        // 初始化地图
+        map = new Dictionary<int, Dictionary<int, int>>();
         InitializeMap();
     }
+
     private void OnGUI()
     {
         GUILayout.BeginHorizontal();
@@ -50,7 +54,7 @@ public class WorldEditor : EditorWindow
         DrawToolPanel();
         GUILayout.EndHorizontal();
     }
-    
+
     private void DrawToolPanel()
     {
         GUILayout.BeginVertical(GUILayout.ExpandWidth(true));
@@ -68,78 +72,104 @@ public class WorldEditor : EditorWindow
         GUILayout.EndVertical();
     }
 
-
     private void InitializeMap()
     {
-        if (map == null)
+        // 动态补充地图内容
+        for (int x = 0; x < mapWidth; x++)
         {
-            map = new int[mapWidth, mapHeight];
-            for (int x = 0; x < mapWidth; x++)
+            if (!map.ContainsKey(x))
             {
-                for (int y = 0; y < mapHeight; y++)
+                map[x] = new Dictionary<int, int>();
+            }
+
+            for (int y = 0; y < mapHeight; y++)
+            {
+                if (!map[x].ContainsKey(y))
                 {
-                    map[x, y] = 1; 
+                    map[x][y] = 1; // 默认值为 1（可行走区域）
                 }
             }
         }
     }
 
-
     private void DrawMonsterEditor()
     {
-        
+        // 种怪编辑功能（待实现）
     }
 
     private void DrawMapEditor()
     {
-        GUILayout.Label("地图编辑",EditorStyles.boldLabel);
+        GUILayout.Label("地图编辑", EditorStyles.boldLabel);
 
-        GUILayout.BeginHorizontal();
+        // 缩放控制
+        GUILayout.BeginHorizontal(GUILayout.Width(500));
         GUILayout.Label("缩放:");
         zoomLevel = GUILayout.HorizontalSlider(zoomLevel, 0.5f, 2.0f);
         GUILayout.EndHorizontal();
 
-        int buttonSize = (int)(20 * zoomLevel);
-        float mapDisplayWidth = mapWidth * buttonSize;
-        float mapDisplayHeight = mapHeight * buttonSize;
-        scrollPostion = GUILayout.BeginScrollView(scrollPostion, GUILayout.Width(1000), GUILayout.Height(1000));
+        // 地图尺寸设置
+        GUILayout.BeginHorizontal(GUILayout.Width(500));
+        GUILayout.Label("地图宽度:");
+        int newMapWidth = EditorGUILayout.IntField(mapWidth);
+        GUILayout.Label("地图高度:");
+        int newMapHeight = EditorGUILayout.IntField(mapHeight);
 
+        if (newMapWidth != mapWidth || newMapHeight != mapHeight)
+        {
+            mapWidth = newMapWidth;
+            mapHeight = newMapHeight;
+            InitializeMap(); // 动态更新地图尺寸
+        }
+        GUILayout.EndHorizontal();
+
+        // 地图图片选择
+        mapIcon = (Sprite)EditorGUILayout.ObjectField(mapIcon, typeof(Sprite), false, GUILayout.Width(100), GUILayout.Height(100));
+
+        // 计算按钮大小
+        int buttonSize = (int)(30 * zoomLevel);
+
+        // 开始滚动视图
+        scrollPosition = GUILayout.BeginScrollView(scrollPosition, GUILayout.Width(300), GUILayout.Height(300));
+
+        // 绘制地图网格
         for (int y = 0; y < mapHeight; y++)
         {
             GUILayout.BeginHorizontal();
             for (int x = 0; x < mapWidth; x++)
             {
-                GUI.backgroundColor = map[x, y] == 1 ? Color.green : Color.red;
+                int cellState = map.ContainsKey(x) && map[x].ContainsKey(y) ? map[x][y] : 1; // 获取单元格状态
+
+                GUI.backgroundColor = cellState == 1 ? Color.green : Color.red;
                 if (GUILayout.Button("", GUILayout.Width(buttonSize), GUILayout.Height(buttonSize)))
                 {
-                    int currState = map[x, y];
+                    int currState = cellState;
                     undoStack.Push(() =>
                     {
-                        if(x>=0&&x<mapWidth&&y>=0&&y<mapHeight)
+                        if (map.ContainsKey(x) && map[x].ContainsKey(y))
                         {
-                            map[x, y] = currState;
-                        }
-                        else
-                        {
-                            Debug.LogWarning($"无效的地图坐标({x},{y})");
+                            map[x][y] = currState; // 撤销操作
                         }
                     });
-                    map[x, y] = map[x, y] == 1 ? 0 : 1;
+                    map[x][y] = cellState == 1 ? 0 : 1; // 切换状态
                 }
             }
             GUILayout.EndHorizontal();
         }
+
+        // 结束滚动视图
         GUILayout.EndScrollView();
 
+        // 保存、加载和撤销按钮
         GUILayout.BeginHorizontal();
-        GUI.backgroundColor= Color.white;
-        if(GUILayout.Button("保存地图",GUILayout.Width(120)))
+        GUI.backgroundColor = Color.white;
+        if (GUILayout.Button("保存地图", GUILayout.Width(120)))
         {
-            SaveMap("Assets/Maps/map.txt");
+            SaveMap("Assets/GameMain/Maps/map.txt");
         }
-        if(GUILayout.Button("加载地图", GUILayout.Width(120)))
+        if (GUILayout.Button("加载地图", GUILayout.Width(120)))
         {
-            LoadMap("Assets/Maps/map.txt");
+            LoadMap("Assets/GameMain/Maps/map.txt");
+         
         }
         if (GUILayout.Button("撤销", GUILayout.Width(120)))
         {
@@ -150,7 +180,7 @@ public class WorldEditor : EditorWindow
 
     private void UnDo()
     {
-        if(undoStack.Count > 0)
+        if (undoStack.Count > 0)
         {
             Action unAction = undoStack.Pop();
             unAction.Invoke();
@@ -163,15 +193,23 @@ public class WorldEditor : EditorWindow
 
     private void LoadMap(string filePath)
     {
-        if(File.Exists(filePath))
+        if (File.Exists(filePath))
         {
-            string[] lines=File.ReadAllLines(filePath);
-            for (int x = 0; x < mapWidth; x++)
+            string[] lines = File.ReadAllLines(filePath);
+            map.Clear();
+            for (int y = 0; y < lines.Length; y++)
             {
-                string[] values = lines[x].Trim().Split(' ');
-                for (int y = 0; y < mapHeight; y++)
+                string[] values = lines[y].Trim().Split(' ');
+                for (int x = 0; x < values.Length; x++)
                 {
-                    map[x, y] = int.Parse(values[x]);
+                    if (int.TryParse(values[x], out int cellState))
+                    {
+                        if (!map.ContainsKey(x))
+                        {
+                            map[x] = new Dictionary<int, int>();
+                        }
+                        map[x][y] = cellState;
+                    }
                 }
             }
             Debug.Log("地图已加载");
@@ -180,19 +218,17 @@ public class WorldEditor : EditorWindow
         {
             Debug.LogWarning("地图不存在");
         }
-
-         
-
     }
 
     private void SaveMap(string filePath)
     {
         StringBuilder mapData = new StringBuilder();
-        for (int x = 0; x < mapWidth; x++)
+        for (int y = 0; y < mapHeight; y++)
         {
-            for (int y = 0; y < mapHeight; y++)
+            for (int x = 0; x < mapWidth; x++)
             {
-                mapData.Append(map[x, y] + " ");
+                int cellState = map.ContainsKey(x) && map[x].ContainsKey(y) ? map[x][y] : 1; // 获取单元格状态
+                mapData.Append(cellState + " ");
             }
             mapData.AppendLine();
         }
