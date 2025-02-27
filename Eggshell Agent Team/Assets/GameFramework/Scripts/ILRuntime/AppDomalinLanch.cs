@@ -26,8 +26,8 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
     } 
     private void OnLoadAssembly(byte[] dlls, byte[] pdbs)
     {
-         try
-        {
+         try 
+        { 
             MemoryStream dllffs=new MemoryStream(dlls);
             MemoryStream pdbffs=new MemoryStream(pdbs);
             ILRuntime.Mono.Cecil.Pdb.PdbReaderProvider pdbReaderProvider =
@@ -40,7 +40,9 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
         }
         //PDB文件是调试数据库，如需要在日志中显示报错的行号，则必须提供PDB文件，不过由于会额外耗用内存，正式发布时请将
         InitializeILRuntime();//初始化
-      
+        
+        MyTest myTest = new MyTest();
+        myTest.OnRun(appdomain);
         
     }
     void InitializeILRuntime()

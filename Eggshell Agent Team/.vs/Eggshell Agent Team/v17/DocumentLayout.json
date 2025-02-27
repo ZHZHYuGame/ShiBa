@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\unity\\sx\\shiba\\shiba\\eggshell agent team\\assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
               "ToolTip": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
               "RelativeToolTip": "Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAkwCYAAAAmAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwCoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T03:11:56.477Z",
               "EditorCaption": ""
@@ -41,7 +41,7 @@
               "RelativeDocumentMoniker": "Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs",
               "ToolTip": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs",
               "RelativeToolTip": "Assets\\GameFramework\\Scripts\\ILRuntime\\LoadHotFixMgr.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T03:06:33.685Z"
             }
