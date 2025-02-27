@@ -57,12 +57,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:Eggshell Agent Team/HotFix_Project/HotFix_Project.csproj
-=======
-    <Compile Include="InstanceClass.cs" />
->>>>>>> pzy:Eggshell Agent Team/HotFix_Projec/HotFix_Project.csproj
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strcips\Test.cs" />
+    <Compile Include="Scripts\Test.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
