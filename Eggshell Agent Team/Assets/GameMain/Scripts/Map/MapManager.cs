@@ -28,7 +28,7 @@ public class MapManager : MonoBehaviour
                 h = 3; // 初始高度  
                 break;
             case MapType.Two:
-                w = 2; // 初始宽度  
+                w = 1; // 初始宽度  
                 h = 3; // 初始高度  
                 break;
             case MapType.Three:

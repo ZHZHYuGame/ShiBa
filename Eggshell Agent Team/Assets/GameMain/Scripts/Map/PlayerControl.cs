@@ -20,7 +20,8 @@ public class PlayerControl : MonoBehaviour
         mapScale = mapManager.oneMapScale * 10;
         pyl = mapScale / 2;
         mapManager.CreatMap(x, y);
-        cam.transform.position = transform.position + Vector3.back * 3;
+        cam.orthographicSize = 2 * mapManager.oneMapScale;
+        cam.transform.position = transform.position + Vector3.back * 3*mapManager.oneMapScale;
     }
 
     void Update()
@@ -37,7 +38,7 @@ public class PlayerControl : MonoBehaviour
             transform.position += moveDirection * speed * Time.deltaTime;
 
             // 更新相机位置  
-            cam.transform.position = transform.position+Vector3.back*3;
+            cam.transform.position = transform.position + Vector3.back * 3 * mapManager.oneMapScale;
 
             // 检查地图更新  
             if (Mathf.Floor((transform.position.x + pyl) / mapScale) != x ||
