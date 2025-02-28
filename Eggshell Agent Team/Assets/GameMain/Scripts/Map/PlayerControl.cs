@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     float h;
     float speed = 10;
 
-    private void Awake()
+    private void Start()
     {
         cam = Camera.main;
         mapScale = mapManager.oneMapScale * 10;
@@ -22,7 +22,6 @@ public class PlayerControl : MonoBehaviour
         mapManager.CreatMap(x, y);
         cam.transform.position = transform.position + Vector3.back * 3;
     }
-
     void Update()
     {
         v = Input.GetAxis("Vertical"); // 上下移动  
