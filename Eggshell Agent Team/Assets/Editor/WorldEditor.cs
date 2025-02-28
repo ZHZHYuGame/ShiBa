@@ -93,7 +93,7 @@ public class WorldEditor : EditorWindow
     private void DrawMapEditor()
     {
         GUILayout.Label("地图编辑",EditorStyles.boldLabel);
-
+       
         GUILayout.BeginHorizontal();
         GUILayout.Label("缩放:");
         zoomLevel = GUILayout.HorizontalSlider(zoomLevel, 0.5f, 2.0f);
@@ -129,23 +129,25 @@ public class WorldEditor : EditorWindow
             }
             GUILayout.EndHorizontal();
         }
-        GUILayout.EndScrollView();
-
         GUILayout.BeginHorizontal();
-        GUI.backgroundColor= Color.white;
-        if(GUILayout.Button("保存地图",GUILayout.Width(120)))
+        GUI.backgroundColor = Color.white;
+        if (GUILayout.Button("保存地图", GUILayout.Width(250)))
         {
             SaveMap("Assets/Maps/map.txt");
         }
-        if(GUILayout.Button("加载地图", GUILayout.Width(120)))
+        if (GUILayout.Button("加载地图", GUILayout.Width(250)))
         {
             LoadMap("Assets/Maps/map.txt");
         }
-        if (GUILayout.Button("撤销", GUILayout.Width(120)))
+        if (GUILayout.Button("撤销", GUILayout.Width(250)))
         {
             UnDo();
         }
         GUILayout.EndHorizontal();
+        GUILayout.EndScrollView();
+
+      
+        
     }
 
     private void UnDo()
@@ -163,13 +165,14 @@ public class WorldEditor : EditorWindow
 
     private void LoadMap(string filePath)
     {
-        if(File.Exists(filePath))
+        
+        if (File.Exists(filePath))
         {
-            string[] lines=File.ReadAllLines(filePath);
-            for (int x = 0; x < mapWidth; x++)
+            string[] lines = File.ReadAllLines(filePath);
+            for (int y = 0; y < mapHeight; y++)
             {
-                string[] values = lines[x].Trim().Split(' ');
-                for (int y = 0; y < mapHeight; y++)
+                string[] values = lines[y].Trim().Split(' ');
+                for (int x = 0; x < mapWidth; x++)
                 {
                     map[x, y] = int.Parse(values[x]);
                 }
@@ -180,9 +183,6 @@ public class WorldEditor : EditorWindow
         {
             Debug.LogWarning("地图不存在");
         }
-
-         
-
     }
 
     private void SaveMap(string filePath)
