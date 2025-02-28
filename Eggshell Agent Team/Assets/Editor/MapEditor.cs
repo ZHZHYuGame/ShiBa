@@ -17,10 +17,10 @@ public class MapEditor : EditorWindow
     private Material walkableMaterial; // 可行走区域的材质
     private Material unwalkableMaterial; // 不可行走区域的材质
 
-    [MenuItem("Tools/3D 地图编辑器")]
+    [MenuItem("Tools/地图编辑器")]
     public static void ShowWindow()
     {
-        GetWindow<MapEditor>("3D 地图编辑器");
+        GetWindow<MapEditor>("地图编辑器");
     }
 
     private void OnEnable()
@@ -35,7 +35,7 @@ public class MapEditor : EditorWindow
 
     private void OnGUI()
     {
-        GUILayout.Label("3D 地图编辑器", EditorStyles.boldLabel);
+        GUILayout.Label("地图编辑器", EditorStyles.boldLabel);
 
         // 地图尺寸设置
         GUILayout.BeginHorizontal();
