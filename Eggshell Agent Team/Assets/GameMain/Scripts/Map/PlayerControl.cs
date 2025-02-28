@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
     float h;
     float speed = 10;
 
-    private void Awake()
+    private void Start()
     {
         cam = Camera.main;
         mapScale = mapManager.oneMapScale * 10;
