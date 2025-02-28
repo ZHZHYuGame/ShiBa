@@ -9,7 +9,7 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
     //AppDomain是ILRuntime的入口，最好是在一个单例类中保存，整个游戏全局就一个，这里为了示例方便，每个例子里面都单独做了一个
     //大家在正式项目中请全局只创建一个AppDomain
    public ILRuntime.Runtime.Enviorment.AppDomain appdomain;
-    public override void Awake()
+    public override void Awake() 
     {
         base.Awake();
         //首先实例化ILRuntime的AppDomain，AppDomain是一个应用程序域，每个AppDomain都是一个独立的沙盒
