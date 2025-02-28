@@ -1,0 +1,6 @@
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\Assets\StreamingAssets\HotFix\HotFix_Project.dll
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\Assets\StreamingAssets\HotFix\HotFix_Project.pdb
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\HotFix_Project\obj\Release\HotFix_Project.csproj.AssemblyReference.cache
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\HotFix_Project\obj\Release\HotFix_Project.csproj.CoreCompileInputs.cache
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\HotFix_Project\obj\Release\HotFix_Project.dll
+D:\Unity\sx\ShiBa\ShiBa\Eggshell Agent Team\HotFix_Project\obj\Release\HotFix_Project.pdb
