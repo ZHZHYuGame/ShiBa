@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\unity\\sx\\shiba\\shiba\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\unity\\sx\\shiba\\shiba\\eggshell agent team\\assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gameframework\\scripts\\ilruntime\\appdomalinlanch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\unity\\sx\\shiba\\shiba\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}|UnityGameFramework.Runtime.csproj|D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gameframework\\scripts\\runtime\\sound\\soundagenthelperbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ResourcesLoader.cs",
               "DocumentMoniker": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AppDomalinLanch.cs",
               "DocumentMoniker": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
               "RelativeDocumentMoniker": "Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
               "ToolTip": "D:\\Unity\\sx\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
               "RelativeToolTip": "Assets\\GameFramework\\Scripts\\ILRuntime\\AppDomalinLanch.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T06:00:35.179Z",
               "EditorCaption": ""
