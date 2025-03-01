@@ -1,6 +1,5 @@
 {
   "dependencies": {
-<<<<<<< HEAD
     "com.ourpalm.ilruntime": {
       "version": "2.1.0",
       "depth": 0,
@@ -36,13 +35,13 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-=======
+      "url": "https://packages.unity.cn"
+    },
     "com.unity.assetbundlebrowser": {
       "version": "1.7.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
->>>>>>> wzl
       "url": "https://packages.unity.cn"
     },
     "com.unity.collab-proxy": {

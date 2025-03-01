@@ -45,6 +45,6 @@ public class LoadHotFixMgr : UnitySingleto<LoadHotFixMgr>
         }
        webRequest.Dispose();
        pdbRequest.Dispose();
-    }
+    } 
     
 }
