@@ -11,7 +11,7 @@ public class GameMgr : MonoBehaviour
     {
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
-         string bundlePath = Path.Combine(Application.streamingAssetsPath, "myprefab");
+         string bundlePath = Path.Combine(Application.streamingAssetsPath, "AssetBundles/myprefab");
         //string bundlePath = "D:/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/mybundle";
         string assetName = "Cube";
         // 同步加载资源

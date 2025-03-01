@@ -21,13 +21,13 @@ public static class ResourcesLoader
             Debug.LogError("Resource path is null or empty.");
             return null;
         }
-        if (!File.Exists(bundlepath))
+        if (!File.Exists(bundlepath)) 
         {
             Debug.LogError($"AssetBundle file not found: {bundlepath}");
             return null;
         }
 
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/" + "myprefab");
+        AssetBundle assetBundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/AssetBundles/" + "myprefab");
         if (assetBundle == null)
         {
             Debug.LogError($"Failed to load AssetBundle: {assetBundle}");
