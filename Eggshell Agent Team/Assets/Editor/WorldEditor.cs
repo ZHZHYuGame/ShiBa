@@ -1,4 +1,4 @@
-﻿
+﻿using Codice.Client.BaseCommands;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +23,6 @@ public class WorldEditor : EditorWindow
     string[] monsterName = new string[] { };
 
     Texture2D mapTexture;
-    Vector2 scrollPostion;
 
     [MenuItem("Tools/自定义编辑器")]
     static public void Init()
@@ -33,10 +32,10 @@ public class WorldEditor : EditorWindow
     private void OnEnable()
     {
         // 加载地图图片
-        mapTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/UI/Texture2D/look.png");
+        mapTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/UI/Maps/look.png");
         if (mapTexture == null)
         {
-            Debug.LogWarning("地图图片未找到，请确保路径正确：Assets / UI / Texture2D / look.png");
+            Debug.LogWarning("地图图片未找到，请确保路径正确：Assets / UI / Maps / look.png");
         }
 
         // 初始化地图
@@ -100,10 +99,6 @@ public class WorldEditor : EditorWindow
         GUILayout.EndHorizontal();
 
         int buttonSize = (int)(20 * zoomLevel);
-        float mapDisplayWidth = mapWidth * buttonSize;
-        float mapDisplayHeight = mapHeight * buttonSize;
-        scrollPostion = GUILayout.BeginScrollView(scrollPostion, GUILayout.Width(1000), GUILayout.Height(1000));
-
         for (int y = 0; y < mapHeight; y++)
         {
             GUILayout.BeginHorizontal();
@@ -129,8 +124,6 @@ public class WorldEditor : EditorWindow
             }
             GUILayout.EndHorizontal();
         }
-        GUILayout.EndScrollView();
-
         GUILayout.BeginHorizontal();
         GUI.backgroundColor= Color.white;
         if(GUILayout.Button("保存地图",GUILayout.Width(120)))
@@ -166,10 +159,10 @@ public class WorldEditor : EditorWindow
         if(File.Exists(filePath))
         {
             string[] lines=File.ReadAllLines(filePath);
-            for (int x = 0; x < mapWidth; x++)
+            for (int y = 0; y < mapHeight; y++)
             {
-                string[] values = lines[x].Trim().Split(' ');
-                for (int y = 0; y < mapHeight; y++)
+                string[] values = lines[y].Trim().Split(' ');
+                for (int x = 0; x < mapWidth; x++)
                 {
                     map[x, y] = int.Parse(values[x]);
                 }
@@ -188,9 +181,9 @@ public class WorldEditor : EditorWindow
     private void SaveMap(string filePath)
     {
         StringBuilder mapData = new StringBuilder();
-        for (int x = 0; x < mapWidth; x++)
+        for (int y = 0; y < mapHeight; y++)
         {
-            for (int y = 0; y < mapHeight; y++)
+            for (int x = 0; x < mapWidth; x++)
             {
                 mapData.Append(map[x, y] + " ");
             }

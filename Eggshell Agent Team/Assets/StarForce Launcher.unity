@@ -712,7 +712,7 @@ MonoBehaviour:
   m_DefaultDictionaryTextAsset: {fileID: 4900000, guid: 00759be143ffa5445b151c2540612e8f,
     type: 3}
   m_UpdateResourceFormTemplate: {fileID: 11487720, guid: a6c731de80e9d824d8f657301a357269,
-    type: 3}
+    type: 2}
 --- !u!1 &1454214586
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 768, y: 1024}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -936,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HPBarItemTemplate: {fileID: 11414536, guid: 96d2e77dd9853514da336717bd5627c0,
-    type: 3}
+    type: 2}
   m_HPBarInstanceRoot: {fileID: 1454214587}
   m_InstancePoolCapacity: 16
 --- !u!1 &1852670052
@@ -949,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852670053}
   - component: {fileID: 1852670054}
+  - component: {fileID: 1852670055}
   m_Layer: 0
   m_Name: Game Framework
   m_TagString: Untagged
@@ -982,5 +983,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d09b8a3e8c0e7e4dbcfd2fa52bf69ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1852670055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852670052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 856221072f300694781fe6c6a1fc91f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
