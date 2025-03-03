@@ -33,5 +33,9 @@ namespace StarForce
         /// 关于。
         /// </summary>
         AboutForm = 102,
+        /// <summary>
+        /// 玩家摇杆
+        /// </summary>
+        PlayerMoveForm = 103,
     }
 }
