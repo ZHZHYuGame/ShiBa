@@ -54,6 +54,7 @@ public class MainForm : UGuiForm
                 {
                     Toggle[index].transform.GetChild(1).transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
                     Toggle[index].transform.GetChild(2).gameObject.SetActive(true);
+
                 }
                 else
                 {
