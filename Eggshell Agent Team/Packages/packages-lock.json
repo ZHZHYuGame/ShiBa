@@ -1,5 +1,7 @@
 {
   "dependencies": {
+<<<<<<< HEAD
+=======
     "com.ourpalm.ilruntime": {
       "version": "2.1.0",
       "depth": 0,
@@ -7,12 +9,15 @@
       "dependencies": {},
       "url": "https://registry.npmjs.org"
     },
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
+<<<<<<< HEAD
+=======
     "com.unity.2d.tilemap": {
       "version": "1.0.0",
       "depth": 0,
@@ -44,6 +49,7 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     "com.unity.collab-proxy": {
       "version": "1.14.18",
       "depth": 0,
@@ -83,6 +89,8 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+<<<<<<< HEAD
+=======
     "com.unity.multiplayer-hlapi": {
       "version": "1.0.8",
       "depth": 0,
@@ -90,6 +98,13 @@
       "dependencies": {
         "nuget.mono-cecil": "0.1.6-preview"
       },
+      "url": "https://packages.unity.cn"
+    },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.cn"
     },
     "com.unity.purchasing": {
@@ -115,6 +130,7 @@
       },
       "url": "https://packages.unity.cn"
     },
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     "com.unity.test-framework": {
       "version": "1.1.31",
       "depth": 0,
@@ -156,6 +172,8 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+<<<<<<< HEAD
+=======
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.9",
       "depth": 0,
@@ -173,6 +191,7 @@
       "dependencies": {},
       "url": "https://packages.unity.cn"
     },
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

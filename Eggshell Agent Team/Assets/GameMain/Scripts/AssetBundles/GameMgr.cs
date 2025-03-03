@@ -7,8 +7,49 @@ public class GameMgr : MonoBehaviour
 {
     private ResourceManager _resourcesManager;
     private AssetBundleManager _assetBundleManager;
+
+    private UIManager UIManager; //UI管理
+    public UIManager UIManager_Root { get => UIManager; }
+
+    private SceneControl SceneControl;//场景管理
+    public SceneControl SceneControl_Root { get => SceneControl; }
+
+
+    #region 单例
+
+    /// <summary>
+    /// 单例
+    /// </summary>
+    /// 
+    private static GameMgr instance;
+    public static GameMgr GetInstance()
+    {
+        if (instance == null)
+        {
+            Debug.LogError("GameMgr获得实例失败");
+            return instance;
+        }
+        return instance;
+    }
+    #endregion 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+        instance = this;
+        UIManager = new UIManager();
+        SceneControl = new SceneControl();
+      
+    }
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
          string bundlePath = Path.Combine(Application.streamingAssetsPath, "AssetBundles/myprefab");
@@ -21,8 +62,18 @@ public class GameMgr : MonoBehaviour
             Instantiate(prefab);
         }
 
+        //加载第一个场景
+        Game game = new Game();
+        SceneControl_Root.dic_scene.Add(game.SceneName, game);
+
+        #region 推入第一个面板
+        //UIManager_Root.Push(new StartPanel());
+        UIManager_Root.Push(new StrartForm());
+
+        #endregion
         // 异步加载资源
         //StartCoroutine(LoadAssetAsync(bundlePath,assetName));
+
     }
 
     IEnumerator LoadAssetAsync(string bundlePath,string assetName)
