@@ -37,5 +37,9 @@ namespace StarForce
         /// 主界面。
         /// </summary>
         MainForm = 103,
+        /// <summary>
+        /// 开始界面。
+        /// </summary>
+        StrartForm = 104,
     }
 }

@@ -1,6 +1,7 @@
 ﻿using StarForce;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,6 +62,9 @@ public class MainForm : UGuiForm
                 }
             });
         }
+        Toggle[2].isOn = true;
+        Toggle[2].transform.GetChild(1).transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+        Toggle[2].transform.GetChild(2).gameObject.SetActive(true);
     }
 
     protected override void OnOpen(object userData)
