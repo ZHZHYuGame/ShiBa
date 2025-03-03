@@ -34,8 +34,18 @@ namespace StarForce
         /// </summary>
         AboutForm = 102,
         /// <summary>
+<<<<<<< HEAD
         /// 玩家摇杆
         /// </summary>
         PlayerMoveForm = 103,
+=======
+        /// 主界面。
+        /// </summary>
+        MainForm = 103,
+        /// <summary>
+        /// 开始界面。
+        /// </summary>
+        StrartForm = 104,
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     }
 }

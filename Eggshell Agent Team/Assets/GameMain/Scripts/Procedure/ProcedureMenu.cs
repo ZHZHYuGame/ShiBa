@@ -36,8 +36,13 @@ namespace StarForce
             //GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 
             m_StartGame = false;
+<<<<<<< HEAD
             //启动页面
             GameEntry.UI.OpenUIForm(UIFormId.PlayerMoveForm, this);
+=======
+            //GameEntry.UI.OpenUIForm(UIFormId.MenuForm, this);
+            GameEntry.UI.OpenUIForm(UIFormId.StrartForm, this);
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -73,7 +78,12 @@ namespace StarForce
         //        return;
         //    }
 
+<<<<<<< HEAD
         //    m_MenuForm = (MenuForm)ne.UIForm.Logic;
         //}
+=======
+            //m_MenuForm = (MenuForm)ne.UIForm.Logic;
+        }
+>>>>>>> f4b6c220d917408bbaa3ae2cebb367645dbaddd3
     }
 }
