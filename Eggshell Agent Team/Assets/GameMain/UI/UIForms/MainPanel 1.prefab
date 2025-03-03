@@ -1731,7 +1731,7 @@ GameObject:
   - component: {fileID: 6629127244635290340}
   - component: {fileID: 782168914842699309}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: togglegame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2821,7 +2821,7 @@ GameObject:
   - component: {fileID: 1721025046425591328}
   - component: {fileID: 1924197486203564833}
   m_Layer: 5
-  m_Name: MainForm
+  m_Name: MainPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
