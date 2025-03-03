@@ -45,6 +45,7 @@ public class GameMgr : MonoBehaviour
         instance = this;
         UIManager = new UIManager();
         SceneControl = new SceneControl();
+      
     }
     private void Start()
     {
@@ -66,7 +67,8 @@ public class GameMgr : MonoBehaviour
         SceneControl_Root.dic_scene.Add(game.SceneName, game);
 
         #region 推入第一个面板
-        UIManager_Root.Push(new StartPanel());
+        //UIManager_Root.Push(new StartPanel());
+        UIManager_Root.Push(new StrartForm());
 
         #endregion
         // 异步加载资源
