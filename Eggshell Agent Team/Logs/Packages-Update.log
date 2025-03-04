@@ -297,7 +297,11 @@ The following packages were added:
   com.unity.timeline@1.2.18
   com.unity.ugui@1.0.0
 
+<<<<<<< HEAD
 === Fri Feb 28 09:10:13 2025
+=======
+=== Fri Feb 28 08:53:24 2025
+>>>>>>> wzl
 
 Packages were changed.
 Update Mode: updateDependencies
