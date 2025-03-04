@@ -51,6 +51,7 @@ public class MapManager : MonoBehaviour
             }
         }
     }
+
     public void CreatMap(int x, int y)
     {
         List<GameObject> viewMap = new List<GameObject>();

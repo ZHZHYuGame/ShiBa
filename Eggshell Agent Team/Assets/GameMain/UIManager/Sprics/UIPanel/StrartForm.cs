@@ -15,7 +15,7 @@ public class StrartForm : BasePanel
 
     private static string name = "StrartForm";
     private static string path = "Panel/StrartForm";
-    private static LayerType layerType = LayerType.Top;
+    private static LayerType layerType = LayerType.Normal;
 
     public static readonly UIType uIType = new UIType(path, name, layerType);
     public StrartForm() : base(uIType)
