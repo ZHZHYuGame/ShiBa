@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class GameMgr : MonoBehaviour
 {
-    public LoadingProgress loadingProgress; // 进度条脚本
     private ResourceManager _resourcesManager;
     private AssetBundleManager _assetBundleManager;
-<<<<<<< HEAD
 
     private UIManager UIManager; //UI管理
     public UIManager UIManager_Root { get => UIManager; }
@@ -49,94 +45,57 @@ public class GameMgr : MonoBehaviour
         instance = this;
         UIManager = new UIManager();
         SceneControl = new SceneControl();
-      
     }
-=======
-    private UnityWebRequestAsyncOperation asyncOperation;
-    private float progress = 0f;
-    private string UI_AB_URL = "";
->>>>>>> wzl
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
-       
-        StartCoroutine(LoadAssetAsync());
-        //同步加载资源
-        //GameObject prefab = _resourcesManager.LoadResource<GameObject>(bundlePath, assetName);
-        //if (prefab != null)
-        //{
-        //    Instantiate(prefab);
-        //}
-    }
-    string str = "";
-    IEnumerator LoadAssetAsync()
-    {
-        //string bundlePath = Path.Combine(Application.streamingAssetsPath, "myprefab");
-        ////string assetName = "Cube";
-        ///
-        Debug.Log(11);
-        UI_AB_URL = Path.Combine(Application.streamingAssetsPath, "ui");
-        AssetBundle ui = AssetBundle.LoadFromFile(UI_AB_URL);
-
-        if (ui == null)
+         string bundlePath = Path.Combine(Application.streamingAssetsPath, "AssetBundles/myprefab");
+        //string bundlePath = "D:/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/mybundle";
+        string assetName = "Cube";
+        // 同步加载资源
+        GameObject prefab = _resourcesManager.LoadResource<GameObject>(bundlePath, assetName);
+        if (prefab != null)
         {
-            Debug.LogError($"Failed to load AssetBundle: {UI_AB_URL}");
-            yield break;
+            Instantiate(prefab);
         }
 
-<<<<<<< HEAD
         //加载第一个场景
         Game game = new Game();
-        SceneControl_Root.dic_scene.Add("11", game);
+        SceneControl_Root.dic_scene.Add(game.SceneName, game);
 
         #region 推入第一个面板
-        //UIManager_Root.Push(new StartPanel());
-        UIManager_Root.Push(new StrartForm());
+        UIManager_Root.Push(new StartPanel());
 
         #endregion
         // 异步加载资源
         //StartCoroutine(LoadAssetAsync(bundlePath,assetName));
 
     }
-=======
-        string[] ui_name = ui.GetAllAssetNames();
-        int totalAssets = ui_name.Length;
-        int loadedAssets = 0;
 
-        foreach (var item in ui_name)
-        {
-            float initialProgress = (float)loadedAssets / totalAssets; // 当前全局进度起始值
-            float progressRange = 1f / totalAssets; // 当前资源加载的进度范围
-            yield return _resourcesManager.LoadAssetAsyncWithProgress<UnityEngine.Object>(
-                ui, // 直接传入已加载的 AssetBundle
-                item,
-                OnAssetLoaded,
-                loadingProgress,
-                initialProgress,
-                progressRange
-            );
->>>>>>> wzl
-
-            loadedAssets++;
-        }
-
-
-        ui.Unload(false);
-        
-    }
-    private void OnAssetLoaded(object asset)
+    IEnumerator LoadAssetAsync(string bundlePath,string assetName)
     {
-        if (asset != null)
+        // 异步加载 AB包
+        yield return _assetBundleManager.LoadAssetBundleAsync(bundlePath, success =>
         {
-            
-        }
+            if (success)
+            {
+                // 从 AB包加载资源
+                GameObject asset = _assetBundleManager.LoadAssetFromBundle<GameObject>(bundlePath, assetName);
+                if (asset != null)
+                {
+                    Instantiate(asset);
+                }
+            }
+        });
     }
+
     void OnDestroy()
     {
         // 释放资源
-        string bundlePath = Path.Combine(Application.streamingAssetsPath, "mybundle");
-        _resourcesManager.ReleaseResource(bundlePath, "MyPrefab");
+        _resourcesManager.UnloadResource("AssetBundles/mybundle", "Cube");
+        _assetBundleManager.UnloadAssetBundle(Application.streamingAssetsPath + "/mybundle", true);
+        _resourcesManager.UnloadUnusedResources();
     }
 }
