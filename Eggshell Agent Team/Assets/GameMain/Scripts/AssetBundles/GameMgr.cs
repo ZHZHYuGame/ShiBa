@@ -45,7 +45,6 @@ public class GameMgr : MonoBehaviour
         instance = this;
         UIManager = new UIManager();
         SceneControl = new SceneControl();
-      
     }
     private void Start()
     {
