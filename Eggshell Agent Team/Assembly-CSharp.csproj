@@ -67,6 +67,8 @@
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\GameMgr.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\LRU\LRUCache.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesDownLoader.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourceManager.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourcesLoader.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Builtin.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Custom.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.cs" />
@@ -171,6 +173,7 @@
     <Compile Include="Assets\GameMain\Scripts\Utility\WebUtility.cs" />
     <Compile Include="Assets\GameMain\UI\Strcips\MyTest.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\GameRoot.cs" />
+    <Compile Include="Assets\GameMain\UIManager\Sprics\SceneBase\BeginScene.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\SceneBase\Game.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\SceneBase\Scene1.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\SceneBase\Scene2.cs" />
@@ -237,6 +240,7 @@
     <None Include="Assets\GameMain\Configs\BuildSettings.xml" />
     <None Include="Assets\Maps\map.txt" />
     <None Include="Assets\GameFramework\Libraries\GameFramework.dll" />
+    <None Include="Assets\GameMain\Maps\map.txt" />
     <None Include="Assets\GameMain\DataTables\Weapon.txt" />
     <None Include="Assets\GameFramework\Libraries\ICSharpCode.SharpZipLib.dll" />
     <None Include="Assets\GameMain\Configs\ResourceEditor.xml" />

@@ -62,10 +62,11 @@ public class GameMgr : MonoBehaviour
             Instantiate(prefab);
         }
 
+        //注册场景 给场景加到字典里面
         //加载第一个场景
-        Game game = new Game();
-        SceneControl_Root.dic_scene.Add(game.SceneName, game);
-
+        BeginScene beginScene = new BeginScene();
+        SceneControl_Root.dic_scene.Add(beginScene.SceneName, beginScene);
+       
         #region 推入第一个面板
         //UIManager_Root.Push(new StartPanel());
         UIManager_Root.Push(new StrartForm());

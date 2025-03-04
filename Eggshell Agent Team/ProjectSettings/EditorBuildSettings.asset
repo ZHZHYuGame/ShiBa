@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/11.unity
+    path: Assets/BeginScene.unity
     guid: da82dc3e06c32a14ca3f2d38f758296a
   - enabled: 1
     path: Assets/StarForce Launcher.unity

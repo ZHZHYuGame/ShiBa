@@ -55,6 +55,7 @@ public class MainPanel : BasePanel
     private void Load()
     {
         Game game = new Game();
+        SceneControl.Ins.dic_scene.Add(game.SceneName, game);
         GameMgr.GetInstance().SceneControl_Root.LoadScene(game.SceneName, game);
         
     }
