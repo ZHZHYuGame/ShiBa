@@ -20,7 +20,7 @@ public class PlayerControl : MonoBehaviour
         mapScale = mapManager.oneMapScale * 10;
         pyl = mapScale / 2;
         mapManager.CreatMap(x, y);
-        cam.orthographicSize = 2 * mapManager.oneMapScale;
+        cam.orthographicSize = 10 * mapManager.oneMapScale;
         cam.transform.position = transform.position + Vector3.back * 3*mapManager.oneMapScale;
     }
 

@@ -8,7 +8,7 @@ public class MainPanel : BasePanel
 {
     private static string name = "MainPanel";
     private static string path = "Panel/MainPanel";
-    private static LayerType layerType = LayerType.Top;
+    private static LayerType layerType = LayerType.Normal;
 
     public static readonly UIType uIType = new UIType(path, name, layerType);
 

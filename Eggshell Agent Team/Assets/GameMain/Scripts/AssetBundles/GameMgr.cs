@@ -63,7 +63,7 @@ public class GameMgr : MonoBehaviour
 
         //加载第一个场景
         Game game = new Game();
-        SceneControl_Root.dic_scene.Add(game.SceneName, game);
+        SceneControl_Root.dic_scene.Add("11", game);
 
         #region 推入第一个面板
         //UIManager_Root.Push(new StartPanel());
