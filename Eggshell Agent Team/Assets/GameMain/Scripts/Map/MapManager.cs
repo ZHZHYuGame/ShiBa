@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public enum MapType
@@ -26,6 +27,7 @@ public class MapManager : MonoBehaviour
             case MapType.One:
                 w = 3; // 初始宽度  
                 h = 3; // 初始高度  
+                //mapSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/GameMain/UI/MapSprites");
                 break;
             case MapType.Two:
                 w = 1; // 初始宽度  
@@ -51,6 +53,7 @@ public class MapManager : MonoBehaviour
             }
         }
     }
+
     public void CreatMap(int x, int y)
     {
         List<GameObject> viewMap = new List<GameObject>();
