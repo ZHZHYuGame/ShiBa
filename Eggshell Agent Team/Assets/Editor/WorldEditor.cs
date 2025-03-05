@@ -32,10 +32,10 @@ public class WorldEditor : EditorWindow
     private void OnEnable()
     {
         // 加载地图图片
-        mapTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets / GameMain / UI / MapSprites/map1.png");
+        mapTexture = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/UI/Maps/look.png");
         if (mapTexture == null)
         {
-            Debug.LogWarning("地图图片未找到，请确保路径正确：Assets / GameMain / UI / MapSprites/map1.png");
+            Debug.LogWarning("地图图片未找到，请确保路径正确：Assets / UI / Maps / look.png");
         }
 
         // 初始化地图
@@ -128,11 +128,11 @@ public class WorldEditor : EditorWindow
         GUI.backgroundColor= Color.white;
         if(GUILayout.Button("保存地图",GUILayout.Width(120)))
         {
-            SaveMap("Assets/GameMain/Maps/map.txt");
+            SaveMap("Assets/Maps/map.txt");
         }
         if(GUILayout.Button("加载地图", GUILayout.Width(120)))
         {
-            LoadMap("Assets/GameMain/Maps/map.txt");
+            LoadMap("Assets/Maps/map.txt");
         }
         if (GUILayout.Button("撤销", GUILayout.Width(120)))
         {
