@@ -20,9 +20,9 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
        
         LoadHotFixMgr.Instanct.OnLoadHotFix("HotFix_Project", (dllls, dpbs) => 
         {
-
+           
             OnLoadAssembly(dllls, dpbs);
-        });
+        }); 
     } 
     private void OnLoadAssembly(byte[] dlls, byte[] pdbs)
     {
