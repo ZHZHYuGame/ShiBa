@@ -12,7 +12,7 @@ public class GameMgr : MonoBehaviour
     private AssetBundleManager _assetBundleManager;
     private UnityWebRequestAsyncOperation asyncOperation;
     private float progress = 0f;
-    private string UI_AB_URL = "";
+    private string UI_AB_URL = ""; 
     private void Start()
     {
         _resourcesManager = new ResourceManager();
