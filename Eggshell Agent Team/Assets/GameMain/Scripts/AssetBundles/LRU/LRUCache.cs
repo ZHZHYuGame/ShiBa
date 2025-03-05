@@ -67,6 +67,15 @@ public class LRUCache<Tkey,TValue>
         _lruList.AddFirst(newNode);
         _cacheMap[key] = newNode;
     }
+    public void Remove(Tkey key)
+    {
+        if (_cacheMap.TryGetValue(key, out var node))
+        {
+            _lruList.Remove(node);
+            _cacheMap.Remove(key);
+        }
+
+    }
     /// <summary>
     /// 移除长时间未使用的节点
     /// </summary>

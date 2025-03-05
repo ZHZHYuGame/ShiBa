@@ -69,7 +69,7 @@ public static class ResourcesLoader
             yield break;
         }
         //异步加载资源
-        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync(assetName);
+        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync<T>(assetName);
         yield return assetbundleRequest;
         if (assetLoadRequest.asset == null)
         {
