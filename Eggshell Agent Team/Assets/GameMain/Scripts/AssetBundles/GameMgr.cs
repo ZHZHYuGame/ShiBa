@@ -30,11 +30,36 @@ public class GameMgr : MonoBehaviour
             return instance;
         }
         return instance;
+        _resourcesManager = new ResourceManager();
+        _assetBundleManager = new AssetBundleManager();
+        
+        StartCoroutine(LoadAssetAsync());
+        //同步加载资源
+        //GameObject prefab = _resourcesManager.LoadResource<GameObject>(bundlePath, assetName);
+        //if (prefab != null)
+        //{
+        //    Instantiate(prefab);
+        //}
     }
     #endregion 
     private void Awake()
+    string str = "";
+    public string ABGetPath(string path)
+    {
+        return Path.Combine(Application.streamingAssetsPath,path);
+    }
+
+    IEnumerator LoadAssetAsync()
     {
         if (instance == null)
+        //string bundlePath = Path.Combine(Application.streamingAssetsPath, "myprefab");
+        ////string assetName = "Cube";
+        ///
+        Debug.Log(11);
+        UI_AB_URL = ABGetPath("ui");
+        AssetBundle ui = AssetBundle.LoadFromFile(UI_AB_URL);
+
+        if (ui == null)
         {
             instance = this;
         }
@@ -48,6 +73,9 @@ public class GameMgr : MonoBehaviour
     }
     private void Start()
     {
+
+        _resourcesManager._loadedBundles.Add(UI_AB_URL,ui);
+
         DontDestroyOnLoad(this.gameObject);
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
@@ -59,6 +87,19 @@ public class GameMgr : MonoBehaviour
         if (prefab != null)
         {
             Instantiate(prefab);
+            float initialProgress = (float)loadedAssets / totalAssets; // 当前全局进度起始值
+            float progressRange = 1f / totalAssets; // 当前资源加载的进度范围
+            yield return _resourcesManager.LoadAssetAsyncWithProgress<UnityEngine.Object>(
+                ui, // 直接传入已加载的 AssetBundle
+                UI_AB_URL,
+                item,
+                OnAssetLoaded,
+                loadingProgress,
+                initialProgress,
+                progressRange
+            );
+
+            loadedAssets++;
         }
 
         //加载第一个场景
