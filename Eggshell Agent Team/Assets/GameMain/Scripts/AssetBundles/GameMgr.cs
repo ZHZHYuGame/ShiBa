@@ -17,7 +17,7 @@ public class GameMgr : MonoBehaviour
     {
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
-       
+        
         StartCoroutine(LoadAssetAsync());
         //同步加载资源
         //GameObject prefab = _resourcesManager.LoadResource<GameObject>(bundlePath, assetName);
@@ -27,13 +27,18 @@ public class GameMgr : MonoBehaviour
         //}
     }
     string str = "";
+    public string ABGetPath(string path)
+    {
+        return Path.Combine(Application.streamingAssetsPath,path);
+    }
+
     IEnumerator LoadAssetAsync()
     {
         //string bundlePath = Path.Combine(Application.streamingAssetsPath, "myprefab");
         ////string assetName = "Cube";
         ///
         Debug.Log(11);
-        UI_AB_URL = Path.Combine(Application.streamingAssetsPath, "ui");
+        UI_AB_URL = ABGetPath("ui");
         AssetBundle ui = AssetBundle.LoadFromFile(UI_AB_URL);
 
         if (ui == null)
@@ -41,7 +46,7 @@ public class GameMgr : MonoBehaviour
             Debug.LogError($"Failed to load AssetBundle: {UI_AB_URL}");
             yield break;
         }
-
+        _resourcesManager._loadedBundles.Add(UI_AB_URL,ui);
         string[] ui_name = ui.GetAllAssetNames();
         int totalAssets = ui_name.Length;
         int loadedAssets = 0;
@@ -52,6 +57,7 @@ public class GameMgr : MonoBehaviour
             float progressRange = 1f / totalAssets; // 当前资源加载的进度范围
             yield return _resourcesManager.LoadAssetAsyncWithProgress<UnityEngine.Object>(
                 ui, // 直接传入已加载的 AssetBundle
+                UI_AB_URL,
                 item,
                 OnAssetLoaded,
                 loadingProgress,

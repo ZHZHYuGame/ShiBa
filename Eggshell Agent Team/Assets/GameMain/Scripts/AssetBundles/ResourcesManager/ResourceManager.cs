@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class ResourceManager
 {
+    //缓存已加载的AssetBundle
+     public  Dictionary<string,AssetBundle> _loadedBundles = new Dictionary<string,AssetBundle>();
      private readonly Dictionary<string, ResourceWrapper<UnityEngine.Object>> _resourceCache;//资源缓存
      private readonly LRUCache<string, ResourceWrapper<UnityEngine.Object>> _lruCache;//lru缓存
 
@@ -18,7 +20,32 @@ public class ResourceManager
         _lruCache = new LRUCache<string, ResourceWrapper<UnityEngine.Object>>(cacheCapacity);
         _resourceCache = new Dictionary<string, ResourceWrapper<UnityEngine.Object>>();
     }
-
+    /// <summary>
+    /// 按需加载
+    /// </summary>
+    /// <param name="bundlePath"></param>
+    /// <param name="onComplete"></param>
+    /// <returns></returns>
+    public IEnumerator LoadAssetBundleAsync(string bundlePath, System.Action<AssetBundle> onComplete)
+    {
+        if (_loadedBundles.TryGetValue(bundlePath, out var assetBundle))
+        {
+            onComplete?.Invoke(assetBundle);
+            yield break;
+        }
+        var bundleLoadRequest = AssetBundle.LoadFromFileAsync(bundlePath);
+        yield return bundleLoadRequest;
+        if (bundleLoadRequest.assetBundle == null)
+        {
+            Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+            onComplete?.Invoke(null);
+        }
+        else
+        {
+            _loadedBundles[bundlePath] = bundleLoadRequest.assetBundle;
+            onComplete?.Invoke(bundleLoadRequest.assetBundle);
+        }
+    }
     /// <summary>
     /// 异步加载
     /// </summary>
@@ -29,7 +56,8 @@ public class ResourceManager
     /// <param name="loadingProgress"></param>
     /// <returns></returns>
     public IEnumerator LoadAssetAsyncWithProgress<T>(
-     AssetBundle assetBundle, // 直接传入已加载的 AssetBundle
+     AssetBundle assetBundle,// 直接传入已加载的 AssetBundle
+       string bundlePath,
      string assetName,
      System.Action<T> onComplete,
      LoadingProgress loadingProgress,
@@ -47,7 +75,16 @@ public class ResourceManager
             onComplete?.Invoke(resourceWrapper.Asset as T);
             yield break;
         }
+        // 按需加载 AssetBundle
+        AssetBundle ab = null;
+        yield return LoadAssetBundleAsync(bundlePath, (bundle) => ab = bundle);
 
+        if (assetBundle == null)
+        {
+            Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+            onComplete?.Invoke(null);
+            yield break;
+        }
         // 异步加载资源
         var assetLoadRequest = assetBundle.LoadAssetAsync<T>(assetName);
         while (!assetLoadRequest.isDone)
@@ -99,6 +136,20 @@ public class ResourceManager
         }
 
         return resources;
+    }
+    // 卸载 AssetBundle
+    public void UnloadAssetBundle(string bundlePath, bool unloadAllLoadedObjects = false)
+    {
+        if (_loadedBundles.TryGetValue(bundlePath, out var assetBundle))
+        {
+            assetBundle.Unload(unloadAllLoadedObjects);
+            _loadedBundles.Remove(bundlePath);
+            Debug.Log($"Unloaded AssetBundle: {bundlePath}");
+        }
+        else
+        {
+            Debug.LogWarning($"AssetBundle not found: {bundlePath}");
+        }
     }
     /// <summary>
     /// 释放资源
