@@ -124,9 +124,16 @@
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItem.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItemObject.cs" />
     <Compile Include="Assets\GameMain\Scripts\Localization\XmlLocalizationHelper.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Chunk\Chunk.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Chunk\ChunkController.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Chunk\ChunkVector2.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Chunk\MonoSingleton.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Chunk\MonoThread.cs" />
     <Compile Include="Assets\GameMain\Scripts\Map\MapManager.cs" />
-    <Compile Include="Assets\GameMain\Scripts\Map\MapResMgr.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\MapTileMgr.cs" />
     <Compile Include="Assets\GameMain\Scripts\Map\PlayerControl.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Tile\EntityBase.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Map\Tile\MapTile.cs" />
     <Compile Include="Assets\GameMain\Scripts\Network\CSPacketBase.cs" />
     <Compile Include="Assets\GameMain\Scripts\Network\CSPacketHeader.cs" />
     <Compile Include="Assets\GameMain\Scripts\Network\NetworkChannelHelper.cs" />
@@ -221,12 +228,15 @@
     <None Include="Assets\GameMain\Localization\Korean\Dictionaries\Default.xml" />
     <None Include="Assets\GameMain\DataTables\Scene.txt" />
     <None Include="Assets\GameMain\Configs\DefaultDictionary.xml" />
+    <None Include="Assets\EnemySpine\dartgoblin\dartgoblin.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Aircraft.txt" />
     <None Include="Assets\GameMain\Configs\DefaultConfig.txt" />
     <None Include="Assets\GameMain\DataTables\UIForm.txt" />
+    <None Include="Assets\EnemySpine\pigman\pigman.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Music.txt" />
     <None Include="Assets\GameMain\DataTables\Asteroid.txt" />
     <None Include="Assets\GameFramework\Libraries\link.xml" />
+    <None Include="Assets\EnemySpine\biggoblin\biggoblin.atlas.txt" />
     <None Include="Assets\GameFramework\Libraries\GameFramework.xml" />
     <None Include="Assets\GameMain\DataTables\Thruster.txt" />
     <None Include="Assets\GameMain\DataTables\Entity.txt" />
@@ -235,9 +245,11 @@
     <None Include="Assets\GameMain\Localization\ChineseSimplified\Dictionaries\Default.xml" />
     <None Include="Assets\GameMain\Libraries\LitJson.dll" />
     <None Include="Assets\GameMain\Localization\ChineseTraditional\Dictionaries\Default.xml" />
+    <None Include="Assets\Spine\version.txt" />
     <None Include="Assets\GameMain\Configs\BuildSettings.xml" />
     <None Include="Assets\GameFramework\Libraries\GameFramework.dll" />
     <None Include="Assets\GameMain\DataTables\Weapon.txt" />
+    <None Include="Assets\EnemySpine\kinfegoblin\kinfegoblin.atlas.txt" />
     <None Include="Assets\GameFramework\Libraries\ICSharpCode.SharpZipLib.dll" />
     <None Include="Assets\GameMain\Configs\ResourceEditor.xml" />
     <None Include="Assets\GameMain\Libraries\protobuf-net.dll" />
@@ -902,9 +914,21 @@
       <Project>{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{3141FCE0-4005-8A3F-27C1-A190AEEBB93F}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
       <Project>{BF7202C6-0604-08EE-2844-63EB4AD8CD29}</Project>
       <Name>UnityGameFramework.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{A8CCD435-2625-7968-88AE-A8AD1FDDDB30}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{123BC292-7ECF-020E-FE0B-D5FAFB57D2C6}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}</Project>
@@ -917,6 +941,10 @@
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{46F7E447-2415-F91A-93FE-7AEF0A9588C7}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}</Project>
+      <Name>spine-unity-editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{BB060D21-803A-C6F1-B1D0-D3272E01547B}</Project>

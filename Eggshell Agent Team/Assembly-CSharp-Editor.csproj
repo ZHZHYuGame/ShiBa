@@ -804,9 +804,21 @@
       <Project>{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="spine-unity-examples.csproj">
+      <Project>{3141FCE0-4005-8A3F-27C1-A190AEEBB93F}</Project>
+      <Name>spine-unity-examples</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
       <Project>{BF7202C6-0604-08EE-2844-63EB4AD8CD29}</Project>
       <Name>UnityGameFramework.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity.csproj">
+      <Project>{A8CCD435-2625-7968-88AE-A8AD1FDDDB30}</Project>
+      <Name>spine-unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-examples-editor.csproj">
+      <Project>{123BC292-7ECF-020E-FE0B-D5FAFB57D2C6}</Project>
+      <Name>spine-unity-examples-editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}</Project>
@@ -819,6 +831,10 @@
     <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
       <Project>{46F7E447-2415-F91A-93FE-7AEF0A9588C7}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="spine-unity-editor.csproj">
+      <Project>{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}</Project>
+      <Name>spine-unity-editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{BB060D21-803A-C6F1-B1D0-D3272E01547B}</Project>
