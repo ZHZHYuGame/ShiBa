@@ -56,8 +56,13 @@
     <Analyzer Include="C:\Program Files\专业\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\LastEditor.cs" />
+    <Compile Include="Assets\Editor\ConfigManager.cs" />
+    <Compile Include="Assets\Editor\ConfigMgr.cs" />
+    <Compile Include="Assets\Editor\CreateMapEditor.cs" />
+    <Compile Include="Assets\Editor\EnemyEditor.cs" />
+    <Compile Include="Assets\Editor\EnemyWavesEditor.cs" />
     <Compile Include="Assets\Editor\MapEditor.cs" />
+    <Compile Include="Assets\Editor\MapInforMation.cs" />
     <Compile Include="Assets\Editor\WorldEditor.cs" />
     <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableCodeGenerator.cs" />
     <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableGenerator.cs" />
@@ -337,6 +342,9 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
