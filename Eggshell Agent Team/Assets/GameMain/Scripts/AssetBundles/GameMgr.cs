@@ -48,6 +48,8 @@ public class GameMgr : MonoBehaviour
     }
     private void Start()
     {
+
+
         DontDestroyOnLoad(this.gameObject);
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
