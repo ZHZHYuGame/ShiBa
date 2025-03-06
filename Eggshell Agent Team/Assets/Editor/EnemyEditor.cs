@@ -25,8 +25,8 @@ public class EnemyEditor : EditorWindow
     Vector2 v2;
     int id = 0;
     Animator anim;//动画
-    Sprite prefab;
-    Sprite bulletPrefab;
+    GameObject prefab;
+    GameObject bulletPrefab;
 
 
     private void OnGUI()
@@ -56,9 +56,9 @@ public class EnemyEditor : EditorWindow
         if (dic[id].This_object_path != null && dic[id].This_object_path.Length > 0)
         {
             //加载
-            prefab = AssetDatabase.LoadAssetAtPath<Sprite>(dic[id].This_object_path);
+            prefab = AssetDatabase.LoadAssetAtPath<GameObject>(dic[id].This_object_path);
         }
-        prefab = (Sprite)EditorGUILayout.ObjectField("模型", prefab, typeof(Sprite), false);
+        prefab = (GameObject)EditorGUILayout.ObjectField("模型", prefab, typeof(GameObject), false);
         if (prefab != null)
         {
             //获取地址
@@ -85,9 +85,9 @@ public class EnemyEditor : EditorWindow
                 if (dic[id].BulletPath != null && dic[id].BulletPath.Length > 0)
                 {
                     //加载
-                    bulletPrefab = AssetDatabase.LoadAssetAtPath<Sprite>(dic[id].BulletPath);
+                    bulletPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(dic[id].BulletPath);
                 }
-                bulletPrefab = (Sprite)EditorGUILayout.ObjectField("子弹模型", bulletPrefab, typeof(Sprite), false);
+                bulletPrefab = (GameObject)EditorGUILayout.ObjectField("子弹模型", bulletPrefab, typeof(GameObject), false);
                 if (bulletPrefab != null)
                 {
                     //获取地址
