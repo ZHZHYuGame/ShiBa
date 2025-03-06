@@ -11,7 +11,7 @@ public enum MapType
 public class MapManager : MonoBehaviour
 {
     [Range(1, 10)]
-    public int oneMapScale;
+    public int oneMapScale=1;
     int w, h;
     bool isMove = true;
     public MapType currType = MapType.One;

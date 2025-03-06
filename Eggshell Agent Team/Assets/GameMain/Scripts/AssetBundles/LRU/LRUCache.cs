@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// LRU缓存
 /// </summary>
-public class LRUCache<Tkey,TValue>
+public class LRUCache<Tkey, TValue>
 {
     //缓存最大容量
     private readonly int _capacity;
@@ -30,9 +30,9 @@ public class LRUCache<Tkey,TValue>
     /// <param name="key"></param>
     /// <param name="value"></param>
     /// <returns></returns>
-    public bool TryGetValue(Tkey key,out TValue value)
+    public bool TryGetValue(Tkey key, out TValue value)
     {
-        if (_cacheMap.TryGetValue(key,out var node))
+        if (_cacheMap.TryGetValue(key, out var node))
         {
             // 如果缓存命中，将节点移动到链表头部（表示最近使用）
             value = node.Value.Value;
@@ -67,6 +67,15 @@ public class LRUCache<Tkey,TValue>
         _lruList.AddFirst(newNode);
         _cacheMap[key] = newNode;
     }
+    public void Remove(Tkey key)
+    {
+        if (_cacheMap.TryGetValue(key, out var node))
+        {
+            _lruList.Remove(node);
+            _cacheMap.Remove(key);
+        }
+
+    }
     /// <summary>
     /// 移除长时间未使用的节点
     /// </summary>
@@ -89,7 +98,7 @@ public class LRUCache<Tkey,TValue>
     }
     private class CacheItem
     {
-        public Tkey Key { get; set;}
+        public Tkey Key { get; set; }
         public TValue Value { get; set; }
     }
 }
