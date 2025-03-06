@@ -514,6 +514,9 @@
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Unity\2019.4.40f1c1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
     </Reference>

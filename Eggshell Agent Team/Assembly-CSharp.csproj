@@ -66,8 +66,10 @@
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\AssetBundleManager.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\GameMgr.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\LRU\LRUCache.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\LoadingProgress.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesDownLoader.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourceManager.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourceWrapper.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourcesLoader.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Builtin.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Custom.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Assets\GameMain\Scripts\DataTable\DRUISound.cs" />
     <Compile Include="Assets\GameMain\Scripts\DataTable\DRWeapon.cs" />
     <Compile Include="Assets\GameMain\Scripts\DataTable\DataTableExtension.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Datas.cs" />
     <Compile Include="Assets\GameMain\Scripts\Debugger\ChangeLanguageDebuggerWindow.cs" />
     <Compile Include="Assets\GameMain\Scripts\Definition\Constant\Constant.AssetPriority.cs" />
     <Compile Include="Assets\GameMain\Scripts\Definition\Constant\Constant.Layer.cs" />
@@ -231,6 +234,7 @@
     <None Include="Assets\EnemySpine\dartgoblin\dartgoblin.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Aircraft.txt" />
     <None Include="Assets\GameMain\Configs\DefaultConfig.txt" />
+    <None Include="Assets\map.txt" />
     <None Include="Assets\GameMain\DataTables\UIForm.txt" />
     <None Include="Assets\EnemySpine\pigman\pigman.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Music.txt" />
@@ -475,6 +479,9 @@
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
       <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Unity\2019.4.40f1c1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
