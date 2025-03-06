@@ -18,5 +18,5 @@ public class LoadingProgress : MonoBehaviour
         progressBar.value = progress;
         progressText.text = $"{progress * 100:F0}%"; // 显示百分比
     }
-   
+
 }
