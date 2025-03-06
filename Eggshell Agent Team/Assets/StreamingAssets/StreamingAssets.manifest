@@ -8,3 +8,13 @@ AssetBundleManifest:
     Info_1:
       Name: ui
       Dependencies: {}
+ManifestFileVersion: 0
+CRC: 2030641047
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: myprefab
+      Dependencies: {}
+    Info_1:
+      Name: ui
+      Dependencies: {}

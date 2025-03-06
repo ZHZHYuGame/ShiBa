@@ -14,14 +14,14 @@ public static class ResourcesLoader
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static T LoadResources<T>(string bundlepath,string assetName)where T : UnityEngine.Object
+    public static T LoadResources<T>(string bundlepath, string assetName) where T : UnityEngine.Object
     {
         if (string.IsNullOrEmpty(bundlepath) || string.IsNullOrEmpty(assetName))
         {
             Debug.LogError("Resource path is null or empty.");
             return null;
         }
-        if (!File.Exists(bundlepath)) 
+        if (!File.Exists(bundlepath))
         {
             Debug.LogError($"AssetBundle file not found: {bundlepath}");
             return null;
@@ -69,7 +69,7 @@ public static class ResourcesLoader
             yield break;
         }
         //异步加载资源
-        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync<T>(assetName);
+        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync(assetName);
         yield return assetbundleRequest;
         if (assetLoadRequest.asset == null)
         {
