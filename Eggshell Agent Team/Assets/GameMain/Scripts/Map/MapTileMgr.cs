@@ -5,7 +5,6 @@ using UnityEngine;
 public class MapTileMgr
 {
 
-    MapManager mapMgr;
     Dictionary<string,MapTile>  MapTiles = new Dictionary<string, MapTile>();
     //添加地图块
     public void Create(int x,int y)
