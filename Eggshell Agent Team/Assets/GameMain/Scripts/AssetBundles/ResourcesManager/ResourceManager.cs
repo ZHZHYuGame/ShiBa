@@ -7,15 +7,15 @@ using UnityEngine;
 public class ResourceManager
 {
     //缓存已加载的AssetBundle
-     public  Dictionary<string,AssetBundle> _loadedBundles = new Dictionary<string,AssetBundle>();
-     private readonly Dictionary<string, ResourceWrapper<UnityEngine.Object>> _resourceCache;//资源缓存
-     private readonly LRUCache<string, ResourceWrapper<UnityEngine.Object>> _lruCache;//lru缓存
+    public Dictionary<string, AssetBundle> _loadedBundles = new Dictionary<string, AssetBundle>();
+    private readonly Dictionary<string, ResourceWrapper<UnityEngine.Object>> _resourceCache;//资源缓存
+    private readonly LRUCache<string, ResourceWrapper<UnityEngine.Object>> _lruCache;//lru缓存
 
     /// <summary>
     /// 构造函数
     /// </summary>
     /// <param name="cacheCapacity">缓存容量</param>
-    public ResourceManager(int cacheCapacity=10)
+    public ResourceManager(int cacheCapacity = 10)
     {
         _lruCache = new LRUCache<string, ResourceWrapper<UnityEngine.Object>>(cacheCapacity);
         _resourceCache = new Dictionary<string, ResourceWrapper<UnityEngine.Object>>();
@@ -114,7 +114,7 @@ public class ResourceManager
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>0
-    public T LoadResource<T>(string bundlePath,string assetName) where T : UnityEngine.Object
+    public T LoadResource<T>(string bundlePath, string assetName) where T : UnityEngine.Object
     {
         //"D:/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/mybundle/MyPrefab"
         string cacheKey = $"{bundlePath}/{assetName}";
@@ -132,7 +132,7 @@ public class ResourceManager
             var wrapper = new ResourceWrapper<UnityEngine.Object>(resources);
             //添加到缓存
             _resourceCache[cacheKey] = wrapper;
-            _lruCache.Add(cacheKey,wrapper);
+            _lruCache.Add(cacheKey, wrapper);
         }
 
         return resources;

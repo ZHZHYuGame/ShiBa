@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public enum MapType
@@ -12,7 +11,7 @@ public enum MapType
 public class MapManager : MonoBehaviour
 {
     [Range(1, 10)]
-    public int oneMapScale;
+    public int oneMapScale=1;
     int w, h;
     bool isMove = true;
     public MapType currType = MapType.One;
@@ -27,7 +26,6 @@ public class MapManager : MonoBehaviour
             case MapType.One:
                 w = 3; // 初始宽度  
                 h = 3; // 初始高度  
-                //mapSprite = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/GameMain/UI/MapSprites");
                 break;
             case MapType.Two:
                 w = 1; // 初始宽度  
