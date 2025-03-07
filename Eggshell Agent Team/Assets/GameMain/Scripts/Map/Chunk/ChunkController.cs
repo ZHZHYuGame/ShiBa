@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-public class ChunkController : MonoBehaviour
+public class ChunkController : MonoSingleton<ChunkController>
 {
     /// <summary>
     /// 所有的块
@@ -30,7 +30,7 @@ public class ChunkController : MonoBehaviour
     /// 单个块的边长
     /// </summary>
     [SerializeField]
-    float m_chunkLength;
+    float m_chunkLength=10;
 
     [SerializeField]
     private int m_loadRange = 1; // 1 表示九宫格，2 表示 5x5，以此类推
@@ -41,7 +41,7 @@ public class ChunkController : MonoBehaviour
         InitMap();
     }
 
-    protected virtual void InitMap()
+    protected void InitMap()
     {
         // 先确定玩家位置，得到玩家所在块的位置  
         ChunkVector2 currentPos = GetCurrentChunkVector(m_player.position);
@@ -69,6 +69,28 @@ public class ChunkController : MonoBehaviour
         }
     }
 
+    //预加载
+    private void PreloadChunks(ChunkVector2 currentPos)
+    {
+        var preloadList = GetPreloadChunks(currentPos);
+    }
+    //获取预加载的块列表
+    private List<ChunkVector2> GetPreloadChunks(ChunkVector2 currentPos)
+    {
+        List<ChunkVector2> preloadList = new List<ChunkVector2>();
+        int preloadRange = m_loadRange + 1;
+        for (int i = -preloadRange; i <= preloadRange; i++)
+        {
+            for (int j = -preloadRange; j <= preloadRange; j++)
+            {
+                int row = currentPos.rowNum + i;
+                int col = currentPos.colNum + j;
+                preloadList.Add(new ChunkVector2(row, col));
+            }
+        }
+        return preloadList;
+    }
+
     /// <summary>
     /// 玩家所在块是否发生改变
     /// </summary>
@@ -84,6 +106,7 @@ public class ChunkController : MonoBehaviour
         return false;
     }
 
+
     /// <summary>
     /// 获取实际块列表
     /// </summary>
@@ -92,33 +115,22 @@ public class ChunkController : MonoBehaviour
 
     List<ChunkVector2> GetActualChunkList(ChunkVector2 currentPos)
     {
-        List<ChunkVector2> preloadList = new List<ChunkVector2>();
-        int preloadRange = m_loadRange + 1;
-        for (int i = -preloadRange; i <= preloadRange; i++)
+        List<ChunkVector2> expectChunkPosList = new List<ChunkVector2>();
+        int currentRow = currentPos.rowNum;
+        int currentCol = currentPos.colNum;
+
+        for (int i = -m_loadRange; i <= m_loadRange; i++)
         {
-            for (int j = -preloadRange; j <= preloadRange; j++)
+            for (int j = -m_loadRange; j <= m_loadRange; j++)
             {
-                int row = currentPos.rowNum + i;
-                int col = currentPos.colNum + j;
-                preloadList.Add(new ChunkVector2(row, col));
+                int expRow = currentRow + i;
+                int expCol = currentCol + j;
+                expectChunkPosList.Add(new ChunkVector2(expRow, expCol));
             }
         }
-        #region
-        //int currentRow = currentPos.rowNum;
-        //int currentCol = currentPos.colNum;
-
-        //for (int i = -m_loadRange; i <= m_loadRange; i++)
-        //{
-        //    for (int j = -m_loadRange; j <= m_loadRange; j++)
-        //    {
-        //        int expRow = currentRow + i;
-        //        int expCol = currentCol + j;
-        //        preloadList.Add(new ChunkVector2(expRow, expCol));
-        //    }
-        //}
-        return preloadList;
+        return expectChunkPosList;
     }
-
+    
     private float _lastUnloadTime;
     private const float UnloadInterval = 10f; // 每 10 秒调用一次
 
@@ -172,7 +184,6 @@ public class ChunkController : MonoBehaviour
         //    m_currentChunkList.Add(pos); // 添加到当前块列表
         //}
         #endregion
-        //Resources.UnloadUnusedAssets(); // 释放未使用的资源
     }
 
     private void UpdateChunkStates(ChunkVector2 currentPos)
@@ -180,42 +191,56 @@ public class ChunkController : MonoBehaviour
         foreach (var pos in m_currentChunkList)
         {
             ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
-            m_chunkMap[pos].Update(actualState);
+            if (m_chunkMap[pos].m_currentState != actualState) // 仅当状态不同时更新
+            {
+                m_chunkMap[pos].Update(actualState);
+            }
         }
     }
-
-    private void LoadNewChunks(List<ChunkVector2> actulChunkList, ChunkVector2 currentPos)
+    //加载地图块
+    private void LoadNewChunks(List<ChunkVector2> actualChunkList, ChunkVector2 currentPos)
     {
-        foreach (var pos in actulChunkList)
+        foreach (var pos in actualChunkList)
         {
             if (!m_chunkMap.ContainsKey(pos))
             {
+                Debug.Log($"加载新的地图块 ({pos.rowNum}, {pos.colNum})");
                 Chunk newChunk = new Chunk(pos);
                 m_chunkMap[pos] = newChunk;
             }
             m_currentChunkList.Add(pos);
         }
     }
-
-    private void UnloadUnnecessaryChunks(List<ChunkVector2> actulChunkList)
+    //卸载
+    private void UnloadUnnecessaryChunks(List<ChunkVector2> actualChunkList)
     {
-        var chunksToRemove = new List<ChunkVector2>();
+        var chunksToRemove = new HashSet<ChunkVector2>();
         foreach (var pos in m_currentChunkList)
         {
-            if (!actulChunkList.Contains(pos))
+            if (!actualChunkList.Contains(pos)&& m_chunkMap.ContainsKey(pos))
             {
-                if (m_chunkMap.ContainsKey(pos))
+                if (CanUnloadChunk(pos)) // 检查块是否可以安全卸载
                 {
                     m_chunkMap[pos].Unload();
                     m_chunkMap.Remove(pos);
+                    chunksToRemove.Add(pos);
                 }
-                chunksToRemove.Add(pos);
             }
         }
         foreach (var pos in chunksToRemove)
         {
-            m_currentChunkList.Remove(pos);
+            Debug.Log($"卸载的地图块：({pos.rowNum}, {pos.colNum})");
         }
+        m_currentChunkList.ExceptWith(chunksToRemove); // 批量移除
+    }
+
+    private bool CanUnloadChunk(ChunkVector2 pos)
+    {
+        if(m_chunkMap.ContainsKey(pos))
+        {
+            return m_chunkMap[pos].m_count == 0;
+        }
+        return true; 
     }
 
 
@@ -225,11 +250,23 @@ public class ChunkController : MonoBehaviour
     /// </summary>
     /// <param name="position">玩家的具体vector3位置</param>
     /// <returns></returns>
-    ChunkVector2 GetCurrentChunkVector(Vector3 position)
+    public ChunkVector2 GetCurrentChunkVector(Vector3 position)
     {
         int col = Mathf.FloorToInt(position.x / m_chunkLength);
         int row = Mathf.FloorToInt(position.y / m_chunkLength);
         return new ChunkVector2(row, col);
+    }
+
+    /// <summary>
+    /// 获取或创建块
+    /// </summary>
+    public Chunk GetOrCreateChunk(ChunkVector2 chunkPos)
+    {
+        if (!m_chunkMap.ContainsKey(chunkPos))
+        {
+            m_chunkMap[chunkPos] = new Chunk(chunkPos);
+        }
+        return m_chunkMap[chunkPos];
     }
 
     /// <summary>
