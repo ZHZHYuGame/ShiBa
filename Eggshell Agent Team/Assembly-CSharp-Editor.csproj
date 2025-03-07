@@ -57,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\ConfigManager.cs" />
-    <Compile Include="Assets\Editor\ConfigMgr.cs" />
     <Compile Include="Assets\Editor\CreateMapEditor.cs" />
     <Compile Include="Assets\Editor\EnemyEditor.cs" />
     <Compile Include="Assets\Editor\EnemyWavesEditor.cs" />
