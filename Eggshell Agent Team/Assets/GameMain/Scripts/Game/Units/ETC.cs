@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class ETC : MonoBehaviour, IDragHandler, IEndDragHandler
 {
-    int r = 40;
+    int r = 50;
     Vector3 dir;
     float dis;
     Vector3 startpos;
