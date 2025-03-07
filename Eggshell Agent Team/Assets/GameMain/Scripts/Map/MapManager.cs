@@ -8,14 +8,16 @@ public enum MapType
     Three
 }
 
-public class MapManager : MonoBehaviour
+public class MapManager : MonoSingleton<MapManager>
 {
     [Range(1, 10)]
-    public int oneMapScale;
+    public int oneMapScale=1;
     int w, h;
     bool isMove = true;
     public MapType currType = MapType.One;
     GameObject[,] mapPool;
+    [SerializeField]
+    Sprite[] sprites;
     public GameObject map;
 
     private void Awake()
@@ -30,6 +32,7 @@ public class MapManager : MonoBehaviour
             case MapType.Two:
                 w = 1; // 初始宽度  
                 h = 3; // 初始高度  
+                
                 break;
             case MapType.Three:
                 w = 5; // 固定宽度  
@@ -39,7 +42,8 @@ public class MapManager : MonoBehaviour
             default:
                 break;
         }
-
+        int num = Random.Range(0, sprites.Length);
+        map.GetComponent<SpriteRenderer>().sprite = sprites[num];
         mapPool = new GameObject[w, h]; // 初始化地图池  
         // 创建地图块并隐藏  
         for (int i = 0; i < w; i++)
