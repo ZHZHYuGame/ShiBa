@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using static EnemyEditor;
 
 public class EnemyWavesEditor :EditorWindow
 {
@@ -40,6 +41,7 @@ public class EnemyWavesEditor :EditorWindow
         dic[id].Wave_id = EditorGUILayout.IntField("当前波次", dic[id].Wave_id);
         dic[id].Enemy_id = EditorGUILayout.IntField("怪物Id", dic[id].Enemy_id);
         dic[id].Enemy_num = EditorGUILayout.IntField("怪物数量", dic[id].Enemy_num);
+        dic[id].ExpType =(ExpType)EditorGUILayout.EnumPopup("掉落经验类型", dic[id].ExpType);
         dic[id].Coefficient = EditorGUILayout.FloatField("增加难度系数", dic[id].Coefficient);
         dic[id].Boss_id = EditorGUILayout.IntField("BossID", dic[id].Boss_id);
         dic[id].RefreshBossWave = EditorGUILayout.IntField("是否有Boss(0没有/1有)", dic[id].RefreshBossWave);

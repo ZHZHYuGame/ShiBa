@@ -56,7 +56,9 @@ public class MainPanel : BasePanel
         // Debug.Log(gameObject.name);
         for (int i = 0; i < GameMgr.GetInstance().dataAnalysis.mapDic.Count; i++)
         {
-            Button levelBtn = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<Button>("Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab"), content.transform);
+
+            //Button levelBtn = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<Button>("Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab"), content.transform);
+            Button levelBtn = UIMethod.Ins.InstantiatePrefab<Button>("ScenePrefab", content.transform);
             levelBtn.transform.Find("Text").GetComponent<Text>().text = GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Name;
             levelBtn.GetComponent<Image>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
             Debug.Log(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);

@@ -11,7 +11,7 @@ public class ChunkController : MonoSingleton<ChunkController>
 
 
     //所有的块
-    Dictionary<ChunkVector2, Chunk> m_chunkMap = new Dictionary<ChunkVector2, Chunk>();
+    Dictionary<ChunkVector2, Chunk> m_chunkMap;
 
     //玩家
     [SerializeField]
@@ -26,7 +26,7 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     //显示加载的块列表
     [SerializeField]
-    HashSet<ChunkVector2> m_currentChunkList = new HashSet<ChunkVector2>();
+    HashSet<Chunk> m_currentChunkList = new HashSet<Chunk>();
 
     //单个地图块的边长
     [SerializeField]
@@ -37,6 +37,7 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     void Start()
     {
+        m_chunkMap = new Dictionary<ChunkVector2, Chunk>();
         // 初始化玩家所在的块
         InitMap();
     }
@@ -191,10 +192,10 @@ public class ChunkController : MonoSingleton<ChunkController>
     {
         foreach (var pos in m_currentChunkList)
         {
-            ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
-            if (m_chunkMap[pos].m_currentState != actualState) // 仅当状态不同时更新
+            ChunkState actualState = GetChunkStateByRelativePosition(pos.m_position, currentPos);
+            if (m_chunkMap[pos.m_position].m_currentState != actualState) // 仅当状态不同时更新
             {
-                m_chunkMap[pos].Update(actualState);
+                m_chunkMap[pos.m_position].Update(actualState);
             }
         }
     }
@@ -209,28 +210,32 @@ public class ChunkController : MonoSingleton<ChunkController>
                 Chunk newChunk = new Chunk(pos);
                 m_chunkMap[pos] = newChunk;
             }
-            m_currentChunkList.Add(pos);
+            m_currentChunkList.Add(m_chunkMap[pos]);
         }
     }
     //卸载
     private void UnloadUnnecessaryChunks(List<ChunkVector2> actualChunkList)
     {
-        var chunksToRemove = new HashSet<ChunkVector2>();
+        var chunksToRemove = new HashSet<Chunk>();
         foreach (var pos in m_currentChunkList)
         {
+<<<<<<< HEAD
             if (!actualChunkList.Contains(pos) && m_chunkMap.ContainsKey(pos))
+=======
+            if (!actualChunkList.Contains(pos.m_position)&& m_chunkMap.ContainsKey(pos.m_position))
+>>>>>>> f1159c709f77e33add12e30756088b7a07068ab9
             {
-                if (CanUnloadChunk(pos)) // 检查块是否可以安全卸载
+                if (CanUnloadChunk(pos.m_position)) // 检查块是否可以安全卸载
                 {
-                    m_chunkMap[pos].Unload();
-                    m_chunkMap.Remove(pos);
                     chunksToRemove.Add(pos);
                 }
             }
         }
         foreach (var pos in chunksToRemove)
         {
-            Debug.Log($"卸载的地图块：({pos.rowNum}, {pos.colNum})");
+            Debug.Log($"卸载的地图块：({pos.m_position})");
+            m_chunkMap[pos.m_position].Unload();
+            m_chunkMap.Remove(pos.m_position);
         }
         m_currentChunkList.ExceptWith(chunksToRemove); // 批量移除
     }
