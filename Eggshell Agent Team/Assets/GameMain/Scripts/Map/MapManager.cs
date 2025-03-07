@@ -48,8 +48,7 @@ public class MapManager : MonoSingleton<MapManager>
             default:
                 break;
         }
-        int num = Random.Range(0, sprites.Length);
-        map.GetComponent<SpriteRenderer>().sprite = sprites[num];
+        map.GetComponent<SpriteRenderer>().sprite = sprites[0];
         mapPool = new GameObject[w, h]; // 初始化地图池  
         // 创建地图块并隐藏  
         for (int i = 0; i < w; i++)

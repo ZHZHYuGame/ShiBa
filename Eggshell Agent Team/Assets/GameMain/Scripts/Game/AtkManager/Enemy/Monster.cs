@@ -50,6 +50,7 @@ public class Monster : MonoBehaviour
         }
         else
         {
+            transform.GetComponent<SpriteRenderer>().color = Color.white;
             // Destroy(this.gameObject);
             ObjectPool.Enqueue(this.gameObject);
             //经验球掉落
