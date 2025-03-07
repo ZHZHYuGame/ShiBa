@@ -5,14 +5,22 @@ using UnityEngine;
 /// <summary>
 /// 玩家移动
 /// </summary>
-public class PlayerRole : MonoBehaviour
+public class PlayerRole : MonoSingleton<PlayerRole>
 {
+    public MapManager mapManager = MapManager.Instance;//地图管理
+    int mapScale;
+    int pyl;
+    int x = 0;
+    int y = 0;
     public ETC etc;
     public float moveSpeed = 0.5f;
     private Vector3 lastMoveDirection = Vector3.forward;
     // Start is called before the first frame update
     void Start()
     {
+        mapScale = mapManager.oneMapScale * 10;
+        pyl = mapScale / 2;
+        mapManager.CreatMap(x, y);
         GameObject[] etcs = GameObject.FindGameObjectsWithTag("Etc");
         etc = etcs[0].GetComponent<ETC>();
     }
@@ -32,8 +40,16 @@ public class PlayerRole : MonoBehaviour
         {
             transform.position += pos * Time.deltaTime * 5;
             float angle = Mathf.Atan2(moveDrection.y,moveDrection.x)*Mathf.Rad2Deg;//计算子弹发射角度
-            
+             // 检查地图更新  
+            if (Mathf.Floor((transform.position.x + pyl) / mapScale) != x ||
+                Mathf.Floor((transform.position.y + pyl) / mapScale) != y)
+            {
+                x = (int)Mathf.Floor((transform.position.x + pyl) / mapScale);
+                y = (int)Mathf.Floor((transform.position.y + pyl) / mapScale);
+                mapManager.CreatMap(x, y);
+            }
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //武器等级升级

@@ -54,6 +54,7 @@ public class RefreshWaves
     private int enemy_id;//怪物id
     private int enemy_num;//怪物数量
     private float coefficient;//系数
+    private ExpType expType;//掉落经验类型
     private int boss_id;//boss编号
     private int refreshBossWave;//boss
 
@@ -62,7 +63,7 @@ public class RefreshWaves
 
     }
 
-    public RefreshWaves(int id, int map_id, int wave_id, int enemy_id, int enemy_num, float coefficient, int boss_id, int refreshBossWave)
+    public RefreshWaves(int id, int map_id, int wave_id, int enemy_id, int enemy_num, float coefficient, int boss_id, int refreshBossWave, ExpType expType = default)
     {
         this.id = id;
         this.map_id = map_id;
@@ -72,6 +73,7 @@ public class RefreshWaves
         this.coefficient = coefficient;
         this.boss_id = boss_id;
         this.refreshBossWave = refreshBossWave;
+        this.ExpType = expType;
     }
 
     public int Id { get => id; set => id = value; }
@@ -82,6 +84,13 @@ public class RefreshWaves
     public float Coefficient { get => coefficient; set => coefficient = value; }
     public int Boss_id { get => boss_id; set => boss_id = value; }
     public int RefreshBossWave { get => refreshBossWave; set => refreshBossWave = value; }
+    public ExpType ExpType { get => expType; set => expType = value; }
+}
+public enum ExpType
+{
+    lowerExp,
+    midelExp,
+    higherExp,
 }
 public class Role
 {
