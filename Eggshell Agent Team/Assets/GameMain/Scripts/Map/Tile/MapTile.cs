@@ -11,12 +11,12 @@ public class MapTile
 {
     public Vector2 postion;
     public string name;
-    Dictionary<int, EntityBase> tileDic;
+    Dictionary<uint, EntityBase> tileDic;
 
     public MapTile(int x, int y)
     {
         name = x + "_" + y;
-        tileDic = new Dictionary<int, EntityBase>();
+        tileDic = new Dictionary<uint, EntityBase>();
     }
 
     //添加新的对象
@@ -26,7 +26,7 @@ public class MapTile
         tileDic.Add(entity.index, entity);
     }
     //卸载移除对象 (资源卸载等待扩展)
-    public void RemoveEntity(int id)
+    public void RemoveEntity(uint id)
     {
         if (!tileDic.ContainsKey(id)) return;
         tileDic[id].Destory();
