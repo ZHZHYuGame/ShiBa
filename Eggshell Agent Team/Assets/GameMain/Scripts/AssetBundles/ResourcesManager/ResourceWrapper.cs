@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceWrapper<T> where T:UnityEngine.Object
+public class ResourceWrapper<T> where T : UnityEngine.Object
 {
     public T Asset;//资源
     public int RefCount;//引用计数

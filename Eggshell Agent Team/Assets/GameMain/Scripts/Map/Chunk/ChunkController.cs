@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
 
 public class ChunkController : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class ChunkController : MonoBehaviour
     /// 当前的块列表
     /// </summary>
     [SerializeField]
-    List<ChunkVector2> m_currentChunkList = new List<ChunkVector2>();
+    HashSet<ChunkVector2> m_currentChunkList = new HashSet<ChunkVector2>();
 
     /// <summary>
     /// 单个块的边长
@@ -55,10 +56,16 @@ public class ChunkController : MonoBehaviour
     {
         // 检测玩家是否移动到了新的块
         var realtimePos = GetCurrentChunkVector(m_player.position);
-        if (IsChange(realtimePos)) // 当前块位置发生改变，则更新当前块列表
+        if (IsChange(realtimePos))
         {
             var list = GetActualChunkList(realtimePos);
             UpdateCurrentChunkList(list, realtimePos);
+        }
+        // 延迟调用 Resources.UnloadUnusedAssets
+        if (Time.time - _lastUnloadTime > UnloadInterval)
+        {
+            Resources.UnloadUnusedAssets();
+            _lastUnloadTime = Time.time;
         }
     }
 
@@ -83,74 +90,135 @@ public class ChunkController : MonoBehaviour
     /// <param name="currentVector">当前中心块位置</param>
     /// <returns></returns>
 
-    List<ChunkVector2> GetActualChunkList(ChunkVector2 currentVector)
+    List<ChunkVector2> GetActualChunkList(ChunkVector2 currentPos)
     {
-        List<ChunkVector2> expectChunkPosList = new List<ChunkVector2>();
-        int currentRow = currentVector.rowNum;
-        int currentCol = currentVector.colNum;
-
-        for (int i = -m_loadRange; i <= m_loadRange; i++)
+        List<ChunkVector2> preloadList = new List<ChunkVector2>();
+        int preloadRange = m_loadRange + 1;
+        for (int i = -preloadRange; i <= preloadRange; i++)
         {
-            for (int j = -m_loadRange; j <= m_loadRange; j++)
+            for (int j = -preloadRange; j <= preloadRange; j++)
             {
-                int expRow = currentRow + i;
-                int expCol = currentCol + j;
-                expectChunkPosList.Add(new ChunkVector2(expRow, expCol));
+                int row = currentPos.rowNum + i;
+                int col = currentPos.colNum + j;
+                preloadList.Add(new ChunkVector2(row, col));
             }
         }
-        return expectChunkPosList;
+        #region
+        //int currentRow = currentPos.rowNum;
+        //int currentCol = currentPos.colNum;
+
+        //for (int i = -m_loadRange; i <= m_loadRange; i++)
+        //{
+        //    for (int j = -m_loadRange; j <= m_loadRange; j++)
+        //    {
+        //        int expRow = currentRow + i;
+        //        int expCol = currentCol + j;
+        //        preloadList.Add(new ChunkVector2(expRow, expCol));
+        //    }
+        //}
+        return preloadList;
     }
 
+    private float _lastUnloadTime;
+    private const float UnloadInterval = 10f; // 每 10 秒调用一次
+
     /// <summary>
-    /// 对比当前块列表与实际块列表，并更新当前块列表
+    /// 更新当前块列表
     /// </summary>
     /// <param name="actulChunkList">实际块列表</param>
     /// <param name="currentPos">当前中心块位置</param>
     private void UpdateCurrentChunkList(List<ChunkVector2> actulChunkList, ChunkVector2 currentPos)
     {
         // 卸载不再需要的块
-        for (int i = 0; i < m_currentChunkList.Count; i++)
+        UnloadUnnecessaryChunks(actulChunkList);
+        //加载新的块
+        LoadNewChunks(actulChunkList, currentPos);
+        //统一更新所有块的状态
+        UpdateChunkStates(currentPos);
+        #region List更新块列表
+        //for (int i = m_currentChunkList.Count - 1; i >= 0; i--)
+        //{
+        //    ChunkVector2 pos = m_currentChunkList[i];
+        //    if (!actulChunkList.Contains(pos))
+        //    {
+        //        if (m_chunkMap.ContainsKey(pos))
+        //        {
+        //            m_chunkMap[pos].Unload();
+        //            m_chunkMap.Remove(pos);
+        //        }
+        //        m_currentChunkList.RemoveAt(i);// 移除当前块列表中不存在与实际块列表的块
+        //    }
+        //    else
+        //    {
+        //        actulChunkList.Remove(pos);// 实际块列表移除和当前块列表中相同的元素
+        //         // 更新块的状态
+        //        ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
+        //        m_chunkMap[pos].Update(actualState);
+        //    }
+        //}
+        //for (int i = 0; i < actulChunkList.Count; i++)
+        //{
+        //    ChunkVector2 pos = actulChunkList[i];
+        //    if (!m_chunkMap.ContainsKey(pos)) // 如果块不存在，则创建新的块
+        //    {
+        //        Chunk newChunk = new Chunk(pos); // 创建新块
+        //        m_chunkMap[pos] = newChunk; // 添加到字典中
+        //    }
+
+        //    // 更新块的状态
+        //    ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
+        //    m_chunkMap[pos].Update(actualState);
+
+        //    m_currentChunkList.Add(pos); // 添加到当前块列表
+        //}
+        #endregion
+        //Resources.UnloadUnusedAssets(); // 释放未使用的资源
+    }
+
+    private void UpdateChunkStates(ChunkVector2 currentPos)
+    {
+        foreach (var pos in m_currentChunkList)
         {
-            ChunkVector2 pos = m_currentChunkList[i];
-            if (!actulChunkList.Contains(pos)) // 实际块列表里若不存在当前列表的指定元素，则卸载删除
+            ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
+            m_chunkMap[pos].Update(actualState);
+        }
+    }
+
+    private void LoadNewChunks(List<ChunkVector2> actulChunkList, ChunkVector2 currentPos)
+    {
+        foreach (var pos in actulChunkList)
+        {
+            if (!m_chunkMap.ContainsKey(pos))
+            {
+                Chunk newChunk = new Chunk(pos);
+                m_chunkMap[pos] = newChunk;
+            }
+            m_currentChunkList.Add(pos);
+        }
+    }
+
+    private void UnloadUnnecessaryChunks(List<ChunkVector2> actulChunkList)
+    {
+        var chunksToRemove = new List<ChunkVector2>();
+        foreach (var pos in m_currentChunkList)
+        {
+            if (!actulChunkList.Contains(pos))
             {
                 if (m_chunkMap.ContainsKey(pos))
                 {
-                    m_chunkMap[pos].Unload(); // 卸载不存在于实际块列表的块
-                    m_chunkMap.Remove(pos);  // 从字典中移除
+                    m_chunkMap[pos].Unload();
+                    m_chunkMap.Remove(pos);
                 }
-
-                m_currentChunkList.RemoveAt(i); // 移除当前块列表中不存在与实际块列表的块
-                i--; // 在遍历列表时删除列表元素，记得索引-1，否则无法正确遍历
-            }
-            else
-            {
-                actulChunkList.Remove(pos); // 实际块列表移除和当前块列表中相同的元素
-                // 更新块的状态
-                ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
-                m_chunkMap[pos].Update(actualState);
+                chunksToRemove.Add(pos);
             }
         }
-
-        // 加载新的块
-        for (int i = 0; i < actulChunkList.Count; i++)
+        foreach (var pos in chunksToRemove)
         {
-            ChunkVector2 pos = actulChunkList[i];
-            if (!m_chunkMap.ContainsKey(pos)) // 如果块不存在，则创建新的块
-            {
-                Chunk newChunk = new Chunk(pos); // 创建新块
-                m_chunkMap[pos] = newChunk; // 添加到字典中
-            }
-
-            // 更新块的状态
-            ChunkState actualState = GetChunkStateByRelativePosition(pos, currentPos);
-            m_chunkMap[pos].Update(actualState);
-
-            m_currentChunkList.Add(pos); // 添加到当前块列表
+            m_currentChunkList.Remove(pos);
         }
-
-        //Resources.UnloadUnusedAssets(); // 释放未使用的资源
     }
+
+
 
     /// <summary>
     /// 获取块坐标
@@ -159,8 +227,8 @@ public class ChunkController : MonoBehaviour
     /// <returns></returns>
     ChunkVector2 GetCurrentChunkVector(Vector3 position)
     {
-        int col = (int)(position.x / m_chunkLength);
-        int row = (int)(position.y / m_chunkLength);
+        int col = Mathf.FloorToInt(position.x / m_chunkLength);
+        int row = Mathf.FloorToInt(position.y / m_chunkLength);
         return new ChunkVector2(row, col);
     }
 
@@ -183,11 +251,6 @@ public class ChunkController : MonoBehaviour
         {
             return ChunkState.Cache;
         }
-        if (rowAmount <= 1 || colAmount <= 1)
-        {
-            return ChunkState.Display;
-        }
-
-        return ChunkState.UnLoad;
+        return ChunkState.Display; // 其他情况均为 Display
     }
 }
