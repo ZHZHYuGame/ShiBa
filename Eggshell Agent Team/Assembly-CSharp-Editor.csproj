@@ -56,13 +56,8 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Editor\ConfigManager.cs" />
-    <Compile Include="Assets\Editor\ConfigMgr.cs" />
-    <Compile Include="Assets\Editor\CreateMapEditor.cs" />
-    <Compile Include="Assets\Editor\EnemyEditor.cs" />
-    <Compile Include="Assets\Editor\EnemyWavesEditor.cs" />
+    <Compile Include="Assets\Editor\LastEditor.cs" />
     <Compile Include="Assets\Editor\MapEditor.cs" />
-    <Compile Include="Assets\Editor\MapInforMation.cs" />
     <Compile Include="Assets\Editor\WorldEditor.cs" />
     <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableCodeGenerator.cs" />
     <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableGenerator.cs" />
@@ -345,9 +340,6 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.14.18\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -824,25 +816,9 @@
       <Project>{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="spine-unity-examples.csproj">
-      <Project>{3141FCE0-4005-8A3F-27C1-A190AEEBB93F}</Project>
-      <Name>spine-unity-examples</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
       <Project>{BF7202C6-0604-08EE-2844-63EB4AD8CD29}</Project>
       <Name>UnityGameFramework.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity.csproj">
-      <Project>{A8CCD435-2625-7968-88AE-A8AD1FDDDB30}</Project>
-      <Name>spine-unity</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-examples-editor.csproj">
-      <Project>{123BC292-7ECF-020E-FE0B-D5FAFB57D2C6}</Project>
-      <Name>spine-unity-examples-editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}</Project>
-      <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

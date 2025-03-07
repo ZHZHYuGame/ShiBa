@@ -3,61 +3,31 @@
   "WorkspaceRootPath": "D:\\Git\\2206Git\\Eggshell Agent Team\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git\\2206git\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206Git\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206Git\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206Git\\Eggshell Agent Team\\assets\\gamemain\\scripts\\map\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\map\\mapmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206Git\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206Git\\Eggshell Agent Team\\assets\\gamemain\\scripts\\map\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\map\\playercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcewrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcewrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git\\2206git\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\shiba\\shiba\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\assetbundlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\assetbundlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\WUyong\\2206AA\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapResMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\loadingprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\loadingprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> master
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\resourcesmanager\\resourcesloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\shiba\\shiba\\eggshell agent team\\assets\\gamemain\\scripts\\assetbundles\\lru\\lrucache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\lru\\lrucache.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Map\\MapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -71,8 +41,7 @@
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ResourceManager.cs",
               "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
@@ -81,36 +50,11 @@
               "ViewState": "AQIAAEQAAAAAAAAAAAAnwEgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-05T07:52:06.565Z",
-=======
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AssetBundleManager.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\AssetBundleManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\AssetBundleManager.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\AssetBundleManager.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\AssetBundleManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T02:48:16.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoadingProgress.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\LoadingProgress.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\LoadingProgress.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\LoadingProgress.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\LoadingProgress.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAswAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T01:43:28.826Z",
->>>>>>> master
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
               "Title": "MainPanel.cs",
               "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
@@ -118,8 +62,7 @@
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T07:36:36.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T08:38:57.538Z"
             },
             {
               "$type": "Document",
@@ -130,123 +73,55 @@
               "ToolTip": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAA5AAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATfSURBVEhL7VRbbxNHFD7rXe/aG3sdezHYieNwC7kQqrQlQIPUBIGqigr1qRW/oEFqXirxByp\u002BAG8I8coDaiIhVRGCwANIIYFAAiK2k5jEzcWOndSx492N7b3NTo8jWqlv7VNViU/aHe3M2XPm\u002B843Ax/xn4P5MMIoHWV7Uj3shDrBvsi\u002BgFwu92EFQAgJtNPsJHeG71iN79nZWXdCS7DP1p5B0kyS2R9myTJddo\u002BPjbteMi/JGIwR\u002BB5II9bVeI2OjrJdG11SBjJxTuN6hKrQazt2r7an9dqG3cvtcR1lp3ywEff06VMu3B0OUx/t8Im\u002BDtEWIw9nHvpgA45V/dWuWqnWHs/EJfgO2EZujlLKTC1NiVWjehos\u002BNp22f0EiOBm3UA8BAS3AB7Ok\u002BW9/ONVfvXeQMcAr\u002Bwq31KDXiKUADXpVJktz9SZ\u002BjDmi6ImCd7mH3Ue7nyRhvQek0wm\u002BSJT/HJdWb\u002BSU3KDO9WdI3Wz7vLwHhOLUJ7hwcW4fuPd/K\u002BXOi790hJoGZxcnbzyeuP1Z4vbi8ymurkY8UeW\u002B1v7v8qUMsG1yto65njGsuy4YAvT3Bv7jRvq0IPJT\u002BPCMepQT4fcsSeJUhJ3rgEFYlM7j/PZgCfAYLFm0zYDBjF8JjHBoU7AsAxZNVWfTnTRJraETCRURjTLJsMl1hIujuFCqq6GMVg42HSw1H2oe8kreO9jgS3TMS2Ub0/X9QIyqoADqXBT\u002BNOIL9JZ1Iqg1JV8PBhPnWo59blFrKZyvVyuGJV1B5zNoBF0XOmdNCxsLUCpVkL5GC0khpLH5eP3Y6HYgwP0wCNVUydEvzjZ3t\u002Bexh0pVKfzR0JHsrFArBb2heuiIOYudl18dyZ\u002BRsM5S/JIJaS5ipvLzd2Zs7l0KQ0SJ0FMijW03kW6rzLFzD2v4t29cOGC3XBCA0jZlYKUSDkaKamlgGIo7qpZZSzbklL5VFT2yoJqqC6UT3Q5riCxSQCdVNm3qWM7\u002B0kQDmpuJWoJfWhoaN/Hf6Lh80Nth1qBg\u002BG3\u002BbcXZjZmDiS3kzJKMvQk/WT49tTt2PTadFNBKZxEqb\u002BhLB2KnYvxnAwy\u002BH1\u002BwD5A1aoym9omJ1LRMz43TqY3pmkWslDL1OhObodpDjWryPKV7JMjUV/Ut1vbBdMy36NUK30tfRK6qBkZ5dAAi8h4VVIlwl69elUIysEBtNUp3dabkKbqd/mN1lBrO0/5o6zOHrPBjqAd2ZAvVBRAKFnUotj4GsZmNEubOhs/O3X\u002B8HlXRa/kd/Xd15VqZRLPyPwKrGjstR\u002BvuSVJ6iYOOapbuoxOkLBByI3/BM9Dn2Zofah1W92qG6ViaWHw5GAZzaCWq\u002BWsUlNSOM5fH7j\u002B/kTkxM5qeXVxq7L1DgssZRYyv8MtcNgbd28wVKMi7sqPtEL4tNTterxm1toVXWnHAu1YWLQcK4\u002BWnX1897HVdrmtsrWylTWajA1BFYpBNViPhqOFdCa9tqwuF2bmZjQYw34iGGwq83zpuU\u002BxlHPb6vZlPImn5/PzQnGvCAzDQMgbArlJzga8gQmmhbl784ub\u002Bv5f/xCuRnA\u002Bka/RAJ0VWOEWXg0/oUwjOtVH8MIbISYZIYT8zBDmQe5mzvw3yRv423VdeFjgynaZnSvMQSFf2J\u002BPtkRB5mVHMIW/ruuP\u002BD8B4A9Au8tL7dFX2AAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-03-05T07:36:36.376Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T08:38:57.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MapResMgr.cs",
               "DocumentMoniker": "E:\\WUyong\\2206AA\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapResMgr.cs",
               "ToolTip": "E:\\WUyong\\2206AA\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapResMgr.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
-=======
-              "DocumentIndex": 2,
-              "Title": "ResourceManager.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAcwBwAAAAXAAAAAAAAAA==",
->>>>>>> master
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T00:39:53.141Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 2,
-=======
-              "DocumentIndex": 1,
-              "Title": "ResourceWrapper.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceWrapper.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceWrapper.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceWrapper.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceWrapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T01:00:14.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T11:18:48.156Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
->>>>>>> master
               "Title": "GameMgr.cs",
               "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
               "ToolTip": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAgwDAAAAA7AAAAAAAAAA==",
+              "ViewState": "AQIAADQAAAAAAAAAAAAewCgAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2025-03-05T07:36:36.77Z"
+              "WhenOpened": "2025-03-05T07:36:36.77Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MapManager.cs",
               "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
               "ToolTip": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAuwA0AAAAbAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATfSURBVEhL7VRbbxNHFD7rXe/aG3sdezHYieNwC7kQqrQlQIPUBIGqigr1qRW/oEFqXirxByp\u002BAG8I8coDaiIhVRGCwANIIYFAAiK2k5jEzcWOndSx492N7b3NTo8jWqlv7VNViU/aHe3M2XPm\u002B843Ax/xn4P5MMIoHWV7Uj3shDrBvsi\u002BgFwu92EFQAgJtNPsJHeG71iN79nZWXdCS7DP1p5B0kyS2R9myTJddo\u002BPjbteMi/JGIwR\u002BB5II9bVeI2OjrJdG11SBjJxTuN6hKrQazt2r7an9dqG3cvtcR1lp3ywEff06VMu3B0OUx/t8Im\u002BDtEWIw9nHvpgA45V/dWuWqnWHs/EJfgO2EZujlLKTC1NiVWjehos\u002BNp22f0EiOBm3UA8BAS3AB7Ok\u002BW9/ONVfvXeQMcAr\u002Bwq31KDXiKUADXpVJktz9SZ\u002BjDmi6ImCd7mH3Ue7nyRhvQek0wm\u002BSJT/HJdWb\u002BSU3KDO9WdI3Wz7vLwHhOLUJ7hwcW4fuPd/K\u002BXOi790hJoGZxcnbzyeuP1Z4vbi8ymurkY8UeW\u002B1v7v8qUMsG1yto65njGsuy4YAvT3Bv7jRvq0IPJT\u002BPCMepQT4fcsSeJUhJ3rgEFYlM7j/PZgCfAYLFm0zYDBjF8JjHBoU7AsAxZNVWfTnTRJraETCRURjTLJsMl1hIujuFCqq6GMVg42HSw1H2oe8kreO9jgS3TMS2Ub0/X9QIyqoADqXBT\u002BNOIL9JZ1Iqg1JV8PBhPnWo59blFrKZyvVyuGJV1B5zNoBF0XOmdNCxsLUCpVkL5GC0khpLH5eP3Y6HYgwP0wCNVUydEvzjZ3t\u002Bexh0pVKfzR0JHsrFArBb2heuiIOYudl18dyZ\u002BRsM5S/JIJaS5ipvLzd2Zs7l0KQ0SJ0FMijW03kW6rzLFzD2v4t29cOGC3XBCA0jZlYKUSDkaKamlgGIo7qpZZSzbklL5VFT2yoJqqC6UT3Q5riCxSQCdVNm3qWM7\u002B0kQDmpuJWoJfWhoaN/Hf6Lh80Nth1qBg\u002BG3\u002BbcXZjZmDiS3kzJKMvQk/WT49tTt2PTadFNBKZxEqb\u002BhLB2KnYvxnAwy\u002BH1\u002BwD5A1aoym9omJ1LRMz43TqY3pmkWslDL1OhObodpDjWryPKV7JMjUV/Ut1vbBdMy36NUK30tfRK6qBkZ5dAAi8h4VVIlwl69elUIysEBtNUp3dabkKbqd/mN1lBrO0/5o6zOHrPBjqAd2ZAvVBRAKFnUotj4GsZmNEubOhs/O3X\u002B8HlXRa/kd/Xd15VqZRLPyPwKrGjstR\u002BvuSVJ6iYOOapbuoxOkLBByI3/BM9Dn2Zofah1W92qG6ViaWHw5GAZzaCWq\u002BWsUlNSOM5fH7j\u002B/kTkxM5qeXVxq7L1DgssZRYyv8MtcNgbd28wVKMi7sqPtEL4tNTterxm1toVXWnHAu1YWLQcK4\u002BWnX1897HVdrmtsrWylTWajA1BFYpBNViPhqOFdCa9tqwuF2bmZjQYw34iGGwq83zpuU\u002BxlHPb6vZlPImn5/PzQnGvCAzDQMgbArlJzga8gQmmhbl784ub\u002Bv5f/xCuRnA\u002Bka/RAJ0VWOEWXg0/oUwjOtVH8MIbISYZIYT8zBDmQe5mzvw3yRv423VdeFjgynaZnSvMQSFf2J\u002BPtkRB5mVHMIW/ruuP\u002BD8B4A9Au8tL7dFX2AAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-03-05T07:36:37.05Z"
-=======
-              "WhenOpened": "2025-03-03T00:42:27.4Z",
-              "EditorCaption": ""
->>>>>>> master
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T08:38:57.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-<<<<<<< HEAD
+              "DocumentIndex": 6,
               "Title": "PlayerControl.cs",
               "DocumentMoniker": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
               "ToolTip": "D:\\Git\\2206Git\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAADwvx8AAAAdAAAA",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATfSURBVEhL7VRbbxNHFD7rXe/aG3sdezHYieNwC7kQqrQlQIPUBIGqigr1qRW/oEFqXirxByp\u002BAG8I8coDaiIhVRGCwANIIYFAAiK2k5jEzcWOndSx492N7b3NTo8jWqlv7VNViU/aHe3M2XPm\u002B843Ax/xn4P5MMIoHWV7Uj3shDrBvsi\u002BgFwu92EFQAgJtNPsJHeG71iN79nZWXdCS7DP1p5B0kyS2R9myTJddo\u002BPjbteMi/JGIwR\u002BB5II9bVeI2OjrJdG11SBjJxTuN6hKrQazt2r7an9dqG3cvtcR1lp3ywEff06VMu3B0OUx/t8Im\u002BDtEWIw9nHvpgA45V/dWuWqnWHs/EJfgO2EZujlLKTC1NiVWjehos\u002BNp22f0EiOBm3UA8BAS3AB7Ok\u002BW9/ONVfvXeQMcAr\u002Bwq31KDXiKUADXpVJktz9SZ\u002BjDmi6ImCd7mH3Ue7nyRhvQek0wm\u002BSJT/HJdWb\u002BSU3KDO9WdI3Wz7vLwHhOLUJ7hwcW4fuPd/K\u002BXOi790hJoGZxcnbzyeuP1Z4vbi8ymurkY8UeW\u002B1v7v8qUMsG1yto65njGsuy4YAvT3Bv7jRvq0IPJT\u002BPCMepQT4fcsSeJUhJ3rgEFYlM7j/PZgCfAYLFm0zYDBjF8JjHBoU7AsAxZNVWfTnTRJraETCRURjTLJsMl1hIujuFCqq6GMVg42HSw1H2oe8kreO9jgS3TMS2Ub0/X9QIyqoADqXBT\u002BNOIL9JZ1Iqg1JV8PBhPnWo59blFrKZyvVyuGJV1B5zNoBF0XOmdNCxsLUCpVkL5GC0khpLH5eP3Y6HYgwP0wCNVUydEvzjZ3t\u002Bexh0pVKfzR0JHsrFArBb2heuiIOYudl18dyZ\u002BRsM5S/JIJaS5ipvLzd2Zs7l0KQ0SJ0FMijW03kW6rzLFzD2v4t29cOGC3XBCA0jZlYKUSDkaKamlgGIo7qpZZSzbklL5VFT2yoJqqC6UT3Q5riCxSQCdVNm3qWM7\u002B0kQDmpuJWoJfWhoaN/Hf6Lh80Nth1qBg\u002BG3\u002BbcXZjZmDiS3kzJKMvQk/WT49tTt2PTadFNBKZxEqb\u002BhLB2KnYvxnAwy\u002BH1\u002BwD5A1aoym9omJ1LRMz43TqY3pmkWslDL1OhObodpDjWryPKV7JMjUV/Ut1vbBdMy36NUK30tfRK6qBkZ5dAAi8h4VVIlwl69elUIysEBtNUp3dabkKbqd/mN1lBrO0/5o6zOHrPBjqAd2ZAvVBRAKFnUotj4GsZmNEubOhs/O3X\u002B8HlXRa/kd/Xd15VqZRLPyPwKrGjstR\u002BvuSVJ6iYOOapbuoxOkLBByI3/BM9Dn2Zofah1W92qG6ViaWHw5GAZzaCWq\u002BWsUlNSOM5fH7j\u002B/kTkxM5qeXVxq7L1DgssZRYyv8MtcNgbd28wVKMi7sqPtEL4tNTterxm1toVXWnHAu1YWLQcK4\u002BWnX1897HVdrmtsrWylTWajA1BFYpBNViPhqOFdCa9tqwuF2bmZjQYw34iGGwq83zpuU\u002BxlHPb6vZlPImn5/PzQnGvCAzDQMgbArlJzga8gQmmhbl784ub\u002Bv5f/xCuRnA\u002Bka/RAJ0VWOEWXg0/oUwjOtVH8MIbISYZIYT8zBDmQe5mzvw3yRv423VdeFjgynaZnSvMQSFf2J\u002BPtkRB5mVHMIW/ruuP\u002BD8B4A9Au8tL7dFX2AAAAABJRU5ErkJggg==",
-              "WhenOpened": "2025-03-05T07:36:37.052Z"
-=======
-              "Title": "ResourcesLoader.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAYwB0AAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T00:21:34.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LRUCache.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\LRU\\LRUCache.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\LRU\\LRUCache.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\LRU\\LRUCache.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\LRU\\LRUCache.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T01:45:05.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AssetDatabaseABDataSource.cs",
-              "DocumentMoniker": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs",
-              "ToolTip": "D:\\ShiBa\\ShiBa\\Eggshell Agent Team\\Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.assetbundlebrowser@1.7.0\\Editor\\AssetBundleDataSource\\AssetDatabaseABDataSource.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAgwFYAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T08:33:30.911Z"
->>>>>>> master
+              "WhenOpened": "2025-03-05T08:38:57.547Z"
             }
           ]
         }
