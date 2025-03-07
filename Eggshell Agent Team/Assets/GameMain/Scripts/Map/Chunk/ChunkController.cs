@@ -4,31 +4,31 @@ using System;
 
 public class ChunkController : MonoSingleton<ChunkController>
 {
-    /// <summary>
-    /// 所有的块
-    /// </summary>
+    //
+    public int m_row=-1;
+
+    public int m_col=-1;
+
+
+    //所有的块
     Dictionary<ChunkVector2, Chunk> m_chunkMap = new Dictionary<ChunkVector2, Chunk>();
 
-    /// <summary>
-    /// 当前玩家
-    /// </summary>
+    //玩家
     [SerializeField]
     Transform m_player;
 
-    /// <summary>
-    /// 当前玩家所在块位置
-    /// </summary>
+    //玩家所在块位置
     ChunkVector2 m_currentPos;
 
-    /// <summary>
-    /// 当前的块列表
-    /// </summary>
+    //预加载的地图块列表
+    [SerializeField]
+    HashSet<ChunkVector2> expectChunkVectorList = new HashSet<ChunkVector2>();
+
+    //显示加载的块列表
     [SerializeField]
     HashSet<ChunkVector2> m_currentChunkList = new HashSet<ChunkVector2>();
 
-    /// <summary>
-    /// 单个块的边长
-    /// </summary>
+    //单个地图块的边长
     [SerializeField]
     float m_chunkLength=10;
 
