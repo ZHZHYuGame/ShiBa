@@ -30,7 +30,7 @@ public class ChunkController : MonoSingleton<ChunkController>
     /// 单个块的边长
     /// </summary>
     [SerializeField]
-    float m_chunkLength = 10;
+    float m_chunkLength=10;
 
     [SerializeField]
     private int m_loadRange = 1; // 1 表示九宫格，2 表示 5x5，以此类推
@@ -40,7 +40,6 @@ public class ChunkController : MonoSingleton<ChunkController>
         // 初始化玩家所在的块
         InitMap();
     }
-
 
     protected void InitMap()
     {
@@ -131,7 +130,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         }
         return expectChunkPosList;
     }
-
+    
     private float _lastUnloadTime;
     private const float UnloadInterval = 10f; // 每 10 秒调用一次
 
@@ -218,7 +217,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         var chunksToRemove = new HashSet<ChunkVector2>();
         foreach (var pos in m_currentChunkList)
         {
-            if (!actualChunkList.Contains(pos) && m_chunkMap.ContainsKey(pos))
+            if (!actualChunkList.Contains(pos)&& m_chunkMap.ContainsKey(pos))
             {
                 if (CanUnloadChunk(pos)) // 检查块是否可以安全卸载
                 {
@@ -237,11 +236,11 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     private bool CanUnloadChunk(ChunkVector2 pos)
     {
-        if (m_chunkMap.ContainsKey(pos))
+        if(m_chunkMap.ContainsKey(pos))
         {
             return m_chunkMap[pos].m_count == 0;
         }
-        return true;
+        return true; 
     }
 
 
