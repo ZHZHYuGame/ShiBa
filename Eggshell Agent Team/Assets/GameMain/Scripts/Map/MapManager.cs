@@ -8,7 +8,7 @@ public enum MapType
     Three
 }
 
-public class MapManager : MonoBehaviour
+public class MapManager : MonoSingleton<MapManager>
 {
     [Range(1, 10)]
     public int oneMapScale=1;

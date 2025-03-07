@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking.Types;
 
 //地图信息表
 public class Map
@@ -13,7 +14,7 @@ public class Map
     private string map_Tips;//关卡描述
     private int map_Victory;//是否通关
     private int refeshId;//怪物波次信息
-    
+
 
     public Map()
     {
@@ -58,6 +59,7 @@ public class RefreshWaves
 
     public RefreshWaves()
     {
+
     }
 
     public RefreshWaves(int id, int map_id, int wave_id, int enemy_id, int enemy_num, float coefficient, int boss_id, int refreshBossWave)
@@ -81,7 +83,7 @@ public class RefreshWaves
     public int Boss_id { get => boss_id; set => boss_id = value; }
     public int RefreshBossWave { get => refreshBossWave; set => refreshBossWave = value; }
 }
-public class Role 
+public class Role
 {
     // ========== 基础属性 ==========
     private int id;//id
@@ -102,7 +104,23 @@ public class Role
     public Role()
     {
     }
-
+    public Role(Role role)
+    {
+        this.Id = role.id;
+        this.Name = role.name;
+        this.This_animator_path = role.this_animator_path;
+        this.This_object_path = role.this_object_path;
+        this.Lever = role.lever;
+        this.Blood = role.blood;
+        this.Atkspeed = role.atkspeed;
+        this.Movespeed = role.movespeed;
+        this.Atk = role.atk;
+        this.Type = role.type;
+        this.Def = role.def;
+        this.Maxboold = role.maxboold;
+        this.BodySize = role.bodySize;
+        this.BulletPath = role.bulletPath;
+    }
     public Role(int id, string name, string this_animator_path, string this_object_path, int lever, float blood, float atkspeed, float movespeed, float atk, int type, float def, float maxboold, float bodySize, string bulletPath = null)
     {
         this.Id = id;
@@ -139,6 +157,7 @@ public class Role
 //public class Player : Role
 //{
 //    // ========== 基础属性 ==========
+//    private int exp;
 //    private Skill[] activeSkills = new ActiveSkill[2]; // 当前装备技能
 //    private Skill[] passiveSkills = new PassiveSkill[2]; // 当前被动技能
 
@@ -146,17 +165,15 @@ public class Role
 //    {
 //    }
 
-//    public Player(Skill[] activeSkills, Skill[] passiveSkills)
+//    public Player(int exp, Skill[] activeSkills, Skill[] passiveSkills)
 //    {
-//        this.ActiveSkills = activeSkills;
-//        this.PassiveSkills = passiveSkills;
+//        this.exp = exp;
+//        this.activeSkills = activeSkills;
+//        this.passiveSkills = passiveSkills;
 //    }
-
-//    public Skill[] ActiveSkills { get => activeSkills; set => activeSkills = value; }
-//    public Skill[] PassiveSkills { get => passiveSkills; set => passiveSkills = value; }
 //}
 //boss
-public class BossEnemy: Role
+public class BossEnemy : Role
 {
     //boss技能...
 }
