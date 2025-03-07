@@ -5,7 +5,6 @@ using UnityEngine;
 public struct ChunkVector2
 {
     public int rowNum;
-
     public int colNum;
 
     public ChunkVector2(int rowNum, int colNum)
