@@ -8,12 +8,16 @@ public class LoadingProgress : BasePanel
 {
     public static Slider progressBar;//进度条Slider
     public Text progressText;//进度百分比文本
+    public static Image maskImage;
     public static float rotationSpeed = 100f;
     public static Image image;
     public float progress;
     private static string name = "LoadPanel";
     private static string path = "Panel/LoadPanel";
     private static LayerType layerType = LayerType.Normal;
+    public static float firstStartPos = 780;
+    public static float nextStartPos = -354;
+    public static float EndPos = -235;
 
     public static readonly UIType uIType = new UIType(path, name, layerType);
 
@@ -26,6 +30,7 @@ public class LoadingProgress : BasePanel
         Debug.Log(2);
         progressBar = UIMethod.Ins.GetOrAddSingleComponentInChild<Slider>(ActiveObj, "Slider");
         image = UIMethod.Ins.GetOrAddSingleComponentInChild<Image>(ActiveObj, "Image");
+        maskImage = UIMethod.Ins.GetOrAddSingleComponentInChild<Image>(ActiveObj, "MaskImage");
     }
     public override void OnDestroy()
     {
@@ -52,7 +57,7 @@ public class LoadingProgress : BasePanel
     /// </summary>
     public static void UpdateProgress(float progress)
     {
-        Debug.Log(1);
+        
         progressBar.value = progress;
        // progressText.text = $"{progress * 100:F0}%"; // 显示百分比
         if (progressBar.value >= 1)
