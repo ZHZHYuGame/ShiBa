@@ -71,6 +71,10 @@
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourceManager.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourceWrapper.cs" />
     <Compile Include="Assets\GameMain\Scripts\AssetBundles\ResourcesManager\ResourcesLoader.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\StartGame.cs" />
+    <Compile Include="Assets\GameMain\Scripts\AssetBundles\UISprite\UISprite.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Audio\AudioMgr.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Audio\audioce.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Builtin.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.Custom.cs" />
     <Compile Include="Assets\GameMain\Scripts\Base\GameEntry.cs" />
@@ -120,9 +124,26 @@
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\TargetableObject.cs" />
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\Thruster.cs" />
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\Weapon.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\DataAnalysis.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Enemy\AI_Move.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Enemy\EnemySpawner.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Enemy\Monster.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Enemy\WeaponOrbitController.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\ObjectPool.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Player\AutoAttackController.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Player\PlayerRole.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\SceneEntry.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\View\HpBase.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\View\HurtItem.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\View\PlayerMoveForm.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\Weapon\Projectile.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\GameBase.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\GameMode.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\SurvivalGame.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\Units\AllObjectPool.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\Units\CameraMgr.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\Units\ConfigMgr.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\Units\ETC.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarComponent.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItem.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItemObject.cs" />
@@ -258,7 +279,6 @@
     <None Include="Assets\GameMain\Configs\ResourceEditor.xml" />
     <None Include="Assets\GameMain\Libraries\protobuf-net.dll" />
     <None Include="Assets\GameMain\Configs\ResourceBuilder.xml" />
-    <None Include="Assets\GameMain\Maps\map.txt" />
     <None Include="Assets\GameMain\DataTables\Sound.txt" />
     <None Include="Assets\GameMain\Configs\BuildInfo.txt" />
     <None Include="Assets\StreamingAssets\HotFix\HotFix_Project.dll" />
@@ -881,6 +901,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.DeviceSimulator.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.DeviceSimulator.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Analytics">
       <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
