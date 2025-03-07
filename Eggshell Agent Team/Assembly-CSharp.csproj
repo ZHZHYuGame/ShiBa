@@ -255,6 +255,7 @@
     <None Include="Assets\EnemySpine\dartgoblin\dartgoblin.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Aircraft.txt" />
     <None Include="Assets\GameMain\Configs\DefaultConfig.txt" />
+    <None Include="Assets\map.txt" />
     <None Include="Assets\GameMain\DataTables\UIForm.txt" />
     <None Include="Assets\EnemySpine\pigman\pigman.atlas.txt" />
     <None Include="Assets\GameMain\DataTables\Music.txt" />
