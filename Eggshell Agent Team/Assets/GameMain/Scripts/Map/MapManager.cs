@@ -16,8 +16,6 @@ public class MapManager : MonoSingleton<MapManager>
     bool isMove = true;
     public MapType currType = MapType.One;
     GameObject[,] mapPool;
-    [SerializeField]
-    Sprite[] sprites;
     public GameObject map;
 
     private void Awake()
