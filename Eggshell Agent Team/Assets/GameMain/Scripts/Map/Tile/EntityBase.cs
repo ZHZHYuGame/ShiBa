@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //实体对象
-public class EntityBase
+public class EntityBase 
 {
     public uint index;//唯一标识
     public Transform tran;
     public EntityBase(Transform tran)
     {
         this.tran = tran;
+        FindChunkByPos();
     }
 
     public virtual void Show()
@@ -25,7 +26,7 @@ public class EntityBase
     private void FindChunkByPos()
     {
        ChunkVector2 chunkPos= ChunkController.Instance.GetCurrentChunkVector(tran.position);
-       ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
+       //ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
     }
 
     public void Destory()

@@ -111,7 +111,7 @@ public class UIMethod :Singleton<UIMethod>
             if (tra.gameObject.name == ComponentName)
             {
                 return tra.gameObject.GetComponent<T>();
-                break;
+               
             }
         }
 
