@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainPanel : BasePanel
@@ -9,7 +11,7 @@ public class MainPanel : BasePanel
     private static string name = "MainPanel";
     private static string path = "Panel/MainPanel";
     private static LayerType layerType = LayerType.Normal;
-
+    private List<Button>btns= new List<Button>();
     public static readonly UIType uIType = new UIType(path, name, layerType);
 
     public MainPanel() : base(uIType)
@@ -50,6 +52,30 @@ public class MainPanel : BasePanel
         toggles[2].isOn = true;
         toggles[2].transform.GetChild(1).transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
         toggles[2].transform.GetChild(2).gameObject.SetActive(true);
+        GameObject content = UIMethod.Ins.GetOrAddSingleComponentInChild<RectTransform>(ActiveObj, "Content").gameObject;
+        // Debug.Log(gameObject.name);
+        for (int i = 0; i < GameMgr.GetInstance().dataAnalysis.mapDic.Count; i++)
+        {
+            Button levelBtn = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<Button>("Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab"), content.transform);
+            levelBtn.transform.Find("Text").GetComponent<Text>().text = GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Name;
+            levelBtn.GetComponent<Image>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
+            Debug.Log(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
+            btns.Add(levelBtn);
+        }
+        for (int i = 0; i < btns.Count; i++)
+        {
+            int levelIndex = i;
+            btns[i].onClick.AddListener(() =>
+            {
+                //跳转场景
+                Game game = new Game();
+                GameMgr.GetInstance().SceneControl_Root.LoadScene(game.SceneName, game);
+                PlayerPrefs.SetInt("levelIndex", levelIndex);
+
+
+            });
+        }
+
     }
 
     private void Load()
