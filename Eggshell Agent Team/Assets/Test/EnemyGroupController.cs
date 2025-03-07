@@ -54,4 +54,10 @@ public class EnemyGroupController : MonoBehaviour
             yield return null;
         }
     }
+    private void Update()
+    {
+        // 显示性能数据
+        Debug.Log("FPS: " + (1f / Time.deltaTime));
+        Debug.Log("Enemy Count: " + enemyCount);
+    }
 }

@@ -160,7 +160,7 @@ public class ChunkController : MonoBehaviour
     ChunkVector2 GetCurrentChunkVector(Vector3 position)
     {
         int col = (int)(position.x / m_chunkLength);
-        int row = (int)(position.z / m_chunkLength);
+        int row = (int)(position.y / m_chunkLength);
         return new ChunkVector2(row, col);
     }
 
