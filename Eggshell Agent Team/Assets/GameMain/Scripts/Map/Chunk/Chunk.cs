@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public enum ChunkState
 {
@@ -12,12 +14,14 @@ public enum ChunkState
 public class Chunk
 {
     // 在块列表中所处的位置
-    ChunkVector2 m_position;
+    public ChunkVector2 m_position;
 
     //块当前的状态
     public ChunkState m_currentState = ChunkState.UnLoad;
 
     Dictionary<uint, EntityBase> m_entityDic;
+
+    GameObject plane;
 
     public int m_count
     {
@@ -32,16 +36,20 @@ public class Chunk
     {
         m_position = new ChunkVector2(rowNum, colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
+        //plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        //plane.transform.position = new Vector3(m_position.rowNum * 10, m_position.colNum * 10, 0);
     }
     public Chunk(ChunkVector2 position) : this(position.rowNum, position.colNum)
     {
         m_position = new ChunkVector2(position.rowNum, position.colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
+       // plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        //plane.transform.position = new Vector3(m_position.rowNum*10, m_position.colNum*10, 0);
     }
 
     public void Display() { MonoThread.Instance.Excute(CoroutineDisplay()); }
-    public void Cache() { MonoThread.Instance.Excute(CoroutineUnload()); }
-    public void Unload() { MonoThread.Instance.Excute(CoroutineCache()); }
+    public void Cache() { MonoThread.Instance.Excute(CoroutineCache()); }
+    public void Unload() { MonoThread.Instance.Excute(CoroutineUnload()); }
 
     //添加对象
     public void AddEntity(EntityBase entity)
@@ -56,25 +64,38 @@ public class Chunk
             m_entityDic[index].Destory();
             m_entityDic.Remove(index);
     }
-
+    /// <summary>
+    /// 获取地图块的中心点
+    /// </summary>
+    public Vector2 GetChunkCenter(float chunkLength)
+    {
+        float centerX = m_position.colNum * chunkLength + chunkLength / 2;
+        float centerY = m_position.rowNum * chunkLength + chunkLength / 2;
+        return new Vector2(centerX, centerY);
+    }
 
     //显示
     IEnumerator CoroutineDisplay()
     {
-        foreach (var item in m_entityDic.Values)
+        if(m_entityDic.Count > 0)
         {
-            yield return item;
-            item.Show();
+            foreach (var item in m_entityDic.Values)
+            {
+                yield return item;
+                item.Show();
+            }
         }
+        
     }
     //卸载
     IEnumerator CoroutineUnload()
     {
-        //foreach (var item in m_entityDic.Values)
-        //{
-        //    item.Destory();
-        //}
-        //m_entityDic.Clear();
+        if(plane!=null)
+        {
+            GameObject.Destroy(plane);
+            plane = null;
+        }
+
         yield return null;
     }
     //缓存
