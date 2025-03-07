@@ -121,9 +121,11 @@
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\TargetableObject.cs" />
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\Thruster.cs" />
     <Compile Include="Assets\GameMain\Scripts\Entity\EntityLogic\Weapon.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\AtkManager\DataAnalysis.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\GameBase.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\GameMode.cs" />
     <Compile Include="Assets\GameMain\Scripts\Game\SurvivalGame.cs" />
+    <Compile Include="Assets\GameMain\Scripts\Game\Units\ConfigMgr.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarComponent.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItem.cs" />
     <Compile Include="Assets\GameMain\Scripts\HPBar\HPBarItemObject.cs" />
