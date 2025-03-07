@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class ConfigMgr
@@ -16,9 +17,10 @@ public class ConfigMgr
         }
         else
         {
-            if (File.Exists(Application.dataPath + "/Resources/" + path + ".json"))
+            string assetPath = Application.dataPath + "/GameMain/GameResources/Configs/" + path+".json";
+            if (File.Exists(assetPath))
             {
-                string json = Resources.Load<TextAsset>(path).text;
+                string json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/GameMain/GameResources/Configs/" + path + ".json").text;
                 T table = JsonConvert.DeserializeObject<T>(json);
                 dic.Add(path, table);
                 return table;
