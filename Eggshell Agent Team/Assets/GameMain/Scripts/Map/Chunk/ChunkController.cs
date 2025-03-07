@@ -4,33 +4,33 @@ using System;
 
 public class ChunkController : MonoSingleton<ChunkController>
 {
-    /// <summary>
-    /// 所有的块
-    /// </summary>
+    //
+    public int m_row=-1;
+
+    public int m_col=-1;
+
+
+    //所有的块
     Dictionary<ChunkVector2, Chunk> m_chunkMap = new Dictionary<ChunkVector2, Chunk>();
 
-    /// <summary>
-    /// 当前玩家
-    /// </summary>
+    //玩家
     [SerializeField]
     Transform m_player;
 
-    /// <summary>
-    /// 当前玩家所在块位置
-    /// </summary>
+    //玩家所在块位置
     ChunkVector2 m_currentPos;
 
-    /// <summary>
-    /// 当前的块列表
-    /// </summary>
+    //预加载的地图块列表
+    [SerializeField]
+    HashSet<ChunkVector2> expectChunkVectorList = new HashSet<ChunkVector2>();
+
+    //显示加载的块列表
     [SerializeField]
     HashSet<ChunkVector2> m_currentChunkList = new HashSet<ChunkVector2>();
 
-    /// <summary>
-    /// 单个块的边长
-    /// </summary>
+    //单个地图块的边长
     [SerializeField]
-    float m_chunkLength=10;
+    float m_chunkLength = 10;
 
     [SerializeField]
     private int m_loadRange = 1; // 1 表示九宫格，2 表示 5x5，以此类推
@@ -40,6 +40,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         // 初始化玩家所在的块
         InitMap();
     }
+
 
     protected void InitMap()
     {
@@ -130,7 +131,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         }
         return expectChunkPosList;
     }
-    
+
     private float _lastUnloadTime;
     private const float UnloadInterval = 10f; // 每 10 秒调用一次
 
@@ -217,7 +218,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         var chunksToRemove = new HashSet<ChunkVector2>();
         foreach (var pos in m_currentChunkList)
         {
-            if (!actualChunkList.Contains(pos)&& m_chunkMap.ContainsKey(pos))
+            if (!actualChunkList.Contains(pos) && m_chunkMap.ContainsKey(pos))
             {
                 if (CanUnloadChunk(pos)) // 检查块是否可以安全卸载
                 {
@@ -236,11 +237,11 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     private bool CanUnloadChunk(ChunkVector2 pos)
     {
-        if(m_chunkMap.ContainsKey(pos))
+        if (m_chunkMap.ContainsKey(pos))
         {
             return m_chunkMap[pos].m_count == 0;
         }
-        return true; 
+        return true;
     }
 
 

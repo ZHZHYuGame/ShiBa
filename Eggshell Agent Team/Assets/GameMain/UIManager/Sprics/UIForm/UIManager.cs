@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
@@ -78,8 +79,9 @@ public class UIManager : Singleton<UIManager>
             // 更新字典中的 Canvas 引用
             canvasDictionary[uiType.UILayerType] = targetCanvas;
         }
-
-        GameObject prefab = Resources.Load<GameObject>(uiType.Path);
+        //Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/HpBase.prefab"), canvas.transform);
+        //GameObject prefab = Resources.Load<GameObject>(uiType.Path);
+        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/" + uiType.Path+ ".prefab");
         if (prefab == null)
         {
             Debug.LogError($"无法加载预制体: {uiType.Path}");
