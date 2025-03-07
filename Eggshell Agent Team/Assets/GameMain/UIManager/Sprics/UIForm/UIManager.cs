@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
@@ -17,8 +18,8 @@ public class UIManager : Singleton<UIManager>
     /// 当前场景对应的Canvas
     /// </summary>
     public GameObject CanvasObj;
+    public ResourceManager _resourcesManager;
 
-    
 
     public GameObject CanvasTop;
     public GameObject CanvasUpper;
@@ -29,6 +30,7 @@ public class UIManager : Singleton<UIManager>
 
     public UIManager()
     {
+        _resourcesManager=new ResourceManager();
         stack_ui = new Stack<BasePanel>();
         dic_uiobject = new Dictionary<string, GameObject>();
         canvasDictionary = new Dictionary<LayerType, GameObject>
@@ -85,9 +87,18 @@ public class UIManager : Singleton<UIManager>
         }
 
         // 实例化到目标 Canvas 下
-        GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
 
-        return gameObject;
+        //同步加载资源         
+        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
+        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
+        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
+        GameObject prefabs =_resourcesManager.LoadResource<GameObject>(GetPath("myprefab"),prefab.name);
+        if (prefabs != null)
+        {
+            GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
+            return gameObject;
+        }
+        return null;
         #region 废弃代码
         //GameObject gameObject;
         //switch (uiType.UILayerType)
@@ -135,7 +146,10 @@ public class UIManager : Singleton<UIManager>
     }
     #endregion
 
-
+    public string GetPath(string path)
+    {
+        return Path.Combine(Application.streamingAssetsPath, path);
+    }
     /// <summary>
     /// 往stack里面压一个Panel；
     /// </summary>

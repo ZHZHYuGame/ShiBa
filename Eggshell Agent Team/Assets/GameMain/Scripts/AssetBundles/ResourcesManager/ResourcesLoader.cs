@@ -26,18 +26,21 @@ public static class ResourcesLoader
             Debug.LogError($"AssetBundle file not found: {bundlepath}");
             return null;
         }
-
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/AssetBundles/" + "myprefab");
-        if (assetBundle == null)
+        if (!ResourceManager._loadedBundles.TryGetValue(bundlepath, out var bundles))
         {
-            Debug.LogError($"Failed to load AssetBundle: {assetBundle}");
-            return null;
+            bundles = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/myprefab");
+            if (bundles == null)
+            {
+                Debug.LogError($"Failed to load AssetBundle: {bundles}");
+                return null;
+            }
+            ResourceManager._loadedBundles[bundlepath] = bundles;
         }
-        T asset = assetBundle.LoadAsset<T>(assetName);
+        T asset = bundles.LoadAsset<T>(assetName);
         if (asset == null)
         {
             Debug.LogError($"Failed to load asset: {assetName} from bundle: {bundlepath}");
-            assetBundle.Unload(false); // 卸载 AB包，但不卸载已加载的资源
+            bundles.Unload(false); // 卸载 AB包，但不卸载已加载的资源
             return null;
         }
 
