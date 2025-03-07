@@ -48,6 +48,7 @@ public class ResourceManager
             onComplete?.Invoke(bundleLoadRequest.assetBundle);
         }
     }
+    float sppeed = 200;
     /// <summary>
     /// 异步加载
     /// </summary>
@@ -79,32 +80,42 @@ public class ResourceManager
         }
         //// 按需加载 AssetBundle
         AssetBundle ab = null;
+        float  sppeed = 300;
+        yield return LoadAssetBundleAsync(bundlePath, (bundle) => ab = bundle);
 
-        //yield return LoadResourcesFromPersistentPath(bundlePath, (bundle) => ab = bundle);
-
-        //if (ab == null)
-        //{
-        //    Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
-        //    onComplete?.Invoke(null);
-        //    yield break;
-        //}
+        if (ab == null)
+        {
+            Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+            onComplete?.Invoke(null);
+            yield break;
+        }
         // 异步加载资源
-        var assetLoadRequest = assetBundle.LoadAssetAsync<T>(assetName);
+        var assetLoadRequest = ab.LoadAssetAsync<T>(assetName);
         while (!assetLoadRequest.isDone)
         {
             float globalProgress = initialProgress + assetLoadRequest.progress * progressRange; // 映射到全局进度
+                                                                                                // 增加 Right 属性
+            Vector2 offsetMax = LoadingProgress.maskImage.rectTransform.offsetMax;
+            offsetMax.x += sppeed * Time.deltaTime;
+            Debug.Log(offsetMax.x);
+            if (offsetMax.x >= LoadingProgress.EndPos)
+            {
+                offsetMax.x = LoadingProgress.nextStartPos;
+                sppeed = 180;
+            }
+            LoadingProgress.maskImage.rectTransform.offsetMax = offsetMax;
             LoadingProgress.UpdateProgress(globalProgress);
             yield return new WaitForEndOfFrame();
         }
 
         if (assetLoadRequest.asset == null)
         {
-            Debug.LogError($"Failed to load asset: {assetName} from bundle: {assetBundle.name}");
+            Debug.LogError($"Failed to load asset: {assetName} from bundle: {ab.name}");
             onComplete?.Invoke(null);
         }
         else
         {
-            Debug.Log($"Asset loaded: {assetName}");
+            //Debug.Log($"Asset loaded: {assetName}");
             LoadingProgress.UpdateProgress(initialProgress + progressRange); // 更新到全局进度终点
             var wrapper = new ResourceWrapper<UnityEngine.Object>(assetLoadRequest.asset);
             _resourceCache[cacheKey] = wrapper; // 添加到缓存

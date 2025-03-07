@@ -3,7 +3,7 @@
     "Id": 0,
     "Name": "勇者",
     "This_animator_path": null,
-    "This_object_path": "Assets/GameMain/GameResources/Role.png",
+    "This_object_path": "Assets/GameMain/GameResources/Prefabs/Player.Prefab",
     "Lever": 1,
     "Blood": 3000.0,
     "Atkspeed": 0.5,
@@ -13,6 +13,6 @@
     "Def": 0.0,
     "Maxboold": 3000.0,
     "BodySize": 1.0,
-    "BulletPath": "Assets/GameMain/GameResources/Prefabs/Bullet.prefab"
+    "BulletPath": "Assets/GameMain/GameResources/Prefabs/bullet.prefab"
   }
 ]
