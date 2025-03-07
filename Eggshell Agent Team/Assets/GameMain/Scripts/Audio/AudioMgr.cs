@@ -70,9 +70,10 @@ public class AudioMgr : MonoBehaviour
     {
         if (clip == null) return;
 
+       
         AudioSource source = GetAvailableAudioSource();
         if (source == null) return;
-
+        
         ConfigureAudioSource(source, clip, volume, is3D ? 1f : defaultSpatialBlend);
         source.outputAudioMixerGroup = sfxMixerGroup;
         source.Play();
@@ -144,6 +145,7 @@ public class AudioMgr : MonoBehaviour
     private void ConfigureAudioSource(AudioSource source, AudioClip clip,
                                      float volume, float spatialBlend)
     {
+        
         source.clip = clip;
         source.volume = volume;
         source.spatialBlend = spatialBlend;
