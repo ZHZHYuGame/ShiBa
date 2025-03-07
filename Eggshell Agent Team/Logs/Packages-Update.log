@@ -188,7 +188,11 @@ The following packages were added:
   com.unity.timeline@1.2.18
   com.unity.ugui@1.0.0
 
+<<<<<<< HEAD
+=== Thu Feb 27 10:05:44 2025
+=======
 === Wed Feb 26 13:22:11 2025
+>>>>>>> master
 
 Packages were changed.
 Update Mode: resetToDefaultDependencies
@@ -234,6 +238,8 @@ The following packages were added:
   com.unity.textmeshpro@2.1.6
   com.unity.timeline@1.2.18
   com.unity.ugui@1.0.0
+<<<<<<< HEAD
+=======
 
 === Thu Feb 27 13:35:23 2025
 
@@ -310,3 +316,4 @@ The following packages were added:
   com.unity.multiplayer-hlapi@1.0.8
   com.unity.purchasing@4.1.5
   com.unity.xr.legacyinputhelpers@2.1.9
+>>>>>>> master

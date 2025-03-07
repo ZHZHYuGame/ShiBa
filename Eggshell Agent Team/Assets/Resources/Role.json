@@ -1,0 +1,18 @@
+[
+  {
+    "Id": 0,
+    "Name": "гТеп",
+    "This_animator_path": null,
+    "This_object_path": "Assets/GameMain/GameResources/Role.png",
+    "Lever": 1,
+    "Blood": 3000.0,
+    "Atkspeed": 0.5,
+    "Movespeed": 5.0,
+    "Atk": 20.0,
+    "Type": 0,
+    "Def": 0.0,
+    "Maxboold": 3000.0,
+    "BodySize": 1.0,
+    "BulletPath": "Assets/GameMain/GameResources/Prefabs/Bullet.prefab"
+  }
+]
