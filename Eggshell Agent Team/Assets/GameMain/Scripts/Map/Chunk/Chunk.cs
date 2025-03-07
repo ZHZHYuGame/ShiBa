@@ -12,7 +12,7 @@ public enum ChunkState
 public class Chunk
 {
     // 在块列表中所处的位置
-    ChunkVector2 m_position;
+    public ChunkVector2 m_position;
 
     //块当前的状态
     public ChunkState m_currentState = ChunkState.UnLoad;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerControl : MonoBehaviour
+public class PlayerControl : MonoSingleton<PlayerControl>
 {
     public MapManager mapManager;
     Camera cam;
@@ -20,8 +20,7 @@ public class PlayerControl : MonoBehaviour
         mapScale = mapManager.oneMapScale * 10;
         pyl = mapScale / 2;
         mapManager.CreatMap(x, y);
-        cam.orthographicSize = 8 * mapManager.oneMapScale;
-        cam.transform.position = transform.position + Vector3.back * 3*mapManager.oneMapScale;
+        cam.orthographicSize = 8;
     }
 
     void Update()
@@ -36,9 +35,6 @@ public class PlayerControl : MonoBehaviour
 
             // 移动角色  
             transform.position += moveDirection * speed * Time.deltaTime;
-
-            // 更新相机位置  
-            cam.transform.position = transform.position + Vector3.back * 3 * mapManager.oneMapScale;
 
             // 检查地图更新  
             if (Mathf.Floor((transform.position.x + pyl) / mapScale) != x ||
