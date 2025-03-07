@@ -5,7 +5,7 @@ using UnityEngine;
 //实体对象
 public class EntityBase
 {
-    public int index;//唯一标识
+    public uint index;//唯一标识
     public Transform tran;
     public EntityBase(Transform tran)
     {
@@ -21,9 +21,17 @@ public class EntityBase
     {
         tran.localScale = Vector3.zero;
     }
+
+    private void FindChunkByPos()
+    {
+       ChunkVector2 chunkPos= ChunkController.Instance.GetCurrentChunkVector(tran.position);
+       ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
+    }
+
     public void Destory()
     {
         //对象池回收
         //Object.Destroy(tran.gameObject);
     }
+
 }
