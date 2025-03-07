@@ -15,10 +15,14 @@ public class Chunk
     ChunkVector2 m_position;
 
     //块当前的状态
-    ChunkState m_currentState = ChunkState.UnLoad;
+    public ChunkState m_currentState = ChunkState.UnLoad;
 
-    Dictionary<int, EntityBase> m_entityDic;
+    Dictionary<uint, EntityBase> m_entityDic;
 
+    public int m_count
+    {
+        get { return m_entityDic.Count; }
+    }
     /// <summary>
     /// 创建一个块对象
     /// </summary>
@@ -27,12 +31,12 @@ public class Chunk
     public Chunk(int rowNum, int colNum)
     {
         m_position = new ChunkVector2(rowNum, colNum);
-        m_entityDic = new Dictionary<int, EntityBase>();
+        m_entityDic = new Dictionary<uint, EntityBase>();
     }
     public Chunk(ChunkVector2 position) : this(position.rowNum, position.colNum)
     {
         m_position = new ChunkVector2(position.rowNum, position.colNum);
-        m_entityDic = new Dictionary<int, EntityBase>();
+        m_entityDic = new Dictionary<uint, EntityBase>();
     }
 
     public void Display() { MonoThread.Instance.Excute(CoroutineDisplay()); }
@@ -46,7 +50,7 @@ public class Chunk
         m_entityDic.Add(entity.index, entity);
     }
     //移除
-    public void RemoveEntity(int index)
+    public void RemoveEntity(uint index)
     {
         if (!m_entityDic.ContainsKey(index)) return;
             m_entityDic[index].Destory();
