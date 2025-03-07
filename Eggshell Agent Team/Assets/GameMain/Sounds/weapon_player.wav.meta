@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 guid: bf75b984df8a84987bcf3a8bf6e2862d
 AudioImporter:
+  externalObjects: {}
   serializedVersion: 6
   defaultSettings:
     loadType: 0
@@ -9,11 +10,23 @@ AudioImporter:
     compressionFormat: 1
     quality: 0.01
     conversionMode: 0
-  platformSettingOverrides: {}
-  forceToMono: 0
-  normalize: 1
+  platformSettingOverrides:
+    7:
+      loadType: 0
+      sampleRateSetting: 2
+<<<<<<< HEAD
+      sampleRateOverride: 11025
+=======
+      sampleRateOverride: 22050
+>>>>>>> 豪猪大王的分支
+      compressionFormat: 2
+      quality: 0.01
+      conversionMode: 0
+  forceToMono: 1
+  normalize: 0
   preloadAudioData: 0
   loadInBackground: 0
+  ambisonic: 0
   3D: 0
   userData: 
   assetBundleName: 

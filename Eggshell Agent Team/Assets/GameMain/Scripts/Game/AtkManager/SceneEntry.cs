@@ -19,7 +19,9 @@ public class SceneEntry : MonoBehaviour
         //画布获取
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
         //地图加载
-
+        Map map = ConfigMgr.GetDicData<Map>("Map", PlayerPrefs.GetInt("levelIndex"));
+        MapManager.Instance.Init(map);
+       
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);
         player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
@@ -29,7 +31,8 @@ public class SceneEntry : MonoBehaviour
         hpBase.GetComponent<HpBase>().Init(player, role);
         //怪物生成规则
         player.AddComponent<EnemySpawner>();
-        player.GetComponent<EnemySpawner>().Init(ConfigMgr.GetDicData <Map>("Map", PlayerPrefs.GetInt("levelIndex")));
+        player.GetComponent<EnemySpawner>().Init(map);
+        
         //相机加载
         cam.gameObject.AddComponent<CameraMgr>().Init(player.transform);
         //摇杆加载 

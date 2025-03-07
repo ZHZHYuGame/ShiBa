@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class UIMethod :Singleton<UIMethod>
@@ -129,7 +130,8 @@ public class UIMethod :Singleton<UIMethod>
     public T InstantiatePrefab<T>(string prefabPath, Transform parent) where T : Component
     {
         // 加载预制体
-        GameObject prefab = Resources.Load<GameObject>(prefabPath);
+        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/" + prefabPath + "prefab");
+
         if (prefab == null)
         {
             Debug.LogError($"没有找到这个文件的路径: {prefabPath}");
@@ -137,7 +139,7 @@ public class UIMethod :Singleton<UIMethod>
         }
 
         // 实例化预制体
-        GameObject clone = Object.Instantiate(prefab, parent);
+        GameObject clone = GameObject.Instantiate(prefab, parent);
 
         // 获取指定类型的组件
         T component = clone.GetComponent<T>();
