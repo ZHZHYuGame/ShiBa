@@ -219,11 +219,8 @@ public class ChunkController : MonoSingleton<ChunkController>
         var chunksToRemove = new HashSet<Chunk>();
         foreach (var pos in m_currentChunkList)
         {
-<<<<<<< HEAD
-            if (!actualChunkList.Contains(pos) && m_chunkMap.ContainsKey(pos))
-=======
             if (!actualChunkList.Contains(pos.m_position)&& m_chunkMap.ContainsKey(pos.m_position))
->>>>>>> f1159c709f77e33add12e30756088b7a07068ab9
+
             {
                 if (CanUnloadChunk(pos.m_position)) // 检查块是否可以安全卸载
                 {
