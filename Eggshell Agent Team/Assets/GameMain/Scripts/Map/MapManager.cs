@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public enum MapType
@@ -11,14 +13,18 @@ public enum MapType
 public class MapManager : MonoSingleton<MapManager>
 {
     [Range(1, 10)]
-    public int oneMapScale=1;
+    public int oneMapScale;
     int w, h;
     bool isMove = true;
     public MapType currType = MapType.One;
     GameObject[,] mapPool;
     public GameObject map;
 
-    private void Awake()
+    public void Init(Map data)
+    {
+        InitMap();
+    }
+    private void InitMap()
     {
         // 根据当前的地图类型设置宽高和初始化地图块  
         switch (currType)
@@ -116,4 +122,6 @@ public class MapManager : MonoSingleton<MapManager>
         tile.transform.position = new Vector3(x * 10 * oneMapScale, y * 10 * oneMapScale, 0);
         tile.transform.localScale = Vector3.one * oneMapScale; // 恢复地图块的缩放  
     }
+
+    
 }
