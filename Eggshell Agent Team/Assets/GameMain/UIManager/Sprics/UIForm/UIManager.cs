@@ -95,6 +95,7 @@ public class UIManager : Singleton<UIManager>
         //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
         //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
         return InstantiatePrefab(targetCanvas.transform, prefab,"myprefab");
+        return InstantiatePerfab(targetCanvas, prefab);
         #region 废弃代码
         //GameObject gameObject;
         //switch (uiType.UILayerType)
@@ -147,6 +148,17 @@ public class UIManager : Singleton<UIManager>
         if (prefabs != null)
         {
             GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas);
+            return gameObject;
+        }
+        return null;
+    }
+
+    private GameObject InstantiatePerfab(GameObject targetCanvas, GameObject prefab)
+    {
+        GameObject prefabs = _resourcesManager.LoadResource<GameObject>(GetPath("myprefab"), prefab.name);
+        if (prefabs != null)
+        {
+            GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
             return gameObject;
         }
         return null;
