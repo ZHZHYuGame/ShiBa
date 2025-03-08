@@ -174,7 +174,7 @@ public class ResourceManager
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>0
-    public T LoadResource<T>(string bundlePath, string assetName) where T : UnityEngine.Object
+    public T LoadResource<T>(string bundlePath, string assetName, string abName) where T : UnityEngine.Object
     {
         //"D:/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/mybundle/MyPrefab"
         string cacheKey = $"{bundlePath}/{assetName}";
@@ -186,7 +186,7 @@ public class ResourceManager
             return resourcesWrapper.Asset as T;
         }
         // 如果缓存未命中，从 ResourceLoader 加载资源
-        T resources = ResourcesLoader.LoadResources<T>(bundlePath, assetName);
+        T resources = ResourcesLoader.LoadResources<T>(bundlePath, assetName, abName);
         if (resources != null)
         {
             var wrapper = new ResourceWrapper<UnityEngine.Object>(resources);
