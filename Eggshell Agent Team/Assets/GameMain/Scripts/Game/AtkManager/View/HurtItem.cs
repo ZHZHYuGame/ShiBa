@@ -12,7 +12,7 @@ public class HurtItem : MonoBehaviour
     {
 
         GetComponent<Text>().text = str;
-        Invoke("SaveObjectPool", 1f);
+        Invoke("SaveObjectPool", 0.5f);
     }
     // Start is called before the first frame update
     void Start()
