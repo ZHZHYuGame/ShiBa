@@ -45,8 +45,8 @@ public class UIManager : Singleton<UIManager>
     #region 加载Panel
     public GameObject GetSingleObject(UIType uiType)
     {
-        
-       
+
+
         if (dic_uiobject.ContainsKey(uiType.Name))
         {
             return dic_uiobject[uiType.Name];
@@ -62,7 +62,7 @@ public class UIManager : Singleton<UIManager>
             Debug.LogError($"未知的 LayerType: {uiType.UILayerType}");
             return null;
         }
-        
+
 
         GameObject targetCanvas = canvasDictionary[uiType.UILayerType];
 
@@ -92,13 +92,7 @@ public class UIManager : Singleton<UIManager>
         //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
         //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
         //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
-        GameObject prefabs =_resourcesManager.LoadResource<GameObject>(GetPath("myprefab"),prefab.name);
-        if (prefabs != null)
-        {
-            GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
-            return gameObject;
-        }
-        return null;
+        return InstantiatePerfab(targetCanvas, prefab);
         #region 废弃代码
         //GameObject gameObject;
         //switch (uiType.UILayerType)
@@ -143,6 +137,17 @@ public class UIManager : Singleton<UIManager>
 
         //return gameObject;
         #endregion
+    }
+
+    private GameObject InstantiatePerfab(GameObject targetCanvas, GameObject prefab)
+    {
+        GameObject prefabs = _resourcesManager.LoadResource<GameObject>(GetPath("myprefab"), prefab.name);
+        if (prefabs != null)
+        {
+            GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
+            return gameObject;
+        }
+        return null;
     }
     #endregion
 
