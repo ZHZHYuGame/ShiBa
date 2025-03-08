@@ -36,15 +36,15 @@ public class Chunk
     {
         m_position = new ChunkVector2(rowNum, colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
-        //plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
-        //plane.transform.position = new Vector3(m_position.rowNum * 10, m_position.colNum * 10, 0);
+        plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        plane.transform.position = new Vector3(m_position.rowNum * 10, m_position.colNum * 10, 0);
     }
     public Chunk(ChunkVector2 position) : this(position.rowNum, position.colNum)
     {
         m_position = new ChunkVector2(position.rowNum, position.colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
-       // plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
-        //plane.transform.position = new Vector3(m_position.rowNum*10, m_position.colNum*10, 0);
+        plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        plane.transform.position = new Vector3(m_position.rowNum*10, m_position.colNum*10, 0);
     }
 
     public void Display() { MonoThread.Instance.Excute(CoroutineDisplay()); }

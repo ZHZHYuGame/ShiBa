@@ -130,7 +130,7 @@ public class UIMethod :Singleton<UIMethod>
     public T InstantiatePrefab<T>(string prefabPath, Transform parent) where T : Component
     {
         // º”‘ÿ‘§÷∆ÃÂ
-        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/" + prefabPath + "prefab");
+        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/" + prefabPath + ".prefab");
 
         if (prefab == null)
         {
