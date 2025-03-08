@@ -1,25 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34031.81
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}"
-EndProject
-=======
 # Visual Studio 15
->>>>>>> f1159c709f77e33add12e30756088b7a07068ab9
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-examples", "spine-unity-examples.csproj", "{3141FCE0-4005-8A3F-27C1-A190AEEBB93F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity", "spine-unity.csproj", "{A8CCD435-2625-7968-88AE-A8AD1FDDDB30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityGameFramework.Runtime", "UnityGameFramework.Runtime.csproj", "{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}"
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}"
->>>>>>> f1159c709f77e33add12e30756088b7a07068ab9
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spine-unity-editor", "spine-unity-editor.csproj", "{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}"
 EndProject
@@ -53,17 +43,14 @@ Global
 		{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A0CA644-38BD-7A5C-A8C9-FAE2B1FB7278}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
-		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> f1159c709f77e33add12e30756088b7a07068ab9
+		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2156ED0E-CA0E-07EB-AE5C-89C8F8D20A76}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4EC6451-A0B9-B19D-8447-BE3777F2FFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -95,8 +82,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {54723A47-BD42-44C1-8AE8-984EE63CAD81}
 	EndGlobalSection
 EndGlobal

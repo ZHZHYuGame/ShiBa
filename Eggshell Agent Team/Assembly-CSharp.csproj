@@ -244,6 +244,7 @@
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\Scripts\Examples\11_ValueTypeBinding\Vector2Binder.cs" />
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\Scripts\Examples\11_ValueTypeBinding\Vector3Binder.cs" />
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\Scripts\Examples\12_Performance\Performance.cs" />
+    <Compile Include="Assets\Test\TestEntity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\GameMain\Configs\DataTableCodeTemplate.txt" />
@@ -281,6 +282,7 @@
     <None Include="Assets\GameMain\Configs\ResourceBuilder.xml" />
     <None Include="Assets\GameMain\DataTables\Sound.txt" />
     <None Include="Assets\GameMain\Configs\BuildInfo.txt" />
+    <None Include="Assets\StreamingAssets\HotFix\HotFix_Project.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
