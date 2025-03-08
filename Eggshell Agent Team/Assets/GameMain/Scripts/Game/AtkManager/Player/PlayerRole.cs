@@ -7,7 +7,6 @@ using UnityEngine;
 /// </summary>
 public class PlayerRole : MonoSingleton<PlayerRole>
 {
-    public MapManager mapManager = MapManager.Instance;//地图管理
     int mapScale;
     int pyl;
     int x = 0;
@@ -18,9 +17,9 @@ public class PlayerRole : MonoSingleton<PlayerRole>
     // Start is called before the first frame update
     void Start()
     {
-        mapScale = mapManager.oneMapScale * 10;
+        mapScale = MapManager.Instance.oneMapScale * 10;
         pyl = mapScale / 2;
-        mapManager.CreatMap(x, y);
+        MapManager.Instance.CreatMap(x, y);
         GameObject[] etcs = GameObject.FindGameObjectsWithTag("Etc");
         etc = etcs[0].GetComponent<ETC>();
     }
@@ -46,7 +45,7 @@ public class PlayerRole : MonoSingleton<PlayerRole>
             {
                 x = (int)Mathf.Floor((transform.position.x + pyl) / mapScale);
                 y = (int)Mathf.Floor((transform.position.y + pyl) / mapScale);
-                mapManager.CreatMap(x, y);
+                MapManager.Instance.CreatMap(x, y);
             }
         }
 

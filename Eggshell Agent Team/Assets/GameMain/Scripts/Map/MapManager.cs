@@ -26,10 +26,6 @@ public class MapManager : MonoSingleton<MapManager>
 
         InitMap();
     }
-    private void Awake()
-    {
-        InitMap();
-    }
     private void InitMap()
     {
         // 根据当前的地图类型设置宽高和初始化地图块  
@@ -38,47 +34,40 @@ public class MapManager : MonoSingleton<MapManager>
             case MapType.One:
                 w = 3; // 初始宽度  
                 h = 3; // 初始高度  
-                map.GetComponent<SpriteRenderer>().sprite = sprites[0];
                 break;
             case MapType.Two:
                 w = 1; // 初始宽度  
                 h = 3; // 初始高度  
-                oneMapScale = 3;
-                map.GetComponent<SpriteRenderer>().sprite = sprites[1];
+
                 break;
             case MapType.Three:
                 w = 5; // 固定宽度  
-                h = 5; // 固定高度
-                map.GetComponent<SpriteRenderer>().sprite = sprites[0];
-                isMove = false; // 固定地图块
+                h = 5; // 固定高度  
+                isMove = false;
                 break;
             default:
                 break;
         }
-
+        map.GetComponent<SpriteRenderer>().sprite = sprites[0];
         mapPool = new GameObject[w, h]; // 初始化地图池  
-        // 创建地图块并设置大小
+        // 创建地图块并隐藏  
         for (int i = 0; i < w; i++)
         {
             for (int j = 0; j < h; j++)
             {
                 mapPool[i, j] = Instantiate(map, transform);
-                mapPool[i, j].transform.localScale = Vector3.one * oneMapScale; // 设置地图块大小
+                int mapX = 0 - 2 + i; // 将中心对齐到x  
+                int mapY = 0 - 2 + j; // 将中心对齐到y  
 
-                // 以 (0, 0, 0) 为中心生成地图块
-                float xPos = (i - (w - 1) / 2f) * mapTileSize * oneMapScale;
-                float yPos = (j - (h - 1) / 2f) * mapTileSize * oneMapScale;
-                mapPool[i, j].transform.position = new Vector3(xPos, yPos, 0);
-
-                mapPool[i, j].SetActive(!isMove); // 如果 isMove 为 false，则显示地图块
+                UpdateMapTile(mapPool[i, j], mapX, mapY);
+                mapPool[i, j].transform.localScale = isMove ? Vector3.zero : Vector3.one * oneMapScale; // 初始化为缩放为零  
             }
         }
     }
 
     public void CreatMap(int x, int y)
     {
-        if (!isMove) return; // 如果 isMove 为 false，则不需要动态生成地图块
-
+        if (!isMove) return;
         List<GameObject> viewMap = new List<GameObject>();
         // 根据当前地图类型判断显示方式  
         switch (currType)
@@ -109,18 +98,7 @@ public class MapManager : MonoSingleton<MapManager>
                 break;
 
             case MapType.Three:
-                // 固定显示整个地图
-                for (int i = 0; i < w; i++)
-                {
-                    for (int j = 0; j < h; j++)
-                    {
-                        int mapX = x - 2 + i; // 将中心对齐到x  
-                        int mapY = y - 2 + j; // 将中心对齐到y  
 
-                        UpdateMapTile(mapPool[i, j], mapX, mapY);
-                        viewMap.Add(mapPool[i, j]);
-                    }
-                }
                 break;
         }
 
@@ -131,20 +109,16 @@ public class MapManager : MonoSingleton<MapManager>
             {
                 if (!viewMap.Contains(mapPool[i, j]))
                 {
-                    mapPool[i, j].SetActive(false); // 隐藏该地图块  
+                    mapPool[i, j].transform.localScale = Vector3.zero; // 隐藏该地图块  
                 }
             }
         }
     }
-
     private void UpdateMapTile(GameObject tile, int x, int y)
     {
-        // 以 (0, 0, 0) 为中心更新地图块位置
-        float xPos = (x - (w - 1) / 2f) * mapTileSize * oneMapScale;
-        float yPos = (y - (h - 1) / 2f) * mapTileSize * oneMapScale;
-        tile.transform.position = new Vector3(xPos, yPos, 0);
-        tile.SetActive(true); // 显示该地图块
+        tile.transform.position = new Vector3(x * 10 * oneMapScale, y * 10 * oneMapScale, 0);
+        tile.transform.localScale = Vector3.one * oneMapScale; // 恢复地图块的缩放  
     }
 
-   
+
 }
