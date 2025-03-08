@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
                 Vector2 spawnPos = (Random.insideUnitCircle.normalized * spawnRadius) + (Vector2)transform.position;
                 enemy.transform.position = spawnPos;
                 enemy.AddComponent<AI_Move>();
-                enemy.AddComponent<Monster>().Init(SetMonsterData(index));
+                enemy.AddComponent<Monster>().Init(SetMonsterData(index), refreshWavesList[index]);//怪物属性
               
                 yield return new WaitForSeconds(0.1f); // 避免瞬时生成卡顿
             }

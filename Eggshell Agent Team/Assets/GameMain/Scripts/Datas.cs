@@ -186,3 +186,30 @@ public class BossEnemy : Role
 {
     //boss技能...
 }
+public class Exp
+{
+    private int id;
+    private string exp_path;//图片路径
+    private string exp_name;//名称
+    private ExpType exp_type;//类型
+    private int exp_value;//经验值
+
+    public Exp()
+    {
+    }
+
+    public Exp(int id, string exp_path, string exp_name, ExpType exp_type, int exp_value)
+    {
+        this.Id = id;
+        this.Exp_path = exp_path;
+        this.Exp_name = exp_name;
+        this.Exp_type = exp_type;
+        this.Exp_value = exp_value;
+    }
+
+    public int Id { get => id; set => id = value; }
+    public string Exp_path { get => exp_path; set => exp_path = value; }
+    public string Exp_name { get => exp_name; set => exp_name = value; }
+    public ExpType Exp_type { get => exp_type; set => exp_type = value; }
+    public int Exp_value { get => exp_value; set => exp_value = value; }
+}

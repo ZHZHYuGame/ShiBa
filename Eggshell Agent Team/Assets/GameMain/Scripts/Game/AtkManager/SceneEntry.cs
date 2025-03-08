@@ -11,6 +11,7 @@ public class SceneEntry : MonoBehaviour
     public GameObject hpBase;
     public GameObject hurttx;//飘血
     public GameObject bullet;//子弹
+    public GameObject expPrefab;//经验
     Canvas canvas;
     AllObjectPool allObjectPool;
     // Start is called before the first frame update
@@ -40,7 +41,7 @@ public class SceneEntry : MonoBehaviour
         //绑定玩家
 
         //对象池管理
-         allObjectPool = new AllObjectPool(hurttx, bullet);
+         allObjectPool = new AllObjectPool(hurttx, bullet, expPrefab);
         
     }
 

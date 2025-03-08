@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using static GameFramework.Utility;
 
 public class ConfigMgr
 {
     static Dictionary<string, object> dic = new Dictionary<string, object>();
-
     //传入路径返回散列表
     public static T GetTable<T>(string path) where T : class, new()
     {
@@ -54,7 +54,8 @@ public class ConfigMgr
     public static void Save(string path, object obj)
     {
         string json = JsonConvert.SerializeObject(obj);
-        File.WriteAllText(Application.dataPath + "/Resources/" + path + ".json", json);
+        string assetPath = Application.dataPath + "/GameMain/GameResources/Configs/" + path + ".json";
+        File.WriteAllText(assetPath, json);
     }
 
 }
