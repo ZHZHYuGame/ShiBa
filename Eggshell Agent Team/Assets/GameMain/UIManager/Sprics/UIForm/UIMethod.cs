@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class UIMethod :Singleton<UIMethod>
@@ -111,11 +112,44 @@ public class UIMethod :Singleton<UIMethod>
             if (tra.gameObject.name == ComponentName)
             {
                 return tra.gameObject.GetComponent<T>();
-                break;
+               
             }
         }
 
         Debug.LogWarning($"没有在{panel.name}中找到{ComponentName}物体！");
         return null;
+    }
+
+    /// <summary>
+    /// 实例化预制体并返回指定类型的组件。
+    /// </summary>
+    /// <typeparam name="T">要返回的组件类型。</typeparam>
+    /// <param name="prefabPath">预制体在 Resources 文件夹中的路径。</param>
+    /// <param name="parent">父对象的 Transform。</param>
+    /// <returns>实例化对象的指定组件，如果失败则返回 null。</returns>
+    public T InstantiatePrefab<T>(string prefabPath, Transform parent) where T : Component
+    {
+        // 加载预制体
+        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/" + prefabPath + "prefab");
+
+        if (prefab == null)
+        {
+            Debug.LogError($"没有找到这个文件的路径: {prefabPath}");
+            return null;
+        }
+
+        // 实例化预制体
+        GameObject clone = GameObject.Instantiate(prefab, parent);
+
+        // 获取指定类型的组件
+        T component = clone.GetComponent<T>();
+        if (component == null)
+        {
+            Debug.LogError($"没有找到该类型的预制体: {typeof(T).Name}");
+            Object.Destroy(clone); // 如果没有找到组件，销毁实例化的对象
+            return null;
+        }
+
+        return component;
     }
 }
