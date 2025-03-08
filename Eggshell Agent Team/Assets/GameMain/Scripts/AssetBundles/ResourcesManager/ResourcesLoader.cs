@@ -14,7 +14,7 @@ public static class ResourcesLoader
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static T LoadResources<T>(string bundlepath, string assetName) where T : UnityEngine.Object
+    public static T LoadResources<T>(string bundlepath, string assetName, string abName) where T : UnityEngine.Object
     {
         if (string.IsNullOrEmpty(bundlepath) || string.IsNullOrEmpty(assetName))
         {
@@ -28,7 +28,7 @@ public static class ResourcesLoader
         }
         if (!ResourceManager._loadedBundles.TryGetValue(bundlepath, out var bundles))
         {
-            bundles = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/myprefab");
+            bundles = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/"+ abName);
             if (bundles == null)
             {
                 Debug.LogError($"Failed to load AssetBundle: {bundles}");

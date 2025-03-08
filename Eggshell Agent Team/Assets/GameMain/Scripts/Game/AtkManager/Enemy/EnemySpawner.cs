@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
        
         for (int i = 0; i < enemyPrefabs.Count; i++)
         {
-            ObjectPool.CreatePool(enemyPrefabs[i], 200,GameObject.Find("EnemyPool").transform);//怪物对象池
+            ObjectPool.CreatePool(enemyPrefabs[i], 200,GameObject.Find("EnemyPool").transform,"enemy");//怪物对象池
         }
     }
 
