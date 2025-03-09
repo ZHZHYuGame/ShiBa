@@ -25,6 +25,7 @@ public class SceneEntry : MonoBehaviour
        
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);
+        
         player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
         Debug.Log(player.name);
         //血条加载

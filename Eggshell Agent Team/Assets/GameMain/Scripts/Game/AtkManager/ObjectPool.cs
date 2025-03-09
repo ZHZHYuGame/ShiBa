@@ -42,8 +42,8 @@ public class ObjectPool
             Queue<GameObject> pool = new Queue<GameObject>();
             for (int i = 0; i < size; i++)
             {
-                GameObject obj = UIManager.Ins.InstantiatePrefab(pos,prefab,abName);
-                //GameObject obj = GameObject.Instantiate(prefab,pos);
+              //  GameObject obj = UIManager.Ins.InstantiatePrefab(pos,prefab,abName);
+                GameObject obj = GameObject.Instantiate(prefab,pos);
                 obj.SetActive(false);
                 pool.Enqueue(obj);
             }
