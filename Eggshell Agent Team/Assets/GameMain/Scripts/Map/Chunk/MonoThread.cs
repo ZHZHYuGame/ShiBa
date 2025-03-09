@@ -23,7 +23,8 @@ public class MonoThread : MonoSingleton<MonoThread>
         m_runing = true;
         while (m_queue.Count > 0)
         {
-            yield return StartCoroutine(m_queue.Dequeue());
+            var coroutine = m_queue.Dequeue();
+            yield return StartCoroutine(coroutine);
         }
         m_runing = false;
     }
