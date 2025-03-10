@@ -14,21 +14,12 @@ AudioImporter:
     7:
       loadType: 2
       sampleRateSetting: 2
-<<<<<<< HEAD
-      sampleRateOverride: 44100
-      compressionFormat: 1
-      quality: 1
-      conversionMode: 0
-  forceToMono: 0
-  normalize: 1
-=======
       sampleRateOverride: 22050
       compressionFormat: 1
-      quality: 0.55
+      quality: 0.48999998
       conversionMode: 0
   forceToMono: 1
   normalize: 0
->>>>>>> 豪猪大王的分支
   preloadAudioData: 1
   loadInBackground: 0
   ambisonic: 0

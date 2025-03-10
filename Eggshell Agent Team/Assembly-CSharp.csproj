@@ -282,7 +282,6 @@
     <None Include="Assets\GameMain\Configs\ResourceBuilder.xml" />
     <None Include="Assets\GameMain\DataTables\Sound.txt" />
     <None Include="Assets\GameMain\Configs\BuildInfo.txt" />
-    <None Include="Assets\StreamingAssets\HotFix\HotFix_Project.dll" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

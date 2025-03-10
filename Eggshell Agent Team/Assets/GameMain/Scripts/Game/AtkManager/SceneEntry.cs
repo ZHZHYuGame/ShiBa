@@ -19,9 +19,14 @@ public class SceneEntry : MonoBehaviour
     {
         //画布获取
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        //地图加载
+
+        //关卡
         Map map = ConfigMgr.GetDicData<Map>("Map", PlayerPrefs.GetInt("levelIndex"));
-        MapManager.Instance.Init(map);
+
+        //地图加载
+        MapData mapData = ConfigMgr.GetDicData<MapData>("MapDatas",map.Id);
+        MapManager.Instance.Init(mapData);
+
        
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);

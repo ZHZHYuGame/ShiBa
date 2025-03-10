@@ -363,9 +363,6 @@
     <Reference Include="protobuf-net">
       <HintPath>Assets\GameMain\Libraries\protobuf-net.dll</HintPath>
     </Reference>
-    <Reference Include="HotFix_Project">
-      <HintPath>Assets\HotFix\HotFix_Project.dll</HintPath>
-    </Reference>
     <Reference Include="ILRuntime.Mono.Cecil">
       <HintPath>Library\PackageCache\com.ourpalm.ilruntime@2.1.0\Plugins\ILRuntime.Mono.Cecil.dll</HintPath>
     </Reference>
