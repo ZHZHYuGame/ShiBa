@@ -29,7 +29,7 @@ public class MapTile
     public void RemoveEntity(uint id)
     {
         if (!tileDic.ContainsKey(id)) return;
-        tileDic[id].Destory();
+        tileDic[id].OnDestory();
         tileDic.Remove(id);
     }
 
@@ -37,7 +37,7 @@ public class MapTile
     {
         foreach (var item in tileDic.Values)
         {
-            item.Destory();
+            item.OnDestory();
         }
         tileDic.Clear();
     }

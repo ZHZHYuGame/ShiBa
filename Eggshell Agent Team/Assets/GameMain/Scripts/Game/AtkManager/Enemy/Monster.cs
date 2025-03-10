@@ -55,7 +55,7 @@ public class Monster : MonoBehaviour
             GameObject expPrefab = ObjectPool.GetObject(GameObject.Find("ExpPool").transform.GetChild(0).gameObject);
             expPrefab.transform.position = transform.position;
             List<Exp> exps = ConfigMgr.GetTable<List<Exp>>("ExpData");
-            Debug.Log(refreshWaves.ExpType);
+            //Debug.Log(refreshWaves.ExpType);
             switch (refreshWaves.ExpType)
             {
                 case ExpType.lowerExp:

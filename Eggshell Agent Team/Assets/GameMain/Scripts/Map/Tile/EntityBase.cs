@@ -2,6 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class EntityIndex
+{
+    static uint index = 0;
+    static readonly object lockObj=new object();
+    public static uint Index
+    {
+        get 
+        {
+            lock(lockObj)
+            {
+                return index++;
+            }
+        }
+    }
+}
+
 //实体对象
 public class EntityBase 
 {
@@ -9,6 +25,7 @@ public class EntityBase
     GameObject obj;
     public EntityBase(GameObject obj)
     {
+        index = EntityIndex.Index;
         this.obj = obj;
         FindChunkByPos();
     }
@@ -26,13 +43,19 @@ public class EntityBase
     private void FindChunkByPos()
     {
        ChunkVector2 chunkPos= ChunkController.Instance.GetCurrentChunkVector(obj.transform.position);
-       //ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
+       ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
     }
 
-    public void Destory()
+    public void OnDestory()
     {
         //对象池回收
-        Object.Destroy(obj);
+        lock(this)
+        {
+            if (obj == null) return;
+            Object.Destroy(obj);
+            obj = null;
+        }
+
     }
 
 }

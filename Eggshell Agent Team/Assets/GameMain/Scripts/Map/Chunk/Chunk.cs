@@ -61,7 +61,7 @@ public class Chunk
     public void RemoveEntity(uint index)
     {
         if (!m_entityDic.ContainsKey(index)) return;
-            m_entityDic[index].Destory();
+            m_entityDic[index].OnDestory();
             m_entityDic.Remove(index);
     }
     /// <summary>
@@ -103,7 +103,7 @@ public class Chunk
         {
             foreach (var item in m_entityDic.Values)
             {
-                item.Destory();
+                item.OnDestory();
             }
             m_entityDic.Clear();
         }
