@@ -13,7 +13,7 @@ public class TestEntity : MonoBehaviour
             GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Vector2 pos = Random.insideUnitCircle * 50;
             obj.transform.position = new Vector3(pos.x,pos.y,0);
-            EntityBase entity = new EntityBase(obj.transform);
+            EntityBase entity = new EntityBase(obj);
         }
     }
 

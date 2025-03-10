@@ -36,15 +36,15 @@ public class Chunk
     {
         m_position = new ChunkVector2(rowNum, colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
-        plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
-        plane.transform.position = new Vector3(m_position.rowNum * 10, m_position.colNum * 10, 0);
+        //plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        //plane.transform.position = new Vector3(m_position.rowNum * 10, m_position.colNum * 10, 0);
     }
     public Chunk(ChunkVector2 position) : this(position.rowNum, position.colNum)
     {
         m_position = new ChunkVector2(position.rowNum, position.colNum);
         m_entityDic = new Dictionary<uint, EntityBase>();
-        plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
-        plane.transform.position = new Vector3(m_position.rowNum*10, m_position.colNum*10, 0);
+        //plane = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/Plane.prefab"));
+        //plane.transform.position = new Vector3(m_position.rowNum*10, m_position.colNum*10, 0);
     }
 
     public void Display() { MonoThread.Instance.Excute(CoroutineDisplay()); }
@@ -74,10 +74,11 @@ public class Chunk
         return new Vector2(centerX, centerY);
     }
 
-    //显示
+    // 显示
     IEnumerator CoroutineDisplay()
     {
-        if(m_entityDic.Count > 0)
+        //Debug.Log($"加载:{m_position.colNum}{m_position.rowNum}");
+        if (m_entityDic.Count > 0)
         {
             foreach (var item in m_entityDic.Values)
             {
@@ -85,31 +86,44 @@ public class Chunk
                 item.Show();
             }
         }
-        
+        //Debug.Log($"加载结束:{m_position.colNum}{m_position.rowNum}");
     }
-    //卸载
+
+    // 卸载
     IEnumerator CoroutineUnload()
     {
-        if(plane!=null)
+        //Debug.Log($"卸载:{m_position.colNum}{m_position.rowNum}");
+        if (plane != null)
         {
             GameObject.Destroy(plane);
             plane = null;
         }
 
-        yield return null;
-    }
-    //缓存
-    IEnumerator CoroutineCache()
-    {
-        if(m_entityDic!=null&&m_entityDic.Count>0)
+        if (m_entityDic != null && m_entityDic.Count > 0)
         {
             foreach (var item in m_entityDic.Values)
             {
+                item.Destory();
+            }
+            m_entityDic.Clear();
+        }
+        //Debug.Log($"卸载结束:{m_position.colNum}{m_position.rowNum}");
+        yield return null;
+    }
+
+    // 缓存
+    IEnumerator CoroutineCache()
+    {
+        //Debug.Log($"缓存:{m_position.colNum}{m_position.rowNum}");
+        if (m_entityDic != null && m_entityDic.Count > 0)
+        {
+            foreach (var item in m_entityDic.Values)
+            {
+                yield return item;
                 item.Hide();
             }
         }
-        yield return null;
-
+        //Debug.Log($"缓存结束:{m_position.colNum}{m_position.rowNum}");
     }
 
     /// <summary>
@@ -120,7 +134,6 @@ public class Chunk
     {
         if (m_currentState == state)
         {
-            Debug.LogErrorFormat(" {0} is already {1} ", m_position, m_currentState);
             return;
         }
         switch (state)
@@ -134,8 +147,13 @@ public class Chunk
             case ChunkState.UnLoad:
                 Unload();
                 break;
-
         }
+
+        m_currentState = state;
     }
 
+    public bool IsUnLoad()
+    {
+        return m_entityDic.Count <= 0;
+    }
 }
