@@ -1,0 +1,50 @@
+{
+  "0": {
+    "Id": 1,
+    "Map_Name": "新手训练场",
+    "Map_Icon": "Assets/GameMain/GameResources/2DSprits/场景/c4af0522-4daa-4d36-89d0-d9b22daf37b3.png",
+    "Enemy_wave": 5,
+    "Enemy_wave_Time": 15.0,
+    "Map_Start_term": 0,
+    "Map_Tips": "新手练习",
+    "Map_Victory": 0,
+    "RefeshId": 0,
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
+  },
+  "1": {
+    "Id": 2,
+    "Map_Name": "进阶之路",
+    "Map_Icon": "Assets/GameMain/GameResources/2DSprits/场景/4682b8ff-fe4a-4690-bc29-11cfaa2052ee.png",
+    "Enemy_wave": 5,
+    "Enemy_wave_Time": 5.0,
+    "Map_Start_term": 0,
+    "Map_Tips": "升级",
+    "Map_Victory": 0,
+    "RefeshId": 0,
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
+  },
+  "2": {
+    "Id": 3,
+    "Map_Name": "Boss战",
+    "Map_Icon": "Assets/GameMain/GameResources/2DSprits/场景/b8d13718-e226-400c-b716-5253f82217d0.png",
+    "Enemy_wave": 3,
+    "Enemy_wave_Time": 10.0,
+    "Map_Start_term": 0,
+    "Map_Tips": "红豆吃多了",
+    "Map_Victory": 0,
+    "RefeshId": 0,
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
+  },
+  "11": {
+    "Id": 11,
+    "Map_Name": null,
+    "Map_Icon": "Assets/GameMain/GameResources/2DSprits/场景/4682b8ff-fe4a-4690-bc29-11cfaa2052ee.png",
+    "Enemy_wave": 0,
+    "Enemy_wave_Time": 0.0,
+    "Map_Start_term": 0,
+    "Map_Tips": null,
+    "Map_Victory": 0,
+    "RefeshId": 0,
+    "Map_Prefab": null
+  }
+}
