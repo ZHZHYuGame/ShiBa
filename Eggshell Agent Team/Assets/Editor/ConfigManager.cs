@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 
 public static class ConfigManager
 {
-    private static string configPath = "Assets/GameMain/Maps/";
+    private static string configPath = "Assets/GameMain/GameResources/Configs/";
 
     // 加载配置文件
     public static T GetDic<T>(string fileName) where T : new()
