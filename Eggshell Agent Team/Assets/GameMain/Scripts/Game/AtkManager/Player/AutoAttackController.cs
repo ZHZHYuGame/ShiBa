@@ -14,7 +14,6 @@ public class AutoAttackController : MonoBehaviour
 
     private void Awake()
     {
-        //ObjectPool.CreatePool(projectilePrefab, 20);//创建子弹池子
     }
     void Update()
     {
