@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
+    Role data;//怪物属性
+    RefreshWaves refreshWaves;//波次属性
 
-    
-     Role currenterData;
-
-
-    public void Init(Role data)
+    public void Init(Role data, RefreshWaves refreshWaves)
     { 
-        currenterData= data;
+        this.data= data;
+        this.refreshWaves = refreshWaves;
+
     }
 
     // Start is called before the first frame update
@@ -30,21 +32,17 @@ public class Monster : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
-            currenterData.Blood -= 10;
+            data.Blood -= 10;
            
             transform.GetComponent<SpriteRenderer>().color = Color.red;
            GameObject hurt=  ObjectPool.GetObject(GameObject.Find("Canvas").transform.GetChild(0).GetChild(0).gameObject);
             hurt.transform.position=Camera.main.WorldToScreenPoint(transform.position);
-            hurt.GetComponent<HurtItem>().Init("-10");
-            //if (currenterData.Blood <= 0)
-            //{
-            //    transform.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("die2");
-            //}
+            hurt.GetComponent<HurtItem>().Init("-10");//伤害动态更新
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (currenterData.Blood > 0)
+        if (data.Blood > 0)
         {
             transform.GetComponent<SpriteRenderer>().color = Color.white;
         }
@@ -53,7 +51,23 @@ public class Monster : MonoBehaviour
             transform.GetComponent<SpriteRenderer>().color = Color.white;
             // Destroy(this.gameObject);
             ObjectPool.Enqueue(this.gameObject);
-            //经验球掉落
+            //经验球掉落 根据怪物波次进行经验球的掉落
+            GameObject expPrefab = ObjectPool.GetObject(GameObject.Find("ExpPool").transform.GetChild(0).gameObject);
+            expPrefab.transform.position = transform.position;
+            List<Exp> exps = ConfigMgr.GetTable<List<Exp>>("ExpData");
+            Debug.Log(refreshWaves.ExpType);
+            switch (refreshWaves.ExpType)
+            {
+                case ExpType.lowerExp:
+                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[0].Exp_path);
+                    break;
+                case ExpType.midelExp:
+                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[1].Exp_path);
+                    break;
+                case ExpType.higherExp:
+                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[2].Exp_path);
+                    break;
+            }
 
         }
 

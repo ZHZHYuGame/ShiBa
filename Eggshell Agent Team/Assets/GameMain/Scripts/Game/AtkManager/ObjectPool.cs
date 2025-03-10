@@ -33,7 +33,7 @@ public class ObjectPool
         prefab.SetActive(false);
     }
     //创建池子
-    public static void CreatePool(GameObject prefab, int size,Transform pos)
+    public static void CreatePool(GameObject prefab, int size,Transform pos, string abName)
     {
         prefab.name = GetName(prefab.name);
         string key = prefab.name;
@@ -42,6 +42,7 @@ public class ObjectPool
             Queue<GameObject> pool = new Queue<GameObject>();
             for (int i = 0; i < size; i++)
             {
+              //  GameObject obj = UIManager.Ins.InstantiatePrefab(pos,prefab,abName);
                 GameObject obj = GameObject.Instantiate(prefab,pos);
                 obj.SetActive(false);
                 pool.Enqueue(obj);
