@@ -19,7 +19,7 @@ public class EntityIndex
 }
 
 //实体对象
-public abstract class EntityBase 
+public class EntityBase 
 {
     public uint index;//唯一标识
     GameObject obj;

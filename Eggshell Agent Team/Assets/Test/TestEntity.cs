@@ -16,7 +16,8 @@ public class TestEntity : MonoBehaviour
             GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             Vector2 pos = Random.insideUnitCircle * 30;
             obj.transform.position = new Vector3(pos.x, pos.y, 0);
-            EntityBase entity = new EntityBase(obj);
+            EntityBase entity = new EntityBase();
+            entity.Init(obj);
         }
     }
 
