@@ -30,7 +30,7 @@ public class EnemySpawner : MonoBehaviour
        
         for (int i = 0; i < enemyPrefabs.Count; i++)
         {
-            ObjectPool.CreatePool(enemyPrefabs[i], 200,GameObject.Find("EnemyPool").transform);//怪物对象池
+            ObjectPool.CreatePool(enemyPrefabs[i], 200,GameObject.Find("EnemyPool").transform,"enemy");//怪物对象池
         }
     }
 
@@ -47,7 +47,7 @@ public class EnemySpawner : MonoBehaviour
                 Vector2 spawnPos = (Random.insideUnitCircle.normalized * spawnRadius) + (Vector2)transform.position;
                 enemy.transform.position = spawnPos;
                 enemy.AddComponent<AI_Move>();
-                enemy.AddComponent<Monster>().Init(SetMonsterData(index));
+                enemy.AddComponent<Monster>().Init(SetMonsterData(index), refreshWavesList[index]);//怪物属性
               
                 yield return new WaitForSeconds(0.1f); // 避免瞬时生成卡顿
             }

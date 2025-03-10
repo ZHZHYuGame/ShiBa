@@ -39,7 +39,7 @@ public class StartGame : MonoBehaviour
         ////string assetName = "Cube";
         ///
         Debug.Log(11);
-        UI_AB_URL = ABGetPath("ui");
+        UI_AB_URL = ABGetPath("ui_mainpanel");
         AssetBundle ui = AssetBundle.LoadFromFile(UI_AB_URL);
 
         if (ui == null)

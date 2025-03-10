@@ -73,7 +73,6 @@ public class EnemyEditor : EditorWindow
         dic[id].Def = EditorGUILayout.FloatField("防御", dic[id].Def);
         dic[id].Maxboold = EditorGUILayout.FloatField("血量", dic[id].Maxboold);
         dic[id].BodySize = EditorGUILayout.FloatField("大小", dic[id].BodySize);
-
         //枚举下拉列表
         type = (RoleType)EditorGUILayout.EnumPopup("攻击类型", type);//返回枚举值
         switch (type)

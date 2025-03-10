@@ -11,6 +11,7 @@ public class SceneEntry : MonoBehaviour
     public GameObject hpBase;
     public GameObject hurttx;//飘血
     public GameObject bullet;//子弹
+    public GameObject expPrefab;//经验
     Canvas canvas;
     AllObjectPool allObjectPool;
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class SceneEntry : MonoBehaviour
        
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);
+        
         player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
         Debug.Log(player.name);
         //血条加载
@@ -40,7 +42,7 @@ public class SceneEntry : MonoBehaviour
         //绑定玩家
 
         //对象池管理
-         allObjectPool = new AllObjectPool(hurttx, bullet);
+         allObjectPool = new AllObjectPool(hurttx, bullet, expPrefab);
         
     }
 
