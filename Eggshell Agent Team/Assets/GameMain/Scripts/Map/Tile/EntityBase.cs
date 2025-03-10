@@ -19,11 +19,11 @@ public class EntityIndex
 }
 
 //实体对象
-public class EntityBase 
+public abstract class EntityBase 
 {
     public uint index;//唯一标识
     GameObject obj;
-    public EntityBase(GameObject obj)
+    public virtual void Init(GameObject obj)
     {
         index = EntityIndex.Index;
         this.obj = obj;
