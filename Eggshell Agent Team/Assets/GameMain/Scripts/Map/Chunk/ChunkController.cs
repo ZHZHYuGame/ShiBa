@@ -16,9 +16,9 @@ public class ChunkController : MonoSingleton<ChunkController>
     // 玩家所在块位置
     ChunkVector2 m_currentPos;
 
-    // 预加载的地图块列表
-    [SerializeField]
-    HashSet<ChunkVector2> expectChunkVectorList = new HashSet<ChunkVector2>();
+    //// 预加载的地图块列表
+    //[SerializeField]
+    //HashSet<ChunkVector2> expectChunkVectorList = new HashSet<ChunkVector2>();
 
     // 显示加载的块列表
     [SerializeField]
@@ -175,7 +175,7 @@ public class ChunkController : MonoSingleton<ChunkController>
         {
             if (!m_chunkMap.ContainsKey(pos))
             {
-                Debug.Log($"加载新的地图块 ({pos.rowNum}, {pos.colNum})");
+                //Debug.Log($"加载新的地图块 ({pos.rowNum}, {pos.colNum})");
                 Chunk newChunk = new Chunk(pos);
                 m_chunkMap[pos] = newChunk;
             }
@@ -190,15 +190,18 @@ public class ChunkController : MonoSingleton<ChunkController>
         {
             if (!actualChunkList.Contains(chunk.m_position))
             {
-                Debug.Log($"准备卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
+                //Debug.Log($"准备卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
                 chunksToRemove.Add(chunk);
             }
         }
         foreach (var chunk in chunksToRemove)
         {
-            Debug.Log($"卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
-            chunk.Unload();
-            m_chunkMap.Remove(chunk.m_position);
+            //Debug.Log($"卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
+            if(chunk.IsUnLoad())
+            {
+                chunk.Unload();
+                m_chunkMap.Remove(chunk.m_position);
+            }
         }
         m_currentChunkList.ExceptWith(chunksToRemove);
     }

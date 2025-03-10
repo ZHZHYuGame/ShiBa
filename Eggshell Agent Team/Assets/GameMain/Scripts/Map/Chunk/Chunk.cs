@@ -77,7 +77,7 @@ public class Chunk
     // 显示
     IEnumerator CoroutineDisplay()
     {
-
+        //Debug.Log($"加载:{m_position.colNum}{m_position.rowNum}");
         if (m_entityDic.Count > 0)
         {
             foreach (var item in m_entityDic.Values)
@@ -86,14 +86,13 @@ public class Chunk
                 item.Show();
             }
         }
-
-        yield return null;
+        //Debug.Log($"加载结束:{m_position.colNum}{m_position.rowNum}");
     }
 
     // 卸载
     IEnumerator CoroutineUnload()
     {
-
+        //Debug.Log($"卸载:{m_position.colNum}{m_position.rowNum}");
         if (plane != null)
         {
             GameObject.Destroy(plane);
@@ -108,23 +107,23 @@ public class Chunk
             }
             m_entityDic.Clear();
         }
-
+        //Debug.Log($"卸载结束:{m_position.colNum}{m_position.rowNum}");
         yield return null;
     }
 
     // 缓存
     IEnumerator CoroutineCache()
     {
-
+        //Debug.Log($"缓存:{m_position.colNum}{m_position.rowNum}");
         if (m_entityDic != null && m_entityDic.Count > 0)
         {
             foreach (var item in m_entityDic.Values)
             {
+                yield return item;
                 item.Hide();
             }
         }
-
-        yield return null;
+        //Debug.Log($"缓存结束:{m_position.colNum}{m_position.rowNum}");
     }
 
     /// <summary>
@@ -153,4 +152,8 @@ public class Chunk
         m_currentState = state;
     }
 
+    public bool IsUnLoad()
+    {
+        return m_entityDic.Count <= 0;
+    }
 }
