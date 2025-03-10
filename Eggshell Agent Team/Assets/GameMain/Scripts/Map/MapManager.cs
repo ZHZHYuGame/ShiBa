@@ -8,6 +8,16 @@ public enum MapType
     Two,
     Three
 }
+// 地图数据类
+public class MapData
+{
+    public int mapId; // 地图ID
+    public string name; // 地图名称
+    public MapType type; // 地图类型
+    public int oneMapScale;//地图比例
+    public int mapLength;//地图比例
+    public string spritePath; // 背景图片路径
+}
 
 public class MapManager : MonoSingleton<MapManager>
 {
@@ -18,12 +28,15 @@ public class MapManager : MonoSingleton<MapManager>
     public MapType currType = MapType.One; // 当前地图类型
     GameObject[,] mapPool; // 地图块池
     [SerializeField]
-    Sprite[] sprites; // 地图块精灵
+    Sprite sprite; // 地图块精灵
     public GameObject map; // 地图块预制体
     int mapTileSize = 10; // 每个地图块的大小
-    public void Init(Map data)
+    public void Init(MapData data)
     {
-
+        mapTileSize = data.mapLength;
+        oneMapScale = data.oneMapScale;
+        currType = data.type;
+        
         InitMap();
     }
     private void InitMap()
@@ -48,7 +61,9 @@ public class MapManager : MonoSingleton<MapManager>
             default:
                 break;
         }
-        map.GetComponent<SpriteRenderer>().sprite = sprites[0];
+        SpriteRenderer renderer = map.GetComponent<SpriteRenderer>();
+        renderer.sprite = sprite;
+        renderer.size = Vector2.one* mapTileSize;
         mapPool = new GameObject[w, h]; // 初始化地图池  
         // 创建地图块并隐藏  
         for (int i = 0; i < w; i++)

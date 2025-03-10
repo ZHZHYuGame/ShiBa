@@ -2,37 +2,60 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public class EntityIndex
+{
+    static uint index = 0;
+    static readonly object lockObj=new object();
+    public static uint Index
+    {
+        get 
+        {
+            lock(lockObj)
+            {
+                return index++;
+            }
+        }
+    }
+}
+
 //实体对象
 public class EntityBase 
 {
     public uint index;//唯一标识
-    public Transform tran;
-    public EntityBase(Transform tran)
+    GameObject obj;
+    public virtual void Init(GameObject obj)
     {
-        this.tran = tran;
+        index = EntityIndex.Index;
+        this.obj = obj;
         FindChunkByPos();
     }
 
     public virtual void Show()
     {
-        tran.localScale = Vector3.one;
+        obj.transform.localScale = Vector3.one;
     }
 
     public virtual void Hide()
     {
-        tran.localScale = Vector3.zero;
+        obj.transform.localScale = Vector3.zero;
     }
 
     private void FindChunkByPos()
     {
-       ChunkVector2 chunkPos= ChunkController.Instance.GetCurrentChunkVector(tran.position);
-       //ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
+       ChunkVector2 chunkPos= ChunkController.Instance.GetCurrentChunkVector(obj.transform.position);
+       ChunkController.Instance.GetOrCreateChunk(chunkPos).AddEntity(this);
     }
 
-    public void Destory()
+    public void OnDestory()
     {
         //对象池回收
-        //Object.Destroy(tran.gameObject);
+        lock(this)
+        {
+            if (obj == null) return;
+            Object.Destroy(obj);
+            obj = null;
+        }
+
     }
 
 }

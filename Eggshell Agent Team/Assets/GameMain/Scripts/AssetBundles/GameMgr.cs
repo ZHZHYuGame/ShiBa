@@ -11,6 +11,7 @@ public class GameMgr : MonoBehaviour
     private SceneControl SceneControl;//场景管理
     public SceneControl SceneControl_Root { get => SceneControl; }
     public DataAnalysis dataAnalysis;
+    
 
 
     #region 单例
@@ -51,7 +52,7 @@ public class GameMgr : MonoBehaviour
         Game game = new Game();
         SceneControl_Root.dic_scene.Add("11", game);
         dataAnalysis = new DataAnalysis();
-
+       // AudioMgr.Instance.PlayMusic();
         #region 推入第一个面板
         //UIManager_Root.Push(new StartPanel());
         UIManager_Root.Push(new StrartForm());
