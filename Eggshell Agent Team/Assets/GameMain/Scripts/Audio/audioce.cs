@@ -14,17 +14,17 @@ public class audioce : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            AudioClip clip = Resources.Load<AudioClip>("music_about");
-            AudioMgr.Instance.PlayMusic(clip,0.5f);
-            AudioMgr.Instance.SetMasterVolume(50);
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            AudioClip clip = Resources.Load<AudioClip>("music_about");
-            AudioMgr.Instance.PlaySFX(clip);
-            AudioMgr.Instance.SetMasterVolume(50);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    AudioClip clip = Resources.Load<AudioClip>("music_about");
+        //    AudioMgr.Instance.PlayMusic(clip,0.5f);
+           
+        //}
+        //if (Input.GetKeyDown(KeyCode.A))
+        //{
+        //    AudioClip clip = Resources.Load<AudioClip>("music_about");
+        //    AudioMgr.Instance.PlaySFX(clip);
+           
+        //}
     }
 }
