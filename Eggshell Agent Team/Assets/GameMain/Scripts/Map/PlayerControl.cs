@@ -17,7 +17,6 @@ public class PlayerControl : MonoSingleton<PlayerControl>
     private void Start()
     {
         cam = Camera.main;
-        mapManager.Init(new Map());
         mapScale = mapManager.oneMapScale * 10;
         pyl = mapScale / 2;
         mapManager.CreatMap(x, y);

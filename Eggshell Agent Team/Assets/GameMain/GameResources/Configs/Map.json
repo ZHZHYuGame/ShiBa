@@ -9,7 +9,7 @@
     "Map_Tips": "新手练习",
     "Map_Victory": 0,
     "RefeshId": 0,
-    "Map_Prefab": "Assets/GameMain/Prefabs/Maps/Map1.prefab"
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
   },
   "1": {
     "Id": 2,
@@ -21,7 +21,7 @@
     "Map_Tips": "升级",
     "Map_Victory": 0,
     "RefeshId": 0,
-    "Map_Prefab": "Assets/GameMain/Prefabs/Maps/Map1.prefab"
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
   },
   "2": {
     "Id": 3,
@@ -33,6 +33,6 @@
     "Map_Tips": "红豆吃多了",
     "Map_Victory": 0,
     "RefeshId": 0,
-    "Map_Prefab": "Assets/GameMain/Prefabs/Maps/Map1.prefab"
+    "Map_Prefab": "Assets/GameMain/GameResources/Prefabs/Plane.prefab"
   }
 }
