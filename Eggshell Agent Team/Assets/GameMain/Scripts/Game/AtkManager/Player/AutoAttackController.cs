@@ -1,16 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 //武器自动攻击
 public class AutoAttackController : MonoBehaviour
 {
-    [SerializeField] float attackRange = 5f;    // 攻击范围
-    [SerializeField] float attackInterval = 0.5f; // 攻击间隔
-    [SerializeField] GameObject projectilePrefab; // 子弹/攻击特效
+    ActiveSkill weapon;//武器数据
+    float attackRange = 5f;    // 攻击范围
+    float attackInterval = 0.5f; // 攻击间隔
+    GameObject projectilePrefab; // 子弹/攻击特效Dan
 
     private Transform nearestEnemy;
     private float timer;
+    int nowLevel;
+    int maxLevel = 5;
 
     private void Awake()
     {
@@ -60,7 +65,7 @@ public class AutoAttackController : MonoBehaviour
         return closest;
     }
 
-    void Attack()
+    void Attack()   
     {
         // 生成攻击特效/子弹
         if (projectilePrefab && nearestEnemy)
@@ -74,5 +79,12 @@ public class AutoAttackController : MonoBehaviour
 
             
         }
+    }
+    //初始武器属性
+    internal void Init(ActiveSkill weapon)
+    {
+        attackRange = weapon.Skill_hurt;
+        attackInterval = weapon.Rate;
+        projectilePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(weapon.This_object_path);
     }
 }

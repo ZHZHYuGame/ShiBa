@@ -51,6 +51,17 @@ public class MainSkillEditor : EditorWindow
             string path = AssetDatabase.GetAssetPath(sprite);
             dic[id].Slill_icon = path;
         }
+        //升级后的图片
+        if (dic[id].Slill_AfterIcon != null && dic[id].Slill_AfterIcon.Length > 0)
+        {
+            sprite = AssetDatabase.LoadAssetAtPath<Sprite>(dic[id].Slill_AfterIcon);
+        }
+        sprite = (Sprite)EditorGUILayout.ObjectField("满级技能图片:", sprite, typeof(Sprite), false, GUILayout.Width(200));
+        if (sprite != null)
+        {
+            string path = AssetDatabase.GetAssetPath(sprite);
+            dic[id].Slill_AfterIcon = path;
+        }
         //模型
         if (dic[id].This_object_path != null && dic[id].This_object_path.Length > 0)
         {

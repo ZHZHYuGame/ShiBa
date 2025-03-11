@@ -43,20 +43,21 @@ public class ExpForm : BasePanel
         nowExp += exp.Exp_value;
         allExp += exp.Exp_value;
         nowLevelMaxExp = (int)Mathf.Pow((50 * level), 1.6f);
-        Debug.Log(nowLevelMaxExp + "当前总经验值");
         
         if (nowExp >= nowLevelMaxExp)
         {
-            //游戏暂停
-            //Time.timeScale = 0;
             level++;
             levelText.text = level.ToString();
-            Debug.Log(level);
             sprcialExpValue = nowExp - nowLevelMaxExp;//差值
             //清空经验
             nowExp = 0;
             //计算剩余经验值
             nowExp = sprcialExpValue;
+            //游戏暂停
+            Time.timeScale = 0;
+            //打开面板
+            GameMgr.GetInstance().UIManager_Root.Push(new SelectSkillPanel());
+
         }
         float v = (1f / nowLevelMaxExp) * nowExp;
         scrollbar.size = v;

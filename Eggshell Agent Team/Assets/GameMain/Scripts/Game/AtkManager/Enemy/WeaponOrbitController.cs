@@ -6,7 +6,7 @@ public class WeaponOrbitController : MonoBehaviour
     [Header("轨道参数")]
     [SerializeField] private float orbitRadius;    // 当前实际半径（私有但序列化，便于调试）
     public float OrbitRadius => orbitRadius;      // 公共只读属性（可选）
-    [System.Serializable]
+                                                  // [System.Serializable]
     public class LevelSettings
     {
         public int level;
