@@ -4,8 +4,8 @@ using System.Collections.Generic;
 public class ChunkController : MonoSingleton<ChunkController>
 {
     // 地图块数量
-    public int m_row = -1;
-    public int m_col = -1;
+    int m_row;
+    int m_col;
 
     // 所有的块
     Dictionary<ChunkVector2, Chunk> m_chunkMap;
@@ -16,33 +16,37 @@ public class ChunkController : MonoSingleton<ChunkController>
     // 玩家所在块位置
     ChunkVector2 m_currentPos;
 
-    //// 预加载的地图块列表
-    //[SerializeField]
-    //HashSet<ChunkVector2> expectChunkVectorList = new HashSet<ChunkVector2>();
-
     // 显示加载的块列表
     [SerializeField]
     HashSet<Chunk> m_currentChunkList = new HashSet<Chunk>();
 
     // 单个地图块的边长
-    [SerializeField]
-    float m_chunkLength = 10;
+    float m_chunkLength;
 
     float mapScale;
     int oneMapScale;
 
     [SerializeField]
-    private int m_loadRange = 1; // 1 表示九宫格，2 表示 5x5，以此类推
-
-    private float _lastUnloadTime;
+    private int m_loadRange = 1;
+    int x;
+    int y ;
+    private float m_lastUnloadTime;
     private const float UnloadInterval = 10f; // 每 10 秒调用一次
 
-    void Start()
+    public void Init(MapData data)
+    {
+        oneMapScale = data.oneMapScale;
+        m_chunkLength = data.mapLength;
+        mapScale = m_chunkLength * oneMapScale;
+        m_row = data.mapWidth;
+        m_col = data.mapHeight;
+        x = m_row / 2;
+        y = m_col / 2;
+    }
+    private void Start()
     {
         m_player = PlayerRole.Instance.transform;
-        oneMapScale = MapManager.Instance.oneMapScale;
         m_chunkMap = new Dictionary<ChunkVector2, Chunk>();
-        mapScale = m_chunkLength * oneMapScale;
         InitMap();
     }
 
@@ -53,29 +57,24 @@ public class ChunkController : MonoSingleton<ChunkController>
         switch (MapManager.Instance.currType)
         {
             case MapType.One:
-                // 无限地图
                 UpdateCurrentChunkList(list, m_currentPos);
                 break;
             case MapType.Two:
-
-                // 部分有限地图
-                m_currentPos = GetCurrentChunkVector(m_player.position);
                 UpdateCurrentChunkList(list, m_currentPos);
                 break;
             case MapType.Three:
-                // 有限地图
-                for (int i = 0; i < m_row; i++)
+
+                for (int i = -x; i <=x; i++)
                 {
-                    for (int j = 0; j < m_col; j++)
+                    for (int j = -y; j <=y; j++)
                     {
-                        Vector3 position = new Vector3(j * m_chunkLength, 0, i * m_chunkLength);
+                        //Vector3 position = new Vector3(j * mapScale, 0, i * mapScale);
                         ChunkVector2 chunkPos = new ChunkVector2(i, j);
                         Chunk newChunk = new Chunk(chunkPos);
                         m_chunkMap[chunkPos] = newChunk;
                     }
                 }
-                break;
-            default:
+                UpdateCurrentChunkList(list, m_currentPos);
                 break;
         }
         list.Clear();
@@ -83,7 +82,7 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     void Update()
     {
-        // 检测玩家是否移动到了新的块
+
         var realtimePos = GetCurrentChunkVector(m_player.position);
         if (IsChange(realtimePos))
         {
@@ -91,11 +90,10 @@ public class ChunkController : MonoSingleton<ChunkController>
             UpdateCurrentChunkList(list, realtimePos);
         }
 
-        // 延迟调用 Resources.UnloadUnusedAssets
-        if (Time.time - _lastUnloadTime > UnloadInterval)
+        if (Time.time - m_lastUnloadTime > UnloadInterval)
         {
             Resources.UnloadUnusedAssets();
-            _lastUnloadTime = Time.time;
+            m_lastUnloadTime = Time.time;
         }
     }
 
@@ -122,16 +120,29 @@ public class ChunkController : MonoSingleton<ChunkController>
                 int expRow = currentRow + i;
                 int expCol = currentCol + j;
 
-                // 检查地图块是否在有限地图的范围内
-                if (m_row > 0 && (expRow < 0 || expRow >= m_row)) continue;
-                if (m_col > 0 && (expCol < 0 || expCol >= m_col)) continue;
+
+                switch (MapManager.Instance.currType)
+                {
+                    case MapType.Three:
+                        if (expRow < -x || expRow >= x || expCol <-y || expCol >= y)
+                        {
+                            continue;
+                        }
+                        break;
+
+                    case MapType.Two: 
+                        if (m_row > 0 && (expRow < 0 || expRow >= m_row)) continue; 
+                        break;
+
+                    case MapType.One:
+                        break;
+                }
 
                 expectChunkPosList.Add(new ChunkVector2(expRow, expCol));
             }
         }
 
-        // 如果是无限地图，预加载外围一圈的地图块
-        if (m_col <= 0 && m_row <= 0)
+        if (MapManager.Instance.currType != MapType.Three)
         {
             for (int i = -m_loadRange - 1; i <= m_loadRange + 1; i++)
             {
@@ -141,6 +152,17 @@ public class ChunkController : MonoSingleton<ChunkController>
                     {
                         int expRow = currentRow + i;
                         int expCol = currentCol + j;
+
+                        switch (MapManager.Instance.currType)
+                        {
+                            case MapType.Two: 
+                                if (m_row > 0 && (expRow < 0 || expRow >= m_row)) continue;
+                                break;
+
+                            case MapType.One: 
+                                break;
+                        }
+
                         expectChunkPosList.Add(new ChunkVector2(expRow, expCol));
                     }
                 }
@@ -156,7 +178,6 @@ public class ChunkController : MonoSingleton<ChunkController>
         LoadNewChunks(actualChunkList, currentPos);
         UpdateChunkStates(currentPos);
     }
-
     private void UpdateChunkStates(ChunkVector2 currentPos)
     {
         foreach (var chunk in m_currentChunkList)
@@ -168,13 +189,29 @@ public class ChunkController : MonoSingleton<ChunkController>
             }
         }
     }
-
     private void LoadNewChunks(List<ChunkVector2> actualChunkList, ChunkVector2 currentPos)
     {
         foreach (var pos in actualChunkList)
         {
             if (!m_chunkMap.ContainsKey(pos))
             {
+                switch (MapManager.Instance.currType)
+                {
+                    case MapType.Three:
+                        if (pos.rowNum < x || pos.rowNum >= -x || pos.colNum >= -y || pos.colNum < y)
+                        {
+                            continue;
+                        }
+                        break;
+
+                    case MapType.Two: 
+                        if (m_row > 0 && (pos.rowNum < 0 || pos.rowNum >= m_row)) continue;
+                        break;
+
+                    case MapType.One:
+                        break;
+                }
+
                 //Debug.Log($"加载新的地图块 ({pos.rowNum}, {pos.colNum})");
                 Chunk newChunk = new Chunk(pos);
                 m_chunkMap[pos] = newChunk;
@@ -190,14 +227,35 @@ public class ChunkController : MonoSingleton<ChunkController>
         {
             if (!actualChunkList.Contains(chunk.m_position))
             {
-                //Debug.Log($"准备卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
-                chunksToRemove.Add(chunk);
+                // 根据地图类型处理边界
+                switch (MapManager.Instance.currType)
+                {
+                    case MapType.Three: // 有限地图
+
+                        if (chunk.m_position.rowNum < x || chunk.m_position.rowNum >= -x || chunk.m_position.colNum < y || chunk.m_position.colNum >= -y)
+                        {
+                            chunksToRemove.Add(chunk);
+                        }
+                        break;
+                    case MapType.Two: // 部分有限地图
+
+                        if (m_col > -y && (chunk.m_position.colNum < y || chunk.m_position.colNum >= -y)) // y 轴有限
+                        {
+                            //Debug.Log($"准备卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
+                            chunksToRemove.Add(chunk);
+                        }
+                        break;
+
+                    case MapType.One:
+                        chunksToRemove.Add(chunk);
+                        break;
+                }
             }
         }
         foreach (var chunk in chunksToRemove)
         {
             //Debug.Log($"卸载的地图块：({chunk.m_position.rowNum}, {chunk.m_position.colNum})");
-            if(chunk.IsUnLoad())
+            if (chunk.IsUnLoad())
             {
                 chunk.Unload();
                 m_chunkMap.Remove(chunk.m_position);

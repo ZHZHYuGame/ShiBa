@@ -24,15 +24,19 @@ public class ExpForm : BasePanel
     public override void OnStart()
     {
         base.OnStart();
+        Debug.Log(uiType.Name);
+        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "ZanTinh").onClick.AddListener(Pause);
         //消息侦听
         MsgManager<Exp>.Ins.OnAddListener(MesID.Exp, ChangeExpData);
         scrollbar = UIMethod.Ins.GetOrAddSingleComponentInChild<Scrollbar>(ActiveObj, "ExpScrollbar");
         levelText = UIMethod.Ins.GetOrAddSingleComponentInChild<Text>(ActiveObj, "Level");
         levelText.text = level.ToString();
-
-
     }
-
+    private void Pause()
+    {
+        GameMgr.GetInstance().UIManager_Root.Push(new PaulePanel());
+        Time.timeScale = 0;
+    }
     private void ChangeExpData(Exp exp)
     {
         this.exp = exp;
@@ -48,7 +52,7 @@ public class ExpForm : BasePanel
         if (nowExp >= nowLevelMaxExp)
         {
             //游戏暂停
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             level++;
             levelText.text = level.ToString();
             Debug.Log(level);

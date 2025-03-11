@@ -1,34 +1,36 @@
 ManifestFileVersion: 0
-CRC: 2284195652
+CRC: 3987799709
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
       Name: ui
       Dependencies: {}
     Info_1:
-      Name: ui_loadpanel
-      Dependencies:
-        Dependency_0: ui
-    Info_2:
-      Name: ui_mainpanel
+      Name: effects
       Dependencies: {}
-    Info_3:
-      Name: ui_startform
+    Info_2:
+      Name: enemy
       Dependencies:
-        Dependency_0: ui
+        Dependency_0: weapon
+    Info_3:
+      Name: dead
+      Dependencies: {}
     Info_4:
-      Name: myprefab
+      Name: weapon
       Dependencies:
         Dependency_0: ui
     Info_5:
-      Name: enemy
+      Name: exp
       Dependencies: {}
     Info_6:
-      Name: weapon
-      Dependencies: {}
+      Name: myprefab
+      Dependencies:
+        Dependency_0: ui
     Info_7:
-      Name: dead
-      Dependencies: {}
+      Name: role
+      Dependencies:
+        Dependency_0: ui
+        Dependency_1: weapon
     Info_8:
-      Name: effects
+      Name: json
       Dependencies: {}
