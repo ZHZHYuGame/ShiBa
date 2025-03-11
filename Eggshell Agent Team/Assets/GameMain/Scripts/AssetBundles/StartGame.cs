@@ -30,7 +30,7 @@ public class StartGame : MonoBehaviour
     string str = "";
     public string ABGetPath(string path)
     {
-        return Path.Combine(Application.streamingAssetsPath, path);
+        return Application.streamingAssetsPath + "/" + path;
     }
 
     IEnumerator LoadAssetAsync()
@@ -39,7 +39,7 @@ public class StartGame : MonoBehaviour
         ////string assetName = "Cube";
         ///
         Debug.Log(11);
-        UI_AB_URL = ABGetPath("ui_mainpanel");
+        UI_AB_URL = ABGetPath("ui");
         AssetBundle ui = AssetBundle.LoadFromFile(UI_AB_URL);
 
         if (ui == null)

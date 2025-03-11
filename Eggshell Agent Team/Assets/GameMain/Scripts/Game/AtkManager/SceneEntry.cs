@@ -18,9 +18,12 @@ public class SceneEntry : MonoBehaviour
     {
         //画布获取
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        //地图加载
+        //关卡加载
         Map map = ConfigMgr.GetDicData<Map>("Map", PlayerPrefs.GetInt("levelIndex"));
-        MapManager.Instance.Init(map);
+        //地图加载
+        MapData data = ConfigMgr.GetDicData<MapData>("MapDatas",map.Id);
+        MapManager.Instance.Init(data);
+        ChunkController.Instance.Init(data);
         //=======UI=======
         //摇杆加载 
         GameMgr.GetInstance().UIManager_Root.Push(new PlayerMoveForm());
@@ -29,11 +32,12 @@ public class SceneEntry : MonoBehaviour
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);
         
-        player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
+         player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
+         //player = Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath+"/role","Player","role"));
         //相机加载
         cam.gameObject.AddComponent<CameraMgr>().Init(player.transform);
         //血条加载
-        hpBase = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/HpBase.prefab"), canvas.transform);
+        hpBase = Instantiate(UIManager.Ins._resourcesManager.LoadResource<GameObject>(Application.streamingAssetsPath + "/myprefab", "HpBase", "myprefab"), canvas.transform);
         hpBase.GetComponent<HpBase>().Init(player, role);
         //怪物生成规则
         player.AddComponent<EnemySpawner>();
