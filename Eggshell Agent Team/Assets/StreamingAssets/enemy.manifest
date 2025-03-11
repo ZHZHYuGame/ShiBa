@@ -1,15 +1,31 @@
 ManifestFileVersion: 0
-CRC: 3499421609
+CRC: 4284007128
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ffae3183c760315c1eb5577312b92efb
+    Hash: 8af5b0e29bb97e5959a99704c1368a69
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 46bbd9da48cff8d17f0c89eef78da528
+    Hash: f6d96d564ff26663525d9f36a99070a5
 HashAppended: 0
 ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 212
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -26,9 +42,12 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/fe7e0e9a-3b65-463d-8571-0aaec00fa5b4.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/071cd1a7-1598-4beb-8af5-040f7f1cf3bf.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/972b7682-c128-4787-aed4-1d35c8bc494d.png"
+- Assets/GameMain/GameResources/Prefabs/Dog.prefab
+- Assets/GameMain/GameResources/Prefabs/SeaUrchin.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/2a4e72ce-b545-4d3e-b7cf-6d8aefc8a5c2.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/57910e8c-a33c-4617-936f-29b68431fbee.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/1ad12d47-4ca4-49d9-a2b6-385fe4a7be99.png"
+- Assets/GameMain/GameResources/Prefabs/SmallRobot.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/351940c1-b293-4109-864c-e38e8bc340dd.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/83e2518d-a25c-43a2-8384-5f7a75188fe9.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/079a317d-9b05-4938-add0-38a13609d650.png"
@@ -36,6 +55,7 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/92e7aa16-7029-4204-95b4-f7d2a581c29d.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/476923ed-4f5c-418e-bd11-9744b334a4f4.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/13723c6a-0cdf-4a36-b89e-2793367d8b38.png"
+- Assets/GameMain/GameResources/Prefabs/Bee.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/9e9a446b-bebe-48ed-b84b-82c1003f6e33.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/05947967-16c1-41b9-8c80-c77ed75eb802.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/b494ab85-8d4d-410f-83d3-971f6bc4c0f0.png"
@@ -53,6 +73,7 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/051ce537-8926-4aa8-b4da-a174552d19f8.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/f087d69a-1f4c-4399-bac8-a23099e0ba20.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/e007e41c-cce2-4c79-83ef-d78c699dde71.png"
+- Assets/GameMain/GameResources/Prefabs/QueenBee.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/cc6eca75-4bbe-47c9-b8a2-f44d774d4488.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/3da08646-6482-400b-aad1-3bf7fc802494.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/60517788-06cd-4a96-b853-c440c56c4d69.png"
@@ -63,6 +84,7 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/f88b09af-09f3-49f0-bce7-b2c11293beec.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/ffbee334-ccf5-4acb-9e10-385ad2765a89.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/16b4b0de-7724-4090-82ab-d5c28eb8c61e.png"
+- Assets/GameMain/GameResources/Prefabs/Shark.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/e7055827-4812-40dd-8b9e-3058b4d77f5d.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/0af87652-72db-4a5a-b4a5-2a106b393880.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/d8b4a5a5-0a23-4306-8e1e-43197f5d504c.png"
@@ -83,13 +105,17 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/0c7233b1-bb9d-4c38-b5f1-163eda805fb2.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/8890e7fd-1027-4ec2-8e66-f4e1604d0c08.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/a5e49928-8cde-48c1-a2cb-0cd93062969d.png"
+- Assets/GameMain/GameResources/Prefabs/Robot.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/1ce8c637-f996-4cb1-89ea-b4a0966952e4.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/6803f9f2-7c76-44e2-a5e3-ea213dc2d80e.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/dda9df42-7fb3-4c72-84a5-702071766bad.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/58f22d95-4637-49bd-bd84-298ce85d0ac0.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/6c3b1bb2-84e6-4725-9e48-79941ef63023.png"
+- Assets/GameMain/GameResources/Prefabs/bullfrog.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/8cca5e36-fb40-4547-b74e-dde1d4b3e7ed.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/07103195-476e-4338-890e-cb178347deb0.png"
+- Assets/GameMain/GameResources/Prefabs/Bullet.prefab
+- Assets/GameMain/GameResources/Prefabs/Nymph.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/18a078ee-61eb-4d83-afab-88ab753540ab.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/64b5b861-e92d-4bba-8059-5dcd53e92531.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/eff06387-7039-4749-bc18-4bccff8bb957.png"
@@ -104,6 +130,10 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/dd1c2940-cf71-43c6-b481-fa93febf87dd.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/3327c143-cd8f-43f4-92a7-e79117de379f.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/fc8478ee-2dcd-41b8-8318-438809c9c272.png"
+- Assets/GameMain/GameResources/Prefabs/Pig.prefab
+- Assets/GameMain/GameResources/Prefabs/Camera.prefab
+- Assets/GameMain/GameResources/Prefabs/Octopus.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/441aed29-a677-4e56-9c8e-5699474bbe84.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/11972087-4ede-443e-957b-02921fc97a16.png"
-Dependencies: []
+Dependencies:
+- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/weapon

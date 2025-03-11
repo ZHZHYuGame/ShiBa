@@ -36,7 +36,7 @@ public class StrartForm : BasePanel
     {
         GameMgr.GetInstance().UIManager_Root.Pop(false);
         Debug.Log(4);
-        GameMgr.GetInstance().UIManager_Root.Push(new MainPanel());
+        GameMgr.GetInstance().UIManager_Root.Push(new LoadingProgress());
     }
 
     public override void OnDistroy()

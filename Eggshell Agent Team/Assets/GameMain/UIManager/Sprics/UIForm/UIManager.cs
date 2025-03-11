@@ -79,29 +79,13 @@ public class UIManager : Singleton<UIManager>
             // 更新字典中的 Canvas 引用
             canvasDictionary[uiType.UILayerType] = targetCanvas;
         }
-        //Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/HpBase.prefab"), canvas.transform);
-        //GameObject prefab = Resources.Load<GameObject>(uiType.Path);
-        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/" + uiType.Path+ ".prefab");
-        if (prefab == null)
-        {
-            Debug.LogError($"无法加载预制体: {uiType.Path}");
-            return null;
-        }
-
         // 实例化到目标 Canvas 下
 
         //同步加载资源         
-        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
-        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
-        //勿删!!!勿删!!!勿删!!!   打包到AB包即可加载UI面板
-        if (prefab != null)
-        {
-            GameObject gameObject = GameObject.Instantiate(prefab, targetCanvas.transform);
-            return gameObject;
-        }
-        return null;
+        GameObject gameObject = GameObject.Instantiate(_resourcesManager.LoadResource<GameObject>(GetPath("myprefab"), uiType.Name, "myprefab"), targetCanvas.transform);
+        return gameObject;
         //return InstantiatePrefab(targetCanvas.transform, prefab,"myprefab");
-   //     return InstantiatePerfab(targetCanvas, prefab);
+        //     return InstantiatePerfab(targetCanvas, prefab);
         #region 废弃代码
         //GameObject gameObject;
         //switch (uiType.UILayerType)
@@ -162,7 +146,7 @@ public class UIManager : Singleton<UIManager>
 
     public string GetPath(string path)
     {
-        return Path.Combine(Application.streamingAssetsPath, path);
+        return Application.streamingAssetsPath +"/"+ path;
     }
     /// <summary>
     /// 往stack里面压一个Panel；
@@ -188,7 +172,7 @@ public class UIManager : Singleton<UIManager>
         }
         else
         {
-            if (stack_ui.Peek().uiType.Name==basePanel.uiType.Name)
+            if (stack_ui.Peek().uiType.Name!=basePanel.uiType.Name)
             {
                 stack_ui.Push(basePanel);
             }
