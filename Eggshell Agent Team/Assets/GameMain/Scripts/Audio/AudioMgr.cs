@@ -41,7 +41,7 @@ public class AudioMgr : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
 
         InitializePool();
     }

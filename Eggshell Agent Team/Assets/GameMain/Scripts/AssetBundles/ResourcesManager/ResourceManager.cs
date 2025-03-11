@@ -97,7 +97,6 @@ public class ResourceManager
                                                                                                 // 增加 Right 属性
             Vector2 offsetMax = LoadingProgress.maskImage.rectTransform.offsetMax;
             offsetMax.x += sppeed * Time.deltaTime;
-            Debug.Log(offsetMax.x);
             if (offsetMax.x >= LoadingProgress.EndPos)
             {
                 offsetMax.x = LoadingProgress.nextStartPos;
@@ -191,6 +190,7 @@ public class ResourceManager
         {
             var wrapper = new ResourceWrapper<UnityEngine.Object>(resources);
             //添加到缓存
+            Debug.Log(abName);
             _resourceCache[cacheKey] = wrapper;
             _lruCache.Add(cacheKey, wrapper);
         }

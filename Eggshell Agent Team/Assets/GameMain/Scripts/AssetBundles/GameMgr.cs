@@ -11,7 +11,8 @@ public class GameMgr : MonoBehaviour
     private SceneControl SceneControl;//场景管理
     public SceneControl SceneControl_Root { get => SceneControl; }
     public DataAnalysis dataAnalysis;
-    
+
+    public ModelMgr ModelMgr;//面板数据管理类
 
 
     #region 单例
@@ -44,6 +45,8 @@ public class GameMgr : MonoBehaviour
         instance = this;
         UIManager = new UIManager();
         SceneControl = new SceneControl();
+        ModelMgr = new ModelMgr();
+        ModelMgr.LoadAll();//加载所有Model
     }
     private void Start()
     {
