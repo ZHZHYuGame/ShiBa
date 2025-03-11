@@ -32,15 +32,17 @@ public class WeaponOrbitController : MonoBehaviour
     [Header("等级系统")]
     public List<LevelSettings> levelConfigs = new List<LevelSettings>()
     {
-        new LevelSettings { level = 1, weaponCount = 1, orbitRadius = 2f,rotationSpeed=300 },
-        new LevelSettings { level = 2, weaponCount = 2, orbitRadius = 2f,rotationSpeed=400},
-        new LevelSettings { level = 3, weaponCount = 4, orbitRadius = 3f,rotationSpeed=500 },
-        new LevelSettings { level = 4, weaponCount = 6, orbitRadius = 3f,rotationSpeed=500 },
-        new LevelSettings { level = 5, weaponCount = 6, orbitRadius = 3f,rotationSpeed=600 },
+
+        new LevelSettings { level = 0, weaponCount = 0, orbitRadius = 0f,rotationSpeed=0 },
+        new LevelSettings { level = 1, weaponCount = 2, orbitRadius = 2f,rotationSpeed=300 },
+        new LevelSettings { level = 2, weaponCount = 3, orbitRadius = 2f,rotationSpeed=350},
+        new LevelSettings { level = 3, weaponCount = 4, orbitRadius = 3f,rotationSpeed=400 },
+        new LevelSettings { level = 4, weaponCount = 6, orbitRadius = 3f,rotationSpeed=450 },
+        new LevelSettings { level = 5, weaponCount = 6, orbitRadius = 3f,rotationSpeed=500 },
     };
 
     [Header("运行时控制")]
-    [SerializeField] private int _currentLevel = 1;
+    [SerializeField] private int _currentLevel = 0;
     public int currentLevel
     {
         get => _currentLevel;
@@ -48,9 +50,9 @@ public class WeaponOrbitController : MonoBehaviour
     }
 
     [Header("优化设置")]
-    public bool useObjectPool = true;
-    public int maxPoolSize;
-    public float radiusChangeSpeed = 2f;
+    bool useObjectPool = true;
+    int maxPoolSize = 6;
+    float radiusChangeSpeed = 2f;
 
     private List<GameObject> activeWeapons = new List<GameObject>();
     private Queue<GameObject> weaponPool = new Queue<GameObject>();
@@ -65,6 +67,7 @@ public class WeaponOrbitController : MonoBehaviour
     void Start()
     {
         InitializePool();
+        currentLevel = 1;
         SetLevel(_currentLevel);
     }
 
@@ -95,7 +98,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     void SetLevel(int newLevel)//等级切换
     {
-        newLevel = Mathf.Clamp(newLevel, 1, levelConfigs.Count);
+        newLevel = Mathf.Clamp(newLevel, 0, levelConfigs.Count);
 
         _currentLevel = newLevel;
 
@@ -167,7 +170,7 @@ public class WeaponOrbitController : MonoBehaviour
             weapon.SetActive(true);
             return weapon;
         }
-        return Instantiate(defaultWeaponPrefab);
+        return Instantiate(_currentWeaponPrefab);
     }
 
     //武器返回到对象池
@@ -205,6 +208,7 @@ public class WeaponOrbitController : MonoBehaviour
     //位置计算
     Vector3 CalculateOrbitPosition(float angle)
     {
+
         Quaternion rotation = Quaternion.AngleAxis(angle, rotationAxis);
         return target.position + rotation * (Vector3.right * orbitRadius);
     }
