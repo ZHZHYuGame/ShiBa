@@ -1,4 +1,5 @@
 ﻿using StarForce;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,11 +17,11 @@ public class PlayerMoveForm : BasePanel
 
     public override void OnStart()
     {
+        Debug.Log(uiType.Name);
         etc = UIMethod.Ins.GetOrAddSingleComponentInChild<Image>(ActiveObj,"ETC").GetComponent<ETC>();
         etc.tag = "Etc";
         base.OnStart();
     }
-
     public override void OnEndable()
     {
         base.OnEndable();

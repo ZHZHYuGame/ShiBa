@@ -172,7 +172,7 @@ public class UIManager : Singleton<UIManager>
         }
         else
         {
-            if (stack_ui.Peek().uiType.Name==basePanel.uiType.Name)
+            if (stack_ui.Peek().uiType.Name!=basePanel.uiType.Name)
             {
                 stack_ui.Push(basePanel);
             }
