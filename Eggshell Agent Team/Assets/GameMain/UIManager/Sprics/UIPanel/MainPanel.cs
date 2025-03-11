@@ -72,6 +72,7 @@ public class MainPanel : BasePanel
                 //跳转场景
                 Game game = new Game();
                 PlayerPrefs.SetInt("levelIndex", levelIndex);
+                GameMgr.GetInstance().UIManager_Root.Pop(false);
                 GameMgr.GetInstance().SceneControl_Root.LoadScene(game.SceneName, game);
 
             });

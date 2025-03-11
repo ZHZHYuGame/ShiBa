@@ -231,4 +231,9 @@ public class UIManager : Singleton<UIManager>
             }
         }
     }
+    public void Pops(BasePanel basePanel)
+    {
+        dic_uiobject.Remove(basePanel.uiType.Name);
+        stack_ui.Pop();
+    }
 }

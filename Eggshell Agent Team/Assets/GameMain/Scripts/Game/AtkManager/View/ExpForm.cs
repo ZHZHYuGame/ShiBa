@@ -24,12 +24,16 @@ public class ExpForm : BasePanel
     public override void OnStart()
     {
         base.OnStart();
+        Debug.Log(uiType.Name);
+        //GameMgr.GetInstance().UIManager_Root.dic_uiobject.Remove(uiType.Name);
+        // GameMgr.GetInstance().UIManager_Root.Push(new PlayerMoveForm());
+        GameMgr.GetInstance().UIManager_Root.Pops(this);
         //消息侦听
         MsgManager<Exp>.Ins.OnAddListener(MesID.Exp, ChangeExpData);
         scrollbar = UIMethod.Ins.GetOrAddSingleComponentInChild<Scrollbar>(ActiveObj, "ExpScrollbar");
         levelText = UIMethod.Ins.GetOrAddSingleComponentInChild<Text>(ActiveObj, "Level");
         levelText.text = level.ToString();
-
+       
 
     }
 

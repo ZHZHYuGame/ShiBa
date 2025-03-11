@@ -218,6 +218,7 @@
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIForm\UIMethod.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIForm\UIType.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\MainPanel.cs" />
+    <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\PaulePanel.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\StartPanel.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\StrartForm.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\TipsPanel.cs" />
