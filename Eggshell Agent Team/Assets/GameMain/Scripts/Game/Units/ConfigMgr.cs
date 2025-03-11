@@ -22,12 +22,14 @@ public class ConfigMgr
             string assetPath = Application.dataPath + "/GameMain/GameResources/Configs/" + path+".json";
             if (File.Exists(assetPath))
             {
-//#if UNITY_EDITOR
+                //#if UNITY_EDITOR
 
-//#else
+                //#else
 
-//#endif
-                string json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/GameMain/GameResources/Configs/" + path + ".json").text;
+                //#endif
+                Debug.Log(path);
+                string json = ResourcesLoader.LoadResources<TextAsset>(Application.streamingAssetsPath+"/json",path,"json").text;
+               // string json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/GameMain/GameResources/Configs/" + path + ".json").text;
                 T table = JsonConvert.DeserializeObject<T>(json);
                 dic.Add(path, table);
                 return table;

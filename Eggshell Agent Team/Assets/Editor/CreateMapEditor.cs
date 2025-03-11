@@ -17,32 +17,29 @@ public class CreateMapEditor : EditorWindow
     public static void Init()
     {
         GetWindow<CreateMapEditor>().Show(); // 显示地图编辑器窗口
-        mapDictionary = ConfigManager.GetDic<Dictionary<int, MapData>>("PlaneData"); // 加载地图数据
+        LoadMapData();
     }
 
     // 编辑器窗口中的变量
-    private int mapId; // 当前编辑的地图ID
+    private int mapId=1; // 当前编辑的地图ID
     private MapType mapType;
     private Sprite sprite; // 背景图片
     private int oneMapScale;//地图比例
     private int mapLength;//地图边长
+    private int mapWidth;
+    private int mapHeight;
     private Vector2 scrollPosition; // 滚动视图的滚动位置
 
-    private void OnEnable()
-    {
-        LoadMapData();
-    }
-
     // 加载地图数据
-    private void LoadMapData()
+    private static void LoadMapData()
     {
-        mapDictionary = ConfigManager.GetDic<Dictionary<int,MapData>>("MapDatas");
+        mapDictionary = ConfigMgr.GetTable<Dictionary<int,MapData>>("MapDatas");
         if (mapDictionary == null)
         {
             mapDictionary = new Dictionary<int, MapData>();
         }
     }
-
+    
 
     // 绘制GUI
     private void OnGUI()
@@ -73,14 +70,17 @@ public class CreateMapEditor : EditorWindow
             mapDictionary[mapId].spritePath = path;
         }
         //地图类型
-        mapType = (MapType)EditorGUILayout.EnumPopup("地图类型：",mapType);
-        mapDictionary[mapId].type = mapType;
+        mapDictionary[mapId].type = (MapType)EditorGUILayout.EnumPopup("地图类型：", mapDictionary[mapId].type);
 
-        oneMapScale = EditorGUILayout.IntField("地图比例：", oneMapScale);
-        mapDictionary[mapId].oneMapScale = oneMapScale;
+        mapDictionary[mapId].mapWidth = EditorGUILayout.IntField("地图宽：", mapDictionary[mapId].mapWidth);
 
-        mapLength = EditorGUILayout.IntField("地图边长：", mapLength);
-        mapDictionary[mapId].mapLength = mapLength;
+        mapDictionary[mapId].mapHeight = EditorGUILayout.IntField("地图高：", mapDictionary[mapId].mapHeight);
+
+
+        mapDictionary[mapId].oneMapScale = EditorGUILayout.IntField("地图比例：", mapDictionary[mapId].oneMapScale);
+
+        mapDictionary[mapId].mapLength = EditorGUILayout.IntField("地图边长：", mapDictionary[mapId].mapLength);
+
 
         // 地图预览
         GUILayout.Label("地图预览", EditorStyles.boldLabel);
@@ -99,7 +99,7 @@ public class CreateMapEditor : EditorWindow
         // 保存数据按钮
         if (GUILayout.Button("保存数据"))
         {
-            ConfigManager.Save("MapDatas", mapDictionary); // 保存地图数据
+            ConfigMgr.Save("MapDatas", mapDictionary); // 保存地图数据
             AssetDatabase.Refresh(); // 刷新资产数据库
         }
 
