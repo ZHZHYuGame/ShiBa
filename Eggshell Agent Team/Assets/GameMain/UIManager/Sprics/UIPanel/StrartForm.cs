@@ -1,4 +1,5 @@
-﻿using StarForce;
+﻿using RedpointSystem;
+using StarForce;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ public class StrartForm : BasePanel
     public static readonly UIType uIType = new UIType(path, name, layerType);
     public StrartForm() : base(uIType)
     {
+        //初始的时候直接让充值提示显示  红点直接显示出来
+        RedPointSystem.Instance.AddNode(RedPointKey.Play_LEVEL1_TOP);
     }
 
     

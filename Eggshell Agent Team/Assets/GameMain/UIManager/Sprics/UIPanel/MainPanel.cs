@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedpointSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -13,6 +14,8 @@ public class MainPanel : BasePanel
     private static LayerType layerType = LayerType.Normal;
     private List<Button>btns= new List<Button>();
     public static readonly UIType uIType = new UIType(path, name, layerType);
+     GameObject top_upBtn;
+   // public TopPanel LevelPanel;
 
     public MainPanel() : base(uIType)
     {
@@ -25,6 +28,7 @@ public class MainPanel : BasePanel
         base.OnStart();
 
         togglegame=UIMethod.Ins.GetOrAddSingleComponentInChild<ToggleGroup>(ActiveObj, "togglegame").gameObject;
+        top_upBtn = UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "Top_upBtn").gameObject;
         for (int i = 0; i < togglegame.transform.childCount; i++)
         {
             toggles.Add(UIMethod.Ins.AddOrGetComponent<Toggle>(togglegame.transform.GetChild(i).gameObject));
@@ -76,7 +80,41 @@ public class MainPanel : BasePanel
 
             });
         }
+        top_upBtn.GetComponent<Button>().onClick.AddListener(OnPlay);
+        InitRedPointState();//初始化红点状态
+    }
 
+    private void OnPlay()
+    {
+        //this.gameObject.SetActive(false);
+        GameMgr.GetInstance().UIManager_Root.Pop(false);
+        GameMgr.GetInstance().UIManager_Root.Push(new TopPanel());
+    }
+
+    private void InitRedPointState()
+    {
+        int redNum = RedPointSystem.Instance.GetRedpointNum(RedPointKey.Play);//获取红点状态
+        RefreshRedPointState(redNum);
+        RedPointSystem.Instance.SetCallBack(RedPointKey.Play, RefreshRedPointState);
+    }
+    /// <summary>
+    /// 刷新红点状态
+    /// </summary>
+    /// <param name="redNum"></param>
+    private void RefreshRedPointState(int redNum)
+    {
+        //红点数量是0就隐藏  否则就显示
+        Transform redPoint = top_upBtn.transform.Find("RedPoint");
+        Transform redNumText = redPoint.transform.Find("Num");
+        if (redNum <= 0)
+        {
+            redPoint.gameObject.SetActive(false);
+        }
+        else
+        {
+            redPoint.gameObject.SetActive(true);
+            redNumText.GetComponent<Text>().text = redNum.ToString();
+        }
     }
 
     private void Load()
