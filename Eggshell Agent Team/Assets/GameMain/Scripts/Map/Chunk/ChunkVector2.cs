@@ -5,6 +5,7 @@ using UnityEngine;
 public struct ChunkVector2
 {
     public int rowNum;
+
     public int colNum;
 
     public ChunkVector2(int rowNum, int colNum)
@@ -19,7 +20,7 @@ public struct ChunkVector2
     }
     public static bool operator !=(ChunkVector2 v1, ChunkVector2 v2)
     {
-        return (v1.colNum == v2.colNum) || (v2.rowNum == v1.rowNum);
+        return (v1.colNum != v2.colNum) || (v2.rowNum != v1.rowNum);
     }
 
     public override bool Equals(object obj)

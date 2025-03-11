@@ -186,3 +186,122 @@ public class BossEnemy : Role
 {
     //boss技能...
 }
+public class Exp
+{
+    private int id;
+    private string exp_path;//图片路径
+    private string exp_name;//名称
+    private ExpType exp_type;//类型
+    private int exp_value;//经验值
+
+    public Exp()
+    {
+    }
+
+    public Exp(int id, string exp_path, string exp_name, ExpType exp_type, int exp_value)
+    {
+        this.Id = id;
+        this.Exp_path = exp_path;
+        this.Exp_name = exp_name;
+        this.Exp_type = exp_type;
+        this.Exp_value = exp_value;
+    }
+
+    public int Id { get => id; set => id = value; }
+    public string Exp_path { get => exp_path; set => exp_path = value; }
+    public string Exp_name { get => exp_name; set => exp_name = value; }
+    public ExpType Exp_type { get => exp_type; set => exp_type = value; }
+    public int Exp_value { get => exp_value; set => exp_value = value; }
+}
+public class Skill
+{
+    private int skill_id;//技能id
+    private string skill_name;//技能名称
+    private string skill_des;//描述
+    private string slill_icon;//图标
+    private int skill_type;//类型
+
+    public Skill()
+    {
+    }
+
+    public Skill(int skill_id, string skill_name, string skill_des, string slill_icon, int skill_type)
+    {
+        this.Skill_id = skill_id;
+        this.Skill_name = skill_name;
+        this.Skill_des = skill_des;
+        this.Slill_icon = slill_icon;
+        this.Skill_type = skill_type;
+    }
+
+    public int Skill_id { get => skill_id; set => skill_id = value; }
+    public string Skill_name { get => skill_name; set => skill_name = value; }
+    public string Skill_des { get => skill_des; set => skill_des = value; }
+    public string Slill_icon { get => slill_icon; set => slill_icon = value; }
+    public int Skill_type { get => skill_type; set => skill_type = value; }
+}
+public class ActiveSkill:Skill
+{
+    private string this_animator_path;//当前动画路径
+    private string this_object_path;//当前模型路径
+    private int level;//技能等级
+    private float skill_hurt;//伤害
+    private int num;//数量
+    private float rate;//频率
+    private float coefficient;//系数
+    private float skill_range;//范围
+    private float skill_cooling;//冷却
+    private float skill_size;//技能大小
+
+    public ActiveSkill()
+    {
+    }
+
+    public ActiveSkill(int skill_id, string skill_name, string skill_des, string slill_icon, int skill_type) : base(skill_id, skill_name, skill_des, slill_icon, skill_type)
+    {
+    }
+
+    public string This_animator_path { get => this_animator_path; set => this_animator_path = value; }
+    public string This_object_path { get => this_object_path; set => this_object_path = value; }
+    public int Level { get => level; set => level = value; }
+    public float Skill_hurt { get => skill_hurt; set => skill_hurt = value; }
+    public int Num { get => num; set => num = value; }
+    public float Rate { get => rate; set => rate = value; }
+    public float Coefficient { get => coefficient; set => coefficient = value; }
+    public float Skill_range { get => skill_range; set => skill_range = value; }
+    public float Skill_cooling { get => skill_cooling; set => skill_cooling = value; }
+    public float Skill_size { get => skill_size; set => skill_size = value; }
+}
+public class PassiveSkill:Skill
+{
+    private int level;//等级
+    private float bulletSpeed;//子弹速度
+    private float moveSpeed;//移动速度
+    private float maxBlood;//血量上限
+    private float exp;//经验
+    private float atk;//伤害提升
+    private float bloodReturning;//血量回复
+
+    public PassiveSkill()
+    {
+    }
+
+    public PassiveSkill(int level, float bulletSpeed, float moveSpeed, float maxBlood, float exp, float atk, float bloodReturning)
+    {
+        this.Level = level;
+        this.BulletSpeed = bulletSpeed;
+        this.MoveSpeed = moveSpeed;
+        this.MaxBlood = maxBlood;
+        this.Exp = exp;
+        this.Atk = atk;
+        this.BloodReturning = bloodReturning;
+    }
+
+    public int Level { get => level; set => level = value; }
+    public float BulletSpeed { get => bulletSpeed; set => bulletSpeed = value; }
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+    public float MaxBlood { get => maxBlood; set => maxBlood = value; }
+    public float Exp { get => exp; set => exp = value; }
+    public float Atk { get => atk; set => atk = value; }
+    public float BloodReturning { get => bloodReturning; set => bloodReturning = value; }
+}
