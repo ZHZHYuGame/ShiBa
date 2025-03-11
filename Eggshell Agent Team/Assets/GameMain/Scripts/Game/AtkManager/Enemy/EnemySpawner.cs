@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -89,7 +90,9 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < roles.Count; i++)
         {
-            enemyPrefabs.Add(AssetDatabase.LoadAssetAtPath<GameObject>(roles[i].This_object_path));
+            string assetName = Path.GetFileNameWithoutExtension(roles[i].This_object_path);
+            //enemyPrefabs.Add(AssetDatabase.LoadAssetAtPath<GameObject>(roles[i].This_object_path));
+            enemyPrefabs.Add(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/enemy", assetName, "enemy"));
         }
         waveInterval = map.Enemy_wave_Time;
     }
