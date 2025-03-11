@@ -1,15 +1,33 @@
 ManifestFileVersion: 0
-CRC: 4031342134
+CRC: 3546644595
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b8b6e307bb334d64b70f06c5a5d48fc1
+    Hash: 738866f81602325d7e122b14764cd352
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 46bbd9da48cff8d17f0c89eef78da528
+    Hash: e36ff91ac9e80b3ca1aebf177efc63e4
 HashAppended: 0
 ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
 - Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9dc277de59b41d646bab469d9036d056, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -21,6 +39,7 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/77372380-148b-4b2e-a0c8-1b47a41547f1.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/d1d97c95-5d1e-4017-8826-7749d70a4679.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/a44f3abb-8358-4575-8ad1-2d92d57386e0.png"
+- Assets/GameMain/GameResources/Prefabs/sawtooth.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/9e12db19-603e-4e59-a5a4-960770fc43aa.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/047724e0-5d65-4d9b-aa18-e7317c1dac8c.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/294bf8d8-075d-49d2-bc9f-94eb90697015.png"
@@ -37,9 +56,11 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/0dad51e9-28ea-4de3-a5bf-d0e9b4989dfc.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/0be14581-e73f-49cb-8acb-fb9b435e101e.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/d63a2ab5-d326-4aa4-9b4e-0a92a9d32d6f.png"
+- Assets/GameMain/GameResources/Prefabs/sawtoothMax.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/2d52dde9-b7c3-4da7-ab9c-09b4c257ff43.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/ceb3e07b-c5b6-46e8-be61-88241004e83d.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/784ac871-10a1-49c2-b9a8-8b72928e9341.png"
+- Assets/GameMain/GameResources/Prefabs/Dan.prefab
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/2a58f559-5b19-478c-9194-003e89c9ac69.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/989fe5d8-e143-48f3-a688-42e1583be3b9.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/91f49e03-e272-40e3-b068-ede53d3926c0.png"
@@ -48,4 +69,5 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/93a1ac43-0cee-4106-8c3a-4efd153b8de2.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/01f0f454-4edf-428f-918b-24c3bf879e19.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/a9ac3c55-d179-4685-846e-936cadde9da9.png"
-Dependencies: []
+Dependencies:
+- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui

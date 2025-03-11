@@ -17,6 +17,7 @@ public class PlayerMoveForm : BasePanel
     public override void OnStart()
     {
         etc = UIMethod.Ins.GetOrAddSingleComponentInChild<Image>(ActiveObj,"ETC").GetComponent<ETC>();
+        etc.tag = "Etc";
         base.OnStart();
     }
 

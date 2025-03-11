@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 873358086
+CRC: 1161963868
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f322c91bfefaf90b25d5d7ed2ea10cd6
+    Hash: ec7388c2e13bfa2be3f8a1f26b7a51ba
   TypeTreeHash:
     serializedVersion: 2
-    Hash: cf5ab2a1e09f376b991e1c9c30b7fbc7
+    Hash: 0a064d2bb72d7f4766476ff0df9724fe
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -30,6 +30,8 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: 15b205d7c9566604688dc515b0af1c2c, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -38,7 +40,13 @@ ClassTypes:
 - Class: 114
   Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: d44e151cbe0b952418c0e44ff72cfdd1, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8372cadccb065824492f5c37e2755740, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 69504a9ef2f683348a0f0d95545453cd, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9085046f02f69544eb97fd06b6048fe2, type: 3}
 - Class: 114
@@ -59,13 +67,16 @@ ClassTypes:
   Script: {instanceID: 0}
 - Class: 225
   Script: {instanceID: 0}
-- Class: 687078895
-  Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/Resources/Panel/MainPanel.prefab
-- Assets/Resources/Panel/LoadPanel.prefab
-- Assets/Resources/Panel/StrartForm.prefab
-- Assets/Resources/Panel/StartPanel.prefab
+- Assets/GameMain/GameResources/Panel/MainPanel.prefab
+- Assets/GameMain/GameResources/Panel/LoadPanel.prefab
+- Assets/GameMain/GameResources/Prefabs/HpBase.prefab
+- Assets/GameMain/GameResources/Panel/ExpForm.prefab
+- Assets/GameMain/GameResources/Panel/StrartForm.prefab
+- Assets/GameMain/GameResources/Prefabs/HurtItem.prefab
+- Assets/GameMain/GameResources/Panel/StartPanel.prefab
+- Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab
+- Assets/GameMain/GameResources/Panel/PlayerMoveForm.prefab
 Dependencies:
 - D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui
