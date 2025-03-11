@@ -18,21 +18,9 @@ public class PlayerMoveForm : BasePanel
     public override void OnStart()
     {
         Debug.Log(uiType.Name);
-        //GameMgr.GetInstance().UIManager_Root.dic_uiobject.Remove(uiType.Name);
-        GameMgr.GetInstance().UIManager_Root.Pops(this);
         etc = UIMethod.Ins.GetOrAddSingleComponentInChild<Image>(ActiveObj,"ETC").GetComponent<ETC>();
-        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj,"ZanTinh").onClick.AddListener(Pause);
-      
         base.OnStart();
     }
-
-    private void Pause()
-    {
-      
-        GameMgr.GetInstance().UIManager_Root.Push(new PaulePanel());
-        Time.timeScale = 0;
-    }
-
     public override void OnEndable()
     {
         base.OnEndable();

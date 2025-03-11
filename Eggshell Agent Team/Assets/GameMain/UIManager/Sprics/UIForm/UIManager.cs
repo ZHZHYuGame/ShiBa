@@ -188,7 +188,7 @@ public class UIManager : Singleton<UIManager>
         }
         else
         {
-            if (stack_ui.Peek().uiType.Name==basePanel.uiType.Name)
+            if (stack_ui.Peek().uiType.Name!=basePanel.uiType.Name)
             {
                 stack_ui.Push(basePanel);
             }
@@ -230,10 +230,5 @@ public class UIManager : Singleton<UIManager>
                 }
             }
         }
-    }
-    public void Pops(BasePanel basePanel)
-    {
-        dic_uiobject.Remove(basePanel.uiType.Name);
-        stack_ui.Pop();
     }
 }

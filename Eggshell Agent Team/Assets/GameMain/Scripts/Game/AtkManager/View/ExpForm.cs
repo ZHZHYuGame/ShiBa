@@ -25,18 +25,18 @@ public class ExpForm : BasePanel
     {
         base.OnStart();
         Debug.Log(uiType.Name);
-        //GameMgr.GetInstance().UIManager_Root.dic_uiobject.Remove(uiType.Name);
-        // GameMgr.GetInstance().UIManager_Root.Push(new PlayerMoveForm());
-        GameMgr.GetInstance().UIManager_Root.Pops(this);
+        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "ZanTinh").onClick.AddListener(Pause);
         //消息侦听
         MsgManager<Exp>.Ins.OnAddListener(MesID.Exp, ChangeExpData);
         scrollbar = UIMethod.Ins.GetOrAddSingleComponentInChild<Scrollbar>(ActiveObj, "ExpScrollbar");
         levelText = UIMethod.Ins.GetOrAddSingleComponentInChild<Text>(ActiveObj, "Level");
         levelText.text = level.ToString();
-       
-
     }
-
+    private void Pause()
+    {
+        GameMgr.GetInstance().UIManager_Root.Push(new PaulePanel());
+        Time.timeScale = 0;
+    }
     private void ChangeExpData(Exp exp)
     {
         this.exp = exp;

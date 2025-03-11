@@ -16,7 +16,17 @@ public class PaulePanel : BasePanel
     public override void OnStart()
     {
         UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "JiXu").onClick.AddListener(Strate);
+        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "FanHun").onClick.AddListener(FanHun);
         base.OnStart();
+    }
+
+    private void FanHun()
+    {
+        Time.timeScale = 1;
+        Game game = new Game();
+        GameMgr.GetInstance().UIManager_Root.Pop(true);
+        GameMgr.GetInstance().SceneControl_Root.LoadScene("11", game);
+        GameMgr.GetInstance().UIManager_Root.Push(new MainPanel());
     }
 
     private void Strate()
