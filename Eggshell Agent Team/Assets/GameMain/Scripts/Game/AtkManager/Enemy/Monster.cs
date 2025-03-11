@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -55,17 +55,20 @@ public class Monster : MonoBehaviour
             GameObject expPrefab = ObjectPool.GetObject(GameObject.Find("ExpPool").transform.GetChild(0).gameObject);
             expPrefab.transform.position = transform.position;
             List<Exp> exps = ConfigMgr.GetTable<List<Exp>>("ExpData");
-            //Debug.Log(refreshWaves.ExpType);
             switch (refreshWaves.ExpType)
             {
                 case ExpType.lowerExp:
                     expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[0].Exp_path);
+                    //属性设置
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
                 case ExpType.midelExp:
                     expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[1].Exp_path);
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
                 case ExpType.higherExp:
                     expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[2].Exp_path);
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
             }
 
