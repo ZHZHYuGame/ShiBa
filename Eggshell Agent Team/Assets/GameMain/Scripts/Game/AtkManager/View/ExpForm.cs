@@ -25,7 +25,7 @@ public class ExpForm : BasePanel
     {
         base.OnStart();
         Debug.Log(uiType.Name);
-        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "ZanTinh").onClick.AddListener(Pause);
+        //UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, " ").onClick.AddListener(Pause);
         //消息侦听
         MsgManager<Exp>.Ins.OnAddListener(MesID.Exp, ChangeExpData);
         scrollbar = UIMethod.Ins.GetOrAddSingleComponentInChild<Scrollbar>(ActiveObj, "ExpScrollbar");
