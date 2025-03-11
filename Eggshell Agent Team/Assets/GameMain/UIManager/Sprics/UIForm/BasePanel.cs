@@ -11,9 +11,9 @@ public class BasePanel
     /// </summary>
     public GameObject ActiveObj;
 
-    public BasePanel(UIType uitype)
+    public BasePanel(UIType uItype)
     {
-        uiType = uitype;
+        uiType = uItype;
     }
 
     public virtual void OnStart()

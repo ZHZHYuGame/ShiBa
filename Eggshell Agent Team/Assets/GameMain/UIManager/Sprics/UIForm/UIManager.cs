@@ -26,6 +26,7 @@ public class UIManager : Singleton<UIManager>
     public GameObject CanvasUpper;
     public GameObject CanvasNormal;
     public GameObject CanvasHud;
+    public GameObject CanvasEtc;
 
     private Dictionary<LayerType, GameObject> canvasDictionary;
 
@@ -39,7 +40,8 @@ public class UIManager : Singleton<UIManager>
             { LayerType.Top, CanvasTop },
             { LayerType.Upper, CanvasUpper },
             { LayerType.Normal, CanvasNormal },
-            { LayerType.Hud, CanvasHud }
+            { LayerType.Hud, CanvasHud },
+            { LayerType.Etc, CanvasEtc }
         };
     }
 
@@ -188,7 +190,7 @@ public class UIManager : Singleton<UIManager>
         }
         else
         {
-            if (stack_ui.Peek().uiType.Name==basePanel.uiType.Name)
+            if (stack_ui.Peek().uiType.Name!=basePanel.uiType.Name)
             {
                 stack_ui.Push(basePanel);
             }
