@@ -48,7 +48,7 @@ public class ExpForm : BasePanel
         if (nowExp >= nowLevelMaxExp)
         {
             //游戏暂停
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             level++;
             levelText.text = level.ToString();
             Debug.Log(level);
