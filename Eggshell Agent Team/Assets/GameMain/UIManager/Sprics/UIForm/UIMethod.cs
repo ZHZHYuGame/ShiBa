@@ -38,28 +38,31 @@ public class UIMethod :Singleton<UIMethod>
         {
             case LayerType.Top:
                 gameObject = GameObject.Find("TopLayer").gameObject;
-                
+
                 return gameObject;
-                
+
             case LayerType.Upper:
                 gameObject = GameObject.Find("UpperLayer").gameObject;
                 return gameObject;
-               
+
             case LayerType.Normal:
                 gameObject = GameObject.Find("NormalLayer").gameObject;
                 return gameObject;
-               
+
             case LayerType.Hud:
                 gameObject = GameObject.Find("HudLayer").gameObject;
+                return gameObject;
+            case LayerType.Etc:
+                gameObject = GameObject.Find("EtcLayer").gameObject;
                 return gameObject;
                 
             default:
                 gameObject = null;
                 Debug.LogError("没有在场景中找到Canvas");
                 return gameObject;
-                
+
         }
-       
+
     }
 
     public GameObject FingObjectInChild(GameObject panel,string child_name)
@@ -130,7 +133,7 @@ public class UIMethod :Singleton<UIMethod>
     public T InstantiatePrefab<T>(string prefabPath, Transform parent) where T : Component
     {
         // 加载预制体
-        GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/" + prefabPath + ".prefab");
+        GameObject prefab = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/myprefab", prefabPath, "myprefab");
 
         if (prefab == null)
         {
