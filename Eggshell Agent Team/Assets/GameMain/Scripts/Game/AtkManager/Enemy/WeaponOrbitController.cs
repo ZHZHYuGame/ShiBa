@@ -6,7 +6,7 @@ public class WeaponOrbitController : MonoBehaviour
     [Header("轨道参数")]
     [SerializeField] private float orbitRadius;    // 当前实际半径（私有但序列化，便于调试）
     public float OrbitRadius => orbitRadius;      // 公共只读属性（可选）
-    [System.Serializable]
+                                                  // [System.Serializable]
     public class LevelSettings
     {
         public int level;
@@ -50,7 +50,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     [Header("优化设置")]
     public bool useObjectPool = true;
-    public int maxPoolSize;
+    public int maxPoolSize=6;
     public float radiusChangeSpeed = 2f;
 
     private List<GameObject> activeWeapons = new List<GameObject>();
