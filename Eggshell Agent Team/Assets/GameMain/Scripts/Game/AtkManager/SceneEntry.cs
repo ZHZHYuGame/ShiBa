@@ -1,5 +1,7 @@
 ﻿
+
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -57,7 +59,8 @@ public class SceneEntry : MonoBehaviour
         ActiveSkill weapon = ConfigMgr.GetDicData<ActiveSkill>(("ActiveskillData"), 1001);
         player.ActiveSkills.Add(weapon);//主动武器添加
         player.Skills.Add(weapon);//所有武器集合
-        playerPrefab = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
+        string assetName = Path.GetFileNameWithoutExtension(role.This_object_path);
+        playerPrefab = Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath+"/role",assetName,"role"));
         //怪物生成规则
         playerPrefab.AddComponent<EnemySpawner>();
         playerPrefab.GetComponent<EnemySpawner>().Init(map);
