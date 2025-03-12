@@ -188,6 +188,12 @@
     <Compile Include="Assets\GameMain\Scripts\Procedure\ProcedureSplash.cs" />
     <Compile Include="Assets\GameMain\Scripts\Procedure\ProcedureUpdateResources.cs" />
     <Compile Include="Assets\GameMain\Scripts\Procedure\ProcedureUpdateVersion.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Example\Scripts\RedDotUI.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Example\Scripts\Reddot.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Example\Scripts\TestRedDot.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Runtime\RangeString.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Runtime\ReddotManager.cs" />
+    <Compile Include="Assets\GameMain\Scripts\RedDot\Runtime\TreeNode.cs" />
     <Compile Include="Assets\GameMain\Scripts\Scene\HideByBoundary.cs" />
     <Compile Include="Assets\GameMain\Scripts\Scene\ScrollableBackground.cs" />
     <Compile Include="Assets\GameMain\Scripts\Sound\SoundExtension.cs" />
@@ -227,6 +233,7 @@
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\StartPanel.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\StrartForm.cs" />
     <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\TipsPanel.cs" />
+    <Compile Include="Assets\GameMain\UIManager\Sprics\UIPanel\TopPanel.cs" />
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\LitJson\IJsonWrapper.cs" />
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\LitJson\JsonData.cs" />
     <Compile Include="Assets\Samples\ILRuntime\2.1.0\Demo\LitJson\JsonException.cs" />

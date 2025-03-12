@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1269088780
+CRC: 1071517138
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 33a61de51acc22f7ae004f82b96e4439
+    Hash: aaf72e720a3573b842d5b094e8227df5
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3aaf6e8846db257e072b00ebd04b770f
@@ -79,6 +79,7 @@ Assets:
 - Assets/GameMain/GameResources/Panel/LoadPanel.prefab
 - Assets/GameMain/GameResources/Panel/SelectSkillPanel.prefab
 - Assets/GameMain/GameResources/Prefabs/HpBase.prefab
+- Assets/GameMain/GameResources/Panel/TopPanel.prefab
 - Assets/GameMain/GameResources/Panel/ExpForm.prefab
 - Assets/GameMain/GameResources/Panel/StrartForm.prefab
 - Assets/GameMain/GameResources/Prefabs/HurtItem.prefab
