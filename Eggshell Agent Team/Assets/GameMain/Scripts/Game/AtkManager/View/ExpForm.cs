@@ -25,7 +25,7 @@ public class ExpForm : BasePanel
     {
         base.OnStart();
         Debug.Log(uiType.Name);
-        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "ZanTinh").onClick.AddListener(Pause);
+        //UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, " ").onClick.AddListener(Pause);
         //消息侦听
         MsgManager<Exp>.Ins.OnAddListener(MesID.Exp, ChangeExpData);
         scrollbar = UIMethod.Ins.GetOrAddSingleComponentInChild<Scrollbar>(ActiveObj, "ExpScrollbar");
@@ -47,20 +47,21 @@ public class ExpForm : BasePanel
         nowExp += exp.Exp_value;
         allExp += exp.Exp_value;
         nowLevelMaxExp = (int)Mathf.Pow((50 * level), 1.6f);
-        Debug.Log(nowLevelMaxExp + "当前总经验值");
         
         if (nowExp >= nowLevelMaxExp)
         {
-            //游戏暂停
-            //Time.timeScale = 0;
             level++;
             levelText.text = level.ToString();
-            Debug.Log(level);
             sprcialExpValue = nowExp - nowLevelMaxExp;//差值
             //清空经验
             nowExp = 0;
             //计算剩余经验值
             nowExp = sprcialExpValue;
+            //游戏暂停
+            Time.timeScale = 0;
+            //打开面板
+            GameMgr.GetInstance().UIManager_Root.Push(new SelectSkillPanel());
+
         }
         float v = (1f / nowLevelMaxExp) * nowExp;
         scrollbar.size = v;

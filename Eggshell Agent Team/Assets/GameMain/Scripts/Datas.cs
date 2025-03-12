@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Networking.Types;
 
 //地图信息表
@@ -163,25 +164,42 @@ public class Role
     public float BodySize { get => bodySize; set => bodySize = value; }
     public string BulletPath { get => bulletPath; set => bulletPath = value; }
 }
-//public class Player : Role
-//{
-//    // ========== 基础属性 ==========
-//    private int exp;
-//    private Skill[] activeSkills = new ActiveSkill[2]; // 当前装备技能
-//    private Skill[] passiveSkills = new PassiveSkill[2]; // 当前被动技能
+public class Player : Role
+{
+    // ========== 基础属性 ==========
+    private  List<ActiveSkill> activeSkills =  new List<ActiveSkill>(4);// 当前装备技能
+    private  List<PassiveSkill> passiveSkills =  new List<PassiveSkill>(4);// 当前装备技能
+    private  List<Skill> skills =  new List<Skill>(8);// 当前装备技能
+    
 
-//    public Player()
-//    {
-//    }
+    public Player()
+    {
+        
+    }
+    public Player(Role role)
+    {
+        this.Id = role.Id;
+        this.Name = role.Name;
+        this.This_animator_path = role.This_animator_path;
+        this.This_object_path = role.This_object_path;
+        this.Lever = role.Lever;
+        this.Blood = role.Blood;
+        this.Atkspeed = role.Atkspeed;
+        this.Movespeed = role.Movespeed;
+        this.Atk = role.Atk;
+        this.Type = role.Type;
+        this.Def = role.Def;
+        this.Maxboold = role.Maxboold;
+        this.BodySize = role.BodySize;
+        this.BulletPath = role.BulletPath;
+    }
+    public List<ActiveSkill> ActiveSkills { get => activeSkills; set => activeSkills = value; }
+    public List<PassiveSkill> PassiveSkills { get => passiveSkills; set => passiveSkills = value; }
+    public List<Skill> Skills { get => skills; set => skills = value; }
+}
 
-//    public Player(int exp, Skill[] activeSkills, Skill[] passiveSkills)
-//    {
-//        this.exp = exp;
-//        this.activeSkills = activeSkills;
-//        this.passiveSkills = passiveSkills;
-//    }
-//}
-//boss
+
+
 public class BossEnemy : Role
 {
     //boss技能...
@@ -220,18 +238,20 @@ public class Skill
     private string skill_des;//描述
     private string slill_icon;//图标
     private int skill_type;//类型
+    private int level;//技能等级
 
     public Skill()
     {
     }
 
-    public Skill(int skill_id, string skill_name, string skill_des, string slill_icon, int skill_type)
+    public Skill(int skill_id, string skill_name, string skill_des, string slill_icon, int skill_type, int level)
     {
         this.Skill_id = skill_id;
         this.Skill_name = skill_name;
         this.Skill_des = skill_des;
         this.Slill_icon = slill_icon;
         this.Skill_type = skill_type;
+        this.Level = level;
     }
 
     public int Skill_id { get => skill_id; set => skill_id = value; }
@@ -239,12 +259,13 @@ public class Skill
     public string Skill_des { get => skill_des; set => skill_des = value; }
     public string Slill_icon { get => slill_icon; set => slill_icon = value; }
     public int Skill_type { get => skill_type; set => skill_type = value; }
+    public int Level { get => level; set => level = value; }
 }
 public class ActiveSkill:Skill
 {
+    private string slill_AfterIcon;//究极形态
     private string this_animator_path;//当前动画路径
     private string this_object_path;//当前模型路径
-    private int level;//技能等级
     private float skill_hurt;//伤害
     private int num;//数量
     private float rate;//频率
@@ -257,13 +278,23 @@ public class ActiveSkill:Skill
     {
     }
 
-    public ActiveSkill(int skill_id, string skill_name, string skill_des, string slill_icon, int skill_type) : base(skill_id, skill_name, skill_des, slill_icon, skill_type)
+    public ActiveSkill(string slill_AfterIcon, string this_animator_path, string this_object_path, float skill_hurt, int num, float rate, float coefficient, float skill_range, float skill_cooling, float skill_size)
     {
+        this.Slill_AfterIcon = slill_AfterIcon;
+        this.This_animator_path = this_animator_path;
+        this.This_object_path = this_object_path;
+        this.Skill_hurt = skill_hurt;
+        this.Num = num;
+        this.Rate = rate;
+        this.Coefficient = coefficient;
+        this.Skill_range = skill_range;
+        this.Skill_cooling = skill_cooling;
+        this.Skill_size = skill_size;
     }
 
+    public string Slill_AfterIcon { get => slill_AfterIcon; set => slill_AfterIcon = value; }
     public string This_animator_path { get => this_animator_path; set => this_animator_path = value; }
     public string This_object_path { get => this_object_path; set => this_object_path = value; }
-    public int Level { get => level; set => level = value; }
     public float Skill_hurt { get => skill_hurt; set => skill_hurt = value; }
     public int Num { get => num; set => num = value; }
     public float Rate { get => rate; set => rate = value; }
@@ -274,7 +305,6 @@ public class ActiveSkill:Skill
 }
 public class PassiveSkill:Skill
 {
-    private int level;//等级
     private float bulletSpeed;//子弹速度
     private float moveSpeed;//移动速度
     private float maxBlood;//血量上限
@@ -286,9 +316,8 @@ public class PassiveSkill:Skill
     {
     }
 
-    public PassiveSkill(int level, float bulletSpeed, float moveSpeed, float maxBlood, float exp, float atk, float bloodReturning)
+    public PassiveSkill(float bulletSpeed, float moveSpeed, float maxBlood, float exp, float atk, float bloodReturning)
     {
-        this.Level = level;
         this.BulletSpeed = bulletSpeed;
         this.MoveSpeed = moveSpeed;
         this.MaxBlood = maxBlood;
@@ -297,7 +326,6 @@ public class PassiveSkill:Skill
         this.BloodReturning = bloodReturning;
     }
 
-    public int Level { get => level; set => level = value; }
     public float BulletSpeed { get => bulletSpeed; set => bulletSpeed = value; }
     public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
     public float MaxBlood { get => maxBlood; set => maxBlood = value; }
