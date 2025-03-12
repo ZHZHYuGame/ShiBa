@@ -8,6 +8,10 @@ using UnityEngine;
 /// </summary>
 public static class ResourcesLoader
 {
+    // LRU 缓存实例
+    private static readonly LRUCache<string, UnityEngine.Object> _lruCache = 
+        new LRUCache<string, UnityEngine.Object>(capacity: 100, timeThresHold: TimeSpan.FromMinutes(10));
+
     /// <summary>
     /// 同步加载
     /// </summary>
@@ -16,10 +20,20 @@ public static class ResourcesLoader
     /// <returns></returns>
     public static T LoadResources<T>(string bundlepath, string assetName, string abName) where T : UnityEngine.Object
     {
+        // 检查并移除超时未访问的资源
+        CheckAndMoveExpiredNodes();
         if (string.IsNullOrEmpty(bundlepath) || string.IsNullOrEmpty(assetName))
         {
             Debug.LogError("Resource path is null or empty.");
             return null;
+        }
+        // 生成缓存键（AssetBundle 路径 + 资源名称）
+        string cacheKey = $"{bundlepath}/{assetName}";
+        // 先从 LRU 缓存中查找资源
+        if (_lruCache.TryGetValue(cacheKey, out var cachedAsset))
+        {
+            Debug.Log($"Asset loaded from cache: {assetName} from bundle: {bundlepath}");
+            return cachedAsset as T;
         }
         if (!File.Exists(bundlepath))
         {
@@ -43,9 +57,17 @@ public static class ResourcesLoader
             bundles.Unload(false); // 卸载 AB包，但不卸载已加载的资源
             return null;
         }
-
+        // 将加载的资源添加到 LRU 缓存
+        _lruCache.Add(cacheKey, asset);
         Debug.Log($"Asset loaded: {assetName} from bundle: {bundlepath}");
         return asset;
+    }
+    /// <summary>
+    /// 检查并移除超时未访问的资源
+    /// </summary>
+    public static void CheckAndMoveExpiredNodes()
+    {
+        _lruCache.CheckAndMoveExpiredNodes();
     }
     /// <summary>
     /// 异步加载
