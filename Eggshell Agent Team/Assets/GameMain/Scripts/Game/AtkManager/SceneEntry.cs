@@ -31,8 +31,8 @@ public class SceneEntry : MonoBehaviour
         //生成玩家
         role = ConfigMgr.GetListData<Role>("Role",0);
         
-         player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
-         //player = Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath+"/role","Player","role"));
+         //player = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>(role.This_object_path));
+         player = Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath+"/role","Player","role"));
         //相机加载
         cam.gameObject.AddComponent<CameraMgr>().Init(player.transform);
         //血条加载

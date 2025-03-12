@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1161963868
+CRC: 1053761012
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: ec7388c2e13bfa2be3f8a1f26b7a51ba
+    Hash: 786d4bf100455e29aa5a2298aff7591c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 0a064d2bb72d7f4766476ff0df9724fe
@@ -77,6 +77,8 @@ Assets:
 - Assets/GameMain/GameResources/Prefabs/HurtItem.prefab
 - Assets/GameMain/GameResources/Panel/StartPanel.prefab
 - Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab
+- Assets/GameMain/GameResources/2DSprits/UI/a0641706-7ae0-4c5c-ba75-83fa84be4447.jpg
 - Assets/GameMain/GameResources/Panel/PlayerMoveForm.prefab
+- Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 Dependencies:
 - D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui

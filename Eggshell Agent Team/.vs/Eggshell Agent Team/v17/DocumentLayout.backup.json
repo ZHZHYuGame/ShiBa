@@ -3,44 +3,68 @@
   "WorkspaceRootPath": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\weaponorbitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\weaponorbitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git2206\\shiba\\eggshell agent team\\assets\\gamemain\\scripts\\game\\atkmanager\\player\\autoattackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\player\\autoattackcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\player\\playerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\player\\playerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git2206\\shiba\\eggshell agent team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\sceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\sceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\playermoveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\playermoveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,23 +74,100 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StrartForm.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
+              "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAUwCYAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:45:37.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AutoAttackController.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\AutoAttackController.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\AutoAttackController.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\AutoAttackController.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\AutoAttackController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:34:49.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerRole.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:31:35.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponOrbitController.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwEMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T11:24:12.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PlayerMoveForm.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T10:27:04.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ExpForm.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwDMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T10:26:32.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "StartGame.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
               "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAxwCAAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T06:46:39.277Z"
+              "WhenOpened": "2025-03-11T06:46:39.277Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "ResourcesLoader.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourcesLoader.cs",
@@ -78,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "ResourceManager.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\ResourcesManager\\ResourceManager.cs",
@@ -90,39 +191,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "UIMethod.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
               "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAcwIQAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAGkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-11T02:18:07.861Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Monster.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
               "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:17:50.636Z"
+              "WhenOpened": "2025-03-11T02:17:50.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "EnemySpawner.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
               "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDIAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwCoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:12:50.123Z"
+              "WhenOpened": "2025-03-11T02:12:50.123Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -134,11 +237,12 @@
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAYwD4AAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:11:32.263Z"
+              "WhenOpened": "2025-03-11T02:11:32.263Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "ConfigMgr.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
@@ -146,32 +250,33 @@
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwDwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:10:28.188Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SceneEntry.cs",
-              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T02:02:33.803Z",
+              "WhenOpened": "2025-03-11T02:10:28.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "SceneEntry.cs",
+              "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
+              "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAswB8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T02:02:33.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UIManager.cs",
               "DocumentMoniker": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs",
               "ToolTip": "D:\\git2206\\ShiBa\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs",
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIManager.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAYwJQAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAIwJIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T01:56:35.135Z"
+              "WhenOpened": "2025-03-11T01:56:35.135Z",
+              "EditorCaption": ""
             }
           ]
         }
