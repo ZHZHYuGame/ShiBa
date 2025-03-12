@@ -10,7 +10,7 @@ public class SceneEntry : MonoBehaviour
     GameObject playerPrefab;
     Role role;
     public Camera cam;
-    public GameObject hpBase; 
+    public GameObject hpBase;
     public GameObject hurttx;//飘血
     public GameObject bullet;//子弹
     public GameObject expPrefab;//经验
