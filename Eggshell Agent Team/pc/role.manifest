@@ -44,5 +44,5 @@ Assets:
 - Assets/GameMain/GameResources/Prefabs/sawtoothMax.prefab
 - Assets/GameMain/GameResources/Prefabs/Dan.prefab
 Dependencies:
-- D:/AppLication/Git/Git9/Eggshell Agent Team/pc/ui
-- D:/AppLication/Git/Git9/Eggshell Agent Team/pc/weapon
+- D:/Unity/sx/ShiBa/Eggshell Agent Team/Assets/StreamiingAssets/ui
+- D:/Unity/sx/ShiBa/Eggshell Agent Team/Assets/StreamiingAssets/weapon
