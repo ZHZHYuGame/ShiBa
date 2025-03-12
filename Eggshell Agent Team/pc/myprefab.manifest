@@ -1,10 +1,10 @@
-ManifestFileVersion: 0
+
 CRC: 1269088780
 Hashes:
   AssetFileHash:
     serializedVersion: 2
 <<<<<<< HEAD:Eggshell Agent Team/Assets/StreamingAssets/myprefab.manifest
-    Hash: 3e78f75fe4e985e107a94a835fb3a32e
+    Hash: 0163148d9895c1bf32af01efd8b78db3
 =======
     Hash: 33a61de51acc22f7ae004f82b96e4439
 >>>>>>> 081ace80e828a4a4959408ca17999d2c65078618:Eggshell Agent Team/pc/myprefab.manifest
@@ -95,8 +95,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-<<<<<<< HEAD:Eggshell Agent Team/Assets/StreamingAssets/myprefab.manifest
-- D:/Unity/sx/ShiBa/Eggshell Agent Team/Assets/StreamiingAssets/ui
-=======
 - D:/AppLication/Git/Git9/Eggshell Agent Team/pc/ui
->>>>>>> 081ace80e828a4a4959408ca17999d2c65078618:Eggshell Agent Team/pc/myprefab.manifest
