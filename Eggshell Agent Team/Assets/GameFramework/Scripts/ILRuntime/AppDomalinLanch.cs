@@ -17,7 +17,7 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
     }
     private void Start()
     { 
-       
+        
         LoadHotFixMgr.Instanct.OnLoadHotFix("HotFix_Project", (dllls, dpbs) => 
         {
            
@@ -31,7 +31,7 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
             MemoryStream dllffs=new MemoryStream(dlls);
             MemoryStream pdbffs=new MemoryStream(pdbs);
             ILRuntime.Mono.Cecil.Pdb.PdbReaderProvider pdbReaderProvider =
-                new ILRuntime.Mono.Cecil.Pdb.PdbReaderProvider();
+             new ILRuntime.Mono.Cecil.Pdb.PdbReaderProvider();
             appdomain.LoadAssembly(dllffs, pdbffs, pdbReaderProvider); 
         }
         catch (Exception ex)
@@ -43,7 +43,7 @@ public class AppDomalinLanch : UnitySingleto<AppDomalinLanch>
  
         
         MyTest myTest = new MyTest();
-        myTest.OnRun(appdomain); 
+        myTest.OnRun(appdomain);
         
     }
     void InitializeILRuntime()
