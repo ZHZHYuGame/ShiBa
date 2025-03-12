@@ -1,0 +1,38 @@
+{
+  "1001": {
+    "Slill_AfterIcon": "Assets/GameMain/GameResources/2DSprits/武器/d63a2ab5-d326-4aa4-9b4e-0a92a9d32d6f.png",
+    "This_animator_path": null,
+    "This_object_path": "Assets/GameMain/GameResources/Prefabs/Dan.prefab",
+    "Level": 1,
+    "Skill_hurt": 5.0,
+    "Num": 0,
+    "Rate": 0.5,
+    "Coefficient": 0.8,
+    "Skill_range": 0.0,
+    "Skill_cooling": 0.0,
+    "Skill_size": 1.0,
+    "Skill_id": 1001,
+    "Skill_name": "火箭弹",
+    "Skill_des": "自动追踪",
+    "Slill_icon": "Assets/GameMain/GameResources/2DSprits/武器/511f474e-e0f2-49ce-bc14-cab4550938e1.png",
+    "Skill_type": 1
+  },
+  "1002": {
+    "Slill_AfterIcon": "Assets/GameMain/GameResources/2DSprits/图集/其他/5898e966-fbd9-4644-a00a-8f6ed3f68ff0.png",
+    "This_animator_path": null,
+    "This_object_path": "Assets/GameMain/GameResources/Prefabs/sawtooth.prefab",
+    "Level": 1,
+    "Skill_hurt": 55.0,
+    "Num": 0,
+    "Rate": 300.0,
+    "Coefficient": 0.5,
+    "Skill_range": 0.0,
+    "Skill_cooling": 0.0,
+    "Skill_size": 1.0,
+    "Skill_id": 1002,
+    "Skill_name": "万刃轮",
+    "Skill_des": "环绕自身攻击敌人",
+    "Slill_icon": "Assets/GameMain/GameResources/2DSprits/攻击特效/5a3b691b-2e7f-44a2-a26f-39eff23c4360.png",
+    "Skill_type": 2
+  }
+}

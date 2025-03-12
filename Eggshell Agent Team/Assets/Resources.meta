@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 5ddc0eeb4ff8f364cba80bb128fd4a0b
-=======
-guid: 3ef737972c5245740bbeec091da87ada
->>>>>>> wzl
+guid: 2612196a73a066742971c0eb0430809e
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+fileFormatVersion: 2
+guid: 5f16b2d48d03a2c409f6c8baf7874f67
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

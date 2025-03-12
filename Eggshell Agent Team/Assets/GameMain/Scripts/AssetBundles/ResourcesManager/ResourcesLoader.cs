@@ -14,30 +14,33 @@ public static class ResourcesLoader
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static T LoadResources<T>(string bundlepath,string assetName)where T : UnityEngine.Object
+    public static T LoadResources<T>(string bundlepath, string assetName, string abName) where T : UnityEngine.Object
     {
         if (string.IsNullOrEmpty(bundlepath) || string.IsNullOrEmpty(assetName))
         {
             Debug.LogError("Resource path is null or empty.");
             return null;
         }
-        if (!File.Exists(bundlepath)) 
+        if (!File.Exists(bundlepath))
         {
             Debug.LogError($"AssetBundle file not found: {bundlepath}");
             return null;
         }
-
-        AssetBundle assetBundle = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/AssetBundles/" + "myprefab");
-        if (assetBundle == null)
+        if (!ResourceManager._loadedBundles.TryGetValue(bundlepath, out var bundles))
         {
-            Debug.LogError($"Failed to load AssetBundle: {assetBundle}");
-            return null;
+            bundles = AssetBundle.LoadFromFile(Application.streamingAssetsPath + "/"+ abName);
+            if (bundles == null)
+            {
+                Debug.LogError($"Failed to load AssetBundle: {bundles}");
+                return null;
+            }
+            ResourceManager._loadedBundles.Add(bundlepath, bundles);
         }
-        T asset = assetBundle.LoadAsset<T>(assetName);
+        T asset = bundles.LoadAsset<T>(assetName);
         if (asset == null)
         {
             Debug.LogError($"Failed to load asset: {assetName} from bundle: {bundlepath}");
-            assetBundle.Unload(false); // 卸载 AB包，但不卸载已加载的资源
+            bundles.Unload(false); // 卸载 AB包，但不卸载已加载的资源
             return null;
         }
 
@@ -69,7 +72,7 @@ public static class ResourcesLoader
             yield break;
         }
         //异步加载资源
-        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync<T>(assetName);
+        var assetLoadRequest = assetbundleRequest.assetBundle.LoadAssetAsync(assetName);
         yield return assetbundleRequest;
         if (assetLoadRequest.asset == null)
         {
