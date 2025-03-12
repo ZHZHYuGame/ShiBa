@@ -40,9 +40,8 @@ public class SceneEntry : MonoBehaviour
         //相机加载1
         cam.gameObject.AddComponent<CameraMgr>().Init(playerPrefab.transform);
         //血条加载
-        hpBase = Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/HpBase.prefab"), canvas.transform);
+        hpBase = Instantiate(UIManager.Ins._resourcesManager.LoadResource<GameObject>(Application.streamingAssetsPath + "/myprefab", "HpBase", "myprefab"), canvas.transform);
         hpBase.GetComponent<HpBase>().Init(playerPrefab, role);
-
         //对象池管理
         allObjectPool = new AllObjectPool(hurttx, bullet, expPrefab);
 
