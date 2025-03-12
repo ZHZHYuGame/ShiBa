@@ -3,7 +3,7 @@ CRC: 2048597792
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c0639cc6c93b20f7b9f02362269b5038
+    Hash: 3e78f75fe4e985e107a94a835fb3a32e
   TypeTreeHash:
     serializedVersion: 2
     Hash: fc6d82fa62d30eb569116898dbfe475a
@@ -88,4 +88,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui
+- D:/Unity/sx/ShiBa/Eggshell Agent Team/Assets/StreamiingAssets/ui
