@@ -50,7 +50,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     [Header("优化设置")]
     public bool useObjectPool = true;
-    public int maxPoolSize;
+    public int maxPoolSize=6;
     public float radiusChangeSpeed = 2f;
 
     private List<GameObject> activeWeapons = new List<GameObject>();
