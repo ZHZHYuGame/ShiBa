@@ -81,12 +81,12 @@ public class SelectSkillPanel : BasePanel
         passiveSkillContent = UIMethod.Ins.GetOrAddSingleComponentInChild<Transform>(ActiveObj, "PassiveSkillContent");
         for (int i = 0; i < 5; i++)
         {
-            GameObject prefab = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/bg.prefab"), activeSkillContent);
+            GameObject prefab = GameObject.Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/Prefabs", "bg", "Prefabs"), activeSkillContent);
             activeSkillList.Add(prefab.transform);
         }
         for (int i = 0; i < 5; i++)
         {
-            GameObject prefab = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<GameObject>("Assets/GameMain/GameResources/Prefabs/bg.prefab"), passiveSkillContent);
+            GameObject prefab = GameObject.Instantiate(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/Prefabs", "bg", "Prefabs"), passiveSkillContent);
             passiveSkillList.Add(prefab.transform);
         }
     }

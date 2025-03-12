@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,8 @@ public class SkillCell : MonoBehaviour
         this.activeSkill = activeSkill;
         if (activeSkill != null)
         {
-            icon.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(activeSkill.Slill_icon);
+            string assetName = Path.GetFileNameWithoutExtension(activeSkill.Slill_icon);
+            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath+"/effect",assetName, "effect");
             icon.gameObject.SetActive(true);
         }
         else
@@ -32,7 +34,8 @@ public class SkillCell : MonoBehaviour
         this.passiveSkill = passiveSkill;
         if (activeSkill != null)
         {
-            icon.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(activeSkill.Slill_icon);
+            string assetName = Path.GetFileNameWithoutExtension(activeSkill.Slill_icon);
+            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/effect", assetName, "effect");
             icon.gameObject.SetActive(true);
         }
         else

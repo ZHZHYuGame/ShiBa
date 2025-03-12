@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -86,6 +87,7 @@ public class AutoAttackController : MonoBehaviour
     {
         attackRange = weapon.Skill_hurt;
         attackInterval = weapon.Rate;
-        projectilePrefab = AssetDatabase.LoadAssetAtPath<GameObject>(weapon.This_object_path);
+        string assetName = Path.GetFileNameWithoutExtension(weapon.This_object_path);
+        projectilePrefab = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/role", assetName, "role");
     }
 }
