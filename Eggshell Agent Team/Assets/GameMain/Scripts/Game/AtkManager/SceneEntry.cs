@@ -40,6 +40,7 @@ public class SceneEntry : MonoBehaviour
         hpBase = Instantiate(UIManager.Ins._resourcesManager.LoadResource<GameObject>(Application.streamingAssetsPath + "/myprefab", "HpBase", "myprefab"), canvas.transform);
         hpBase.GetComponent<HpBase>().Init(player, role);
         //怪物生成规则
+        
         player.AddComponent<EnemySpawner>();
         player.GetComponent<EnemySpawner>().Init(map);
         //对象池管理
