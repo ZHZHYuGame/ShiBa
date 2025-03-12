@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+<<<<<<< HEAD:Eggshell Agent Team/Assets/StreamingAssets/StreamingAssets.manifest
+CRC: 3670244572
+=======
+CRC: 3466201386
+>>>>>>> 081ace80e828a4a4959408ca17999d2c65078618:Eggshell Agent Team/pc/pc.manifest
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui
+      Dependencies: {}
+    Info_1:
+      Name: effects
+      Dependencies: {}
+    Info_2:
+      Name: enemy
+      Dependencies:
+        Dependency_0: weapon
+    Info_3:
+      Name: dead
+      Dependencies: {}
+    Info_4:
+      Name: weapon
+      Dependencies: {}
+    Info_5:
+      Name: myprefab
+      Dependencies:
+        Dependency_0: ui
+    Info_6:
+      Name: exp
+      Dependencies: {}
+    Info_7:
+      Name: json
+      Dependencies: {}
+    Info_8:
+      Name: role
+      Dependencies:
+        Dependency_0: ui
+        Dependency_1: weapon
