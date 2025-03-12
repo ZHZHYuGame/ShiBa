@@ -34,7 +34,7 @@ public static class ResourcesLoader
                 Debug.LogError($"Failed to load AssetBundle: {bundles}");
                 return null;
             }
-            ResourceManager._loadedBundles[bundlepath] = bundles;
+            ResourceManager._loadedBundles.Add(bundlepath, bundles);
         }
         T asset = bundles.LoadAsset<T>(assetName);
         if (asset == null)

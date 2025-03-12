@@ -60,7 +60,8 @@ public class MainPanel : BasePanel
             //Button levelBtn = GameObject.Instantiate(AssetDatabase.LoadAssetAtPath<Button>("Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab"), content.transform);
             Button levelBtn = UIMethod.Ins.InstantiatePrefab<Button>("ScenePrefab", content.transform);
             levelBtn.transform.Find("Text").GetComponent<Text>().text = GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Name;
-            levelBtn.GetComponent<Image>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
+            levelBtn.GetComponent<Image>().sprite = UIManager.Ins._resourcesManager.LoadResource<Sprite>(Application.streamingAssetsPath + "/ui", GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon, "ui");
+            //levelBtn.GetComponent<Image>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
             Debug.Log(GameMgr.GetInstance().dataAnalysis.mapDic[i].Map_Icon);
             btns.Add(levelBtn);
         }
@@ -72,6 +73,7 @@ public class MainPanel : BasePanel
                 //跳转场景
                 Game game = new Game();
                 PlayerPrefs.SetInt("levelIndex", levelIndex);
+                GameMgr.GetInstance().UIManager_Root.Pop(false);
                 GameMgr.GetInstance().SceneControl_Root.LoadScene(game.SceneName, game);
 
             });

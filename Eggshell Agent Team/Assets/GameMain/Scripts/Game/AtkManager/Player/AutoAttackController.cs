@@ -14,7 +14,6 @@ public class AutoAttackController : MonoBehaviour
 
     private void Awake()
     {
-        //ObjectPool.CreatePool(projectilePrefab, 20);//创建子弹池子
     }
     void Update()
     {
@@ -33,6 +32,7 @@ public class AutoAttackController : MonoBehaviour
     Transform FindNearestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Debug.Log(enemies.Length);
         List<GameObject> enemyList = new List<GameObject> ();
         for (int i = 0; i < enemies.Length; i++)
         {

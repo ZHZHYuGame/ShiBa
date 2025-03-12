@@ -32,6 +32,7 @@ public class WeaponOrbitController : MonoBehaviour
     [Header("等级系统")]
     public List<LevelSettings> levelConfigs = new List<LevelSettings>()
     {
+        new LevelSettings { level = 0, weaponCount = 0, orbitRadius = 0,rotationSpeed=0 },
         new LevelSettings { level = 1, weaponCount = 1, orbitRadius = 2f,rotationSpeed=300 },
         new LevelSettings { level = 2, weaponCount = 2, orbitRadius = 2f,rotationSpeed=400},
         new LevelSettings { level = 3, weaponCount = 4, orbitRadius = 3f,rotationSpeed=500 },
@@ -40,7 +41,7 @@ public class WeaponOrbitController : MonoBehaviour
     };
 
     [Header("运行时控制")]
-    [SerializeField] private int _currentLevel = 1;
+    [SerializeField] private int _currentLevel = 0;
     public int currentLevel
     {
         get => _currentLevel;
@@ -49,7 +50,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     [Header("优化设置")]
     public bool useObjectPool = true;
-    public int maxPoolSize;
+    public int maxPoolSize=6;
     public float radiusChangeSpeed = 2f;
 
     private List<GameObject> activeWeapons = new List<GameObject>();
@@ -65,6 +66,7 @@ public class WeaponOrbitController : MonoBehaviour
     void Start()
     {
         InitializePool();
+        currentLevel = 1;
         SetLevel(_currentLevel);
     }
 
@@ -95,7 +97,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     void SetLevel(int newLevel)//等级切换
     {
-        newLevel = Mathf.Clamp(newLevel, 1, levelConfigs.Count);
+        newLevel = Mathf.Clamp(newLevel, 0, levelConfigs.Count);
 
         _currentLevel = newLevel;
 

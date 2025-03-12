@@ -1,5 +1,6 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,7 +20,7 @@ public class Monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.tag = "Enemy";
     }
 
     // Update is called once per frame
@@ -55,17 +56,23 @@ public class Monster : MonoBehaviour
             GameObject expPrefab = ObjectPool.GetObject(GameObject.Find("ExpPool").transform.GetChild(0).gameObject);
             expPrefab.transform.position = transform.position;
             List<Exp> exps = ConfigMgr.GetTable<List<Exp>>("ExpData");
-            //Debug.Log(refreshWaves.ExpType);
             switch (refreshWaves.ExpType)
             {
                 case ExpType.lowerExp:
-                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[0].Exp_path);
+                    string assetName = Path.GetFileNameWithoutExtension(exps[0].Exp_path);
+                    expPrefab.GetComponent<SpriteRenderer>().sprite =ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath+"/exp",assetName,"exp");
+                    //属性设置
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
                 case ExpType.midelExp:
-                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[1].Exp_path);
+                    string assetName1 = Path.GetFileNameWithoutExtension(exps[1].Exp_path);
+                    expPrefab.GetComponent<SpriteRenderer>().sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/exp", assetName1, "exp");
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
                 case ExpType.higherExp:
-                    expPrefab.GetComponent<SpriteRenderer>().sprite = AssetDatabase.LoadAssetAtPath<Sprite>(exps[2].Exp_path);
+                    string assetName2 = Path.GetFileNameWithoutExtension(exps[2].Exp_path);
+                    expPrefab.GetComponent<SpriteRenderer>().sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/exp", assetName2, "exp");
+                    expPrefab.GetComponent<ExpPrefab>().Init(exps[0]);
                     break;
             }
 
