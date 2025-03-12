@@ -13,7 +13,7 @@ public class AssetBundleManager
     /// <param name="cacheCapacity">缓存容量</param>
     public AssetBundleManager(int cacheCapacity = 5)
     {
-        _bunleCache = new LRUCache<string, AssetBundle>(cacheCapacity);
+       // _bunleCache = new LRUCache<string, AssetBundle>(cacheCapacity);
     }
     /// <summary>
     /// 异步加载AB包

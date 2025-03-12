@@ -1,0 +1,30 @@
+{
+  "1001": {
+    "Level": 1,
+    "BulletSpeed": 0.0,
+    "MoveSpeed": 0.0,
+    "MaxBlood": 0.0,
+    "Exp": 0.0,
+    "Atk": 1.2,
+    "BloodReturning": 0.0,
+    "Skill_id": 1001,
+    "Skill_name": "大力丸",
+    "Skill_des": "攻击力大幅提升，提升玩家20%的攻击力",
+    "Slill_icon": "Assets/GameMain/GameResources/2DSprits/攻击特效/6803335f-f0e5-4d5d-8c8d-f4688d08ae59.png",
+    "Skill_type": 1
+  },
+  "1002": {
+    "Level": 1,
+    "BulletSpeed": 0.0,
+    "MoveSpeed": 0.0,
+    "MaxBlood": 1.2,
+    "Exp": 0.0,
+    "Atk": 0.0,
+    "BloodReturning": 0.0,
+    "Skill_id": 1002,
+    "Skill_name": "战斗服",
+    "Skill_des": "穿上战斗服，提升玩家20%血量上限",
+    "Slill_icon": "Assets/GameMain/GameResources/2DSprits/图集/其他/a8df3dd9-fd5f-4b67-9405-94b090b9ebed.png",
+    "Skill_type": 2
+  }
+}
