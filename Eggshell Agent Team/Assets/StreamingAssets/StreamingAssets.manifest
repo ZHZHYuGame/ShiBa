@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 3987799709
+CRC: 1101125202
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -17,20 +17,19 @@ AssetBundleManifest:
       Dependencies: {}
     Info_4:
       Name: weapon
-      Dependencies:
-        Dependency_0: ui
+      Dependencies: {}
     Info_5:
       Name: exp
       Dependencies: {}
     Info_6:
+      Name: json
+      Dependencies: {}
+    Info_7:
       Name: myprefab
       Dependencies:
         Dependency_0: ui
-    Info_7:
+    Info_8:
       Name: role
       Dependencies:
         Dependency_0: ui
         Dependency_1: weapon
-    Info_8:
-      Name: json
-      Dependencies: {}

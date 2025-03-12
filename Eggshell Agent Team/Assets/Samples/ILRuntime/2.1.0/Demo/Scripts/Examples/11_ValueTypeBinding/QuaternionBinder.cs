@@ -9,7 +9,7 @@ using ILRuntime.CLR.Method;
 using ILRuntime.CLR.TypeSystem;
 using ILRuntime.Runtime.Stack;
 
-public unsafe class QuaternionBinder : ValueTypeBinder<Quaternion>
+public unsafe class QuaternionBinder : ValueTypeBinder<Quaternion>  
 {
     Vector3Binder vector3Binder;
     bool vector3BinderGot;

@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1297654495
+CRC: 3670872957
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 338eb1405a9683e1cb4a730e58b35918
+    Hash: 3c1a3177fdf9f65429030f1156cba521
   TypeTreeHash:
     serializedVersion: 2
     Hash: aae7e2eb4c3a515f23a0fae76d762f8f
@@ -65,6 +65,7 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/70bbcf71-fc1b-4f3b-9da6-79d7d0a97626.png
 - Assets/GameMain/GameResources/2DSprits/UI/e1cc22e2-bb8d-41dd-8fcd-6ea2d0601d6f.png
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/c25773db-f64b-4ce1-864c-b766427027b7.png"
+- Assets/GameMain/GameResources/2DSprits/UI/e9cdaf843c6129ad9fd0898fb262db8c.png
 - Assets/GameMain/GameResources/2DSprits/UI/afccd027-6ab4-43fc-bd30-6bfa0a22ffe6.png
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/83cb8bbd-858c-47ad-be4e-f65864f24d4e.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/34e93918-7171-4bb4-b243-3dfebb05c21d.png"
@@ -685,7 +686,6 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/UI/493f9e53-6b36-48cd-99ae-cf12726082b0
   - \u526F\u672C.png"
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/6c895e98-967e-4a6d-8c08-bf6b035fa2c2.jpg"
-- Assets/GameMain/GameResources/2DSprits/UI/a0641706-7ae0-4c5c-ba75-83fa84be4447.jpg
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/137edd65-6a02-4c7e-b2bc-a9f6d0f4db2a.png"
 - Assets/GameMain/GameResources/2DSprits/UI/54bb4dfd-ba2f-45e7-9ec3-e382188fc5e2.png
 - Assets/GameMain/GameResources/2DSprits/UI/1ce2b019-b4f6-4a95-a92c-09d5da3b40e5.png
@@ -694,6 +694,7 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/ddf0a3cf-ad1e-419b-a189-f73cfae5b09d.png
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/d717243a-1df0-41a4-91cf-07d64b21c73e.png"
 - Assets/GameMain/GameResources/2DSprits/UI/a9989a08-fd37-49ed-8ece-7c53f0e3039f.png
+- "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/2a58f559-5b19-478c-9194-003e89c9ac69.png"
 - Assets/GameMain/GameResources/2DSprits/UI/0ff0e2e6-adcb-4fa2-a2ad-5e8102da4fc3.png
 - "Assets/GameMain/GameResources/2DSprits/UI/4b19f24c-2ef0-4bda-add5-1858b3a9ead7
   - \u526F\u672C.png"
@@ -800,7 +801,6 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/c15cf421-278d-4aa1-8365-3aa6c46ef8a3.png
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/717366e7-d128-4508-8271-4f88750f5793.png"
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/5b38590f-417c-4f1e-b1a6-24fa173428d5.png"
-- Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/2DSprits/UI/1ae02f18-803b-45fb-87ab-a5de4c3db813.png
 - Assets/GameMain/GameResources/2DSprits/UI/ce74f840-4a8e-412a-88ac-a03ebe64ac24.png
 - Assets/GameMain/GameResources/2DSprits/UI/cdf4cfa9-54fb-416f-ae44-b73ab5b51fd8.png
@@ -898,6 +898,7 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/5ad4cf6e-b6ac-47d4-b613-3f4b9181436a.png
 - Assets/GameMain/GameResources/2DSprits/UI/8f715e3c-512f-45c3-aefb-a4e90ad5df7b.png
 - Assets/GameMain/GameResources/2DSprits/UI/780826ce-76b4-40e6-9b95-b2b0aad1e1a5.png
+- Assets/GameMain/GameResources/2DSprits/UI/QQ_1741658646271.png
 - Assets/GameMain/GameResources/2DSprits/UI/c5dc9782-f344-4499-9943-371579dd8288.png
 - Assets/GameMain/GameResources/2DSprits/UI/01950080-8207-4a74-ac70-e0c0368cc859.png
 - Assets/GameMain/GameResources/2DSprits/UI/5fb206fa-994a-4cd5-a887-52907b4e5244.png
@@ -917,6 +918,7 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/d3f34cb4-835a-40a4-b231-e15532086a07.png
 - Assets/GameMain/GameResources/2DSprits/UI/50e396df-a5e0-43bc-9c0d-cbb85c390db4.png
 - "Assets/GameMain/GameResources/2DSprits/\u56FE\u96C6/\u5176\u4ED6/ab33b8fe-cf80-49e9-921c-25557e1e44fc.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/fc284016-1a16-4568-99de-88d906b6fa3e.png"
 - Assets/GameMain/GameResources/2DSprits/UI/cdae0e8d-5c9b-4f4d-9432-49cb35b37e01.png
 - Assets/GameMain/GameResources/2DSprits/UI/5bbaf2ad-628b-4355-8c10-bb5a130bc6fe.png
 Dependencies: []
