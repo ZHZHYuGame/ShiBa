@@ -23,6 +23,7 @@ public class SceneEntry : MonoBehaviour
         //地图加载
         MapData data = ConfigMgr.GetDicData<MapData>("MapDatas",map.Id);
         MapManager.Instance.Init(data);
+        ChunkController.Instance.Init(data);
         //=======UI=======
         //摇杆加载 
         GameMgr.GetInstance().UIManager_Root.Push(new PlayerMoveForm());

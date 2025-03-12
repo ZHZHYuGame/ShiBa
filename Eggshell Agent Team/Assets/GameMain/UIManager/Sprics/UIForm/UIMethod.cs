@@ -38,28 +38,31 @@ public class UIMethod :Singleton<UIMethod>
         {
             case LayerType.Top:
                 gameObject = GameObject.Find("TopLayer").gameObject;
-                
+
                 return gameObject;
-                
+
             case LayerType.Upper:
                 gameObject = GameObject.Find("UpperLayer").gameObject;
                 return gameObject;
-               
+
             case LayerType.Normal:
                 gameObject = GameObject.Find("NormalLayer").gameObject;
                 return gameObject;
-               
+
             case LayerType.Hud:
                 gameObject = GameObject.Find("HudLayer").gameObject;
+                return gameObject;
+            case LayerType.Etc:
+                gameObject = GameObject.Find("EtcLayer").gameObject;
                 return gameObject;
                 
             default:
                 gameObject = null;
                 Debug.LogError("没有在场景中找到Canvas");
                 return gameObject;
-                
+
         }
-       
+
     }
 
     public GameObject FingObjectInChild(GameObject panel,string child_name)

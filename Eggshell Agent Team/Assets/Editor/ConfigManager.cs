@@ -14,7 +14,7 @@ public static class ConfigManager
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            return JsonUtility.FromJson<T>(json);
+            return JsonConvert.DeserializeObject<T>(json);
         }
         else
         {
