@@ -1,98 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Git\\2206A\\Eggshell Agent Team\\",
+  "WorkspaceRootPath": "E:\\Git_Space_2\\Eggshell Agent Team\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|d:\\git\\2206a\\eggshell agent team\\assets\\editor\\mainskilleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\mainskilleditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|e:\\git_space_2\\eggshell agent team\\assets\\gamemain\\uimanager\\sprics\\uiform\\uimethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uiform\\uimethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|d:\\git\\2206a\\eggshell agent team\\assets\\editor\\passiveskilleditor .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\passiveskilleditor .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Datas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Datas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\editor\\enemywaveseditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\enemywaveseditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\player\\playerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\player\\playerrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\git\\2206a\\eggshell agent team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\expform1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\expprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\expprefab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\units\\msgmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\units\\msgmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|e:\\git_space_2\\eggshell agent team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\enemyspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\sceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\sceneentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\weaponorbitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\weaponorbitcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\MapInforMation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A667C0E1-1C66-3F05-8427-853798BF9A9C}|Assembly-CSharp-Editor.csproj|solutionrelative:Assets\\Editor\\MapInforMation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\view\\playermoveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\view\\playermoveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\objectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\startgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Map\\MapManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\units\\allobjectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\units\\allobjectpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|e:\\git_space_2\\eggshell agent team\\assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\atkmanager\\enemy\\monster.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\Git\\2206A\\Eggshell Agent Team\\assets\\gamemain\\scripts\\game\\units\\configmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\game\\units\\configmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,309 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PassiveSkillEditor .cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\PassiveSkillEditor .cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\PassiveSkillEditor .cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\PassiveSkillEditor .cs",
-              "RelativeToolTip": "Assets\\Editor\\PassiveSkillEditor .cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T12:12:49.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainSkillEditor.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\MainSkillEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\MainSkillEditor.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\MainSkillEditor.cs",
-              "RelativeToolTip": "Assets\\Editor\\MainSkillEditor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
+              "Title": "UIMethod.cs",
+              "DocumentMoniker": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
+              "ToolTip": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
+              "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIForm\\UIMethod.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAASwIUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T11:56:17.214Z",
+              "WhenOpened": "2025-03-11T02:02:58.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ExpForm.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAqwDkAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T07:38:10.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MsgManager.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\MsgManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\Units\\MsgManager.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\MsgManager.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\Units\\MsgManager.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAowA4AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T10:33:58.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExpForm1.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm1.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm1.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm1.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpForm1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T10:01:56.278Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WeaponOrbitController.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\WeaponOrbitController.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAAAUwGMAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T08:28:18.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SceneEntry.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\SceneEntry.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAD4vx4AAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "EnemySpawner.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
+              "DocumentMoniker": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
+              "ToolTip": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
               "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\EnemySpawner.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAADwvxsAAAAZAAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAUwFsAAABjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T06:31:05.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PlayerMoveForm.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\PlayerMoveForm.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAwwA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T01:27:30.087Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ExpPrefab.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpPrefab.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpPrefab.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpPrefab.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\View\\ExpPrefab.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAcwGoAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T01:00:33.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Monster.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAUwD4AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T00:55:53.665Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "StrartForm.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
-              "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\StrartForm.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAADwvx0AAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:56:26.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "StartGame.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\AssetBundles\\StartGame.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAUwCYAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:55:40.031Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ObjectPool.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\ObjectPool.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\ObjectPool.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\ObjectPool.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\ObjectPool.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAIwAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:55:15.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ConfigMgr.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\Units\\ConfigMgr.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:51:05.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AllObjectPool.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\AllObjectPool.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\Units\\AllObjectPool.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\AllObjectPool.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\Units\\AllObjectPool.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:48.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MapInforMation.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\MapInforMation.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\MapInforMation.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\MapInforMation.cs",
-              "RelativeToolTip": "Assets\\Editor\\MapInforMation.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAADwvzQAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PlayerControl.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Map\\PlayerControl.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAADwvy4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.892Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MapManager.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Map\\MapManager.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAcwBIAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerRole.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Player\\PlayerRole.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAywCgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.967Z",
+              "WhenOpened": "2025-03-11T02:02:34.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Datas.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Datas.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Datas.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Datas.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Datas.cs",
-              "ViewState": "AQIAAPUAAAAAAAAAAADwvxQBAAAEAAAA",
+              "Title": "Monster.cs",
+              "DocumentMoniker": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
+              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
+              "ToolTip": "E:\\Git_Space_2\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
+              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\AtkManager\\Enemy\\Monster.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwDwAAAB+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ETC.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs",
-              "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs",
-              "RelativeToolTip": "Assets\\GameMain\\Scripts\\Game\\Units\\ETC.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAvwCQAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T11:41:47.994Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "51b3ee7c-c47b-463d-8f3a-23a3913df534",
-        "Display": 0,
-        "X": 100,
-        "Y": 282,
-        "Width": 1271,
-        "Height": 633,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyWavesEditor.cs",
-              "DocumentMoniker": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\EnemyWavesEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\EnemyWavesEditor.cs",
-              "ToolTip": "D:\\Git\\2206A\\Eggshell Agent Team\\Assets\\Editor\\EnemyWavesEditor.cs",
-              "RelativeToolTip": "Assets\\Editor\\EnemyWavesEditor.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwBgAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T06:28:09.957Z",
+              "WhenOpened": "2025-03-11T01:40:46.628Z",
               "EditorCaption": ""
             }
           ]
