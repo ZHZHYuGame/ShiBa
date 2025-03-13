@@ -38,7 +38,7 @@ public class AutoAttackController : MonoBehaviour
     Transform FindNearestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        Debug.Log(enemies.Length);
+        //Debug.Log(enemies.Length);
         List<GameObject> enemyList = new List<GameObject> ();
         for (int i = 0; i < enemies.Length; i++)
         {

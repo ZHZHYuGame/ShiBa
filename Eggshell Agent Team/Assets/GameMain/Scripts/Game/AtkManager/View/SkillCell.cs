@@ -17,7 +17,7 @@ public class SkillCell : MonoBehaviour
         if (activeSkill != null)
         {
             string assetName = Path.GetFileNameWithoutExtension(activeSkill.Slill_icon);
-            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath+"/effect",assetName, "effect");
+            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath+"/weapon",assetName, "weapon");
             icon.gameObject.SetActive(true);
         }
         else
@@ -35,7 +35,7 @@ public class SkillCell : MonoBehaviour
         if (activeSkill != null)
         {
             string assetName = Path.GetFileNameWithoutExtension(activeSkill.Slill_icon);
-            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/effect", assetName, "effect");
+            icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/weapon", assetName, "weapon");
             icon.gameObject.SetActive(true);
         }
         else
