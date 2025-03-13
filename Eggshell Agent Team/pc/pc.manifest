@@ -1,9 +1,5 @@
 ManifestFileVersion: 0
-<<<<<<< HEAD:Eggshell Agent Team/Assets/StreamingAssets/StreamingAssets.manifest
-CRC: 3670244572
-=======
-CRC: 3466201386
->>>>>>> 081ace80e828a4a4959408ca17999d2c65078618:Eggshell Agent Team/pc/pc.manifest
+CRC: 2583398697
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:

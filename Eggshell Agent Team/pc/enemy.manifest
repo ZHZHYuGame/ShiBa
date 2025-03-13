@@ -136,8 +136,4 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/441aed29-a677-4e56-9c8e-5699474bbe84.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/11972087-4ede-443e-957b-02921fc97a16.png"
 Dependencies:
-<<<<<<< HEAD:Eggshell Agent Team/Assets/StreamingAssets/enemy.manifest
-- D:/Unity/sx/ShiBa/Eggshell Agent Team/Assets/StreamiingAssets/weapon
-=======
-- D:/AppLication/Git/Git9/Eggshell Agent Team/pc/weapon
->>>>>>> 081ace80e828a4a4959408ca17999d2c65078618:Eggshell Agent Team/pc/enemy.manifest
+- D:/git2206/ShiBa/Eggshell Agent Team/PC/weapon
