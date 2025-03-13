@@ -1,1 +1,33 @@
-{"1":{"mapId":1,"name":"新手训练场","type":0,"oneMapScale":2,"mapLength":10,"mapWidth":3,"mapHeight":3,"spritePath":"Assets/GameMain/GameResources/2DSprits/UI/52ef29ed-bd92-4e94-ab2f-0ebc91bf3a60.jpg"},"2":{"mapId":2,"name":"进阶之路","type":1,"oneMapScale":2,"mapLength":10,"mapWidth":1,"mapHeight":3,"spritePath":"Assets/GameMain/GameResources/2DSprits/UI/702d68aa-ceb9-4bd2-ba2e-8f8e94432d3c.png"},"3":{"mapId":3,"name":"Boss站","type":2,"oneMapScale":2,"mapLength":10,"mapWidth":5,"mapHeight":5,"spritePath":"Assets/GameMain/GameResources/2DSprits/UI/f21328dc-8f89-4633-8876-1959e5384723.png"}}
+{
+  "1": {
+    "mapId": 1,
+    "name": "新手训练场",
+    "type": 0,
+    "oneMapScale": 2,
+    "mapLength": 10,
+    "mapWidth": 3,
+    "mapHeight": 3,
+    "spritePath": "52ef29ed-bd92-4e94-ab2f-0ebc91bf3a60"
+
+  },
+  "2": {
+    "mapId": 2,
+    "name": "进阶之路",
+    "type": 1,
+    "oneMapScale": 2,
+    "mapLength": 10,
+    "mapWidth": 1,
+    "mapHeight": 3,
+    "spritePath": "702d68aa-ceb9-4bd2-ba2e-8f8e94432d3c"
+  },
+  "3": {
+    "mapId": 3,
+    "name": "Boss站",
+    "type": 2,
+    "oneMapScale": 2,
+    "mapLength": 10,
+    "mapWidth": 5,
+    "mapHeight": 5,
+    "spritePath": "f21328dc-8f89-4633-8876-1959e5384723"
+  }
+}
