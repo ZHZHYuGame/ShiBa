@@ -19,7 +19,7 @@ public class ResourceManager
     /// <param name="cacheCapacity">缓存容量</param>
     public ResourceManager(int cacheCapacity = 10)
     {
-        _lruCache = new LRUCache<string, ResourceWrapper<UnityEngine.Object>>(cacheCapacity);
+        _lruCache = new LRUCache<string, ResourceWrapper<UnityEngine.Object>>(cacheCapacity, TimeSpan.FromSeconds(5));
         _resourceCache = new Dictionary<string, ResourceWrapper<UnityEngine.Object>>();
     }
     /// <summary>
