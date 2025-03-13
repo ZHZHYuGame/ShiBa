@@ -4,6 +4,7 @@ Hashes:
   AssetFileHash:
     serializedVersion: 2
     Hash: aaf72e720a3573b842d5b094e8227df5
+    Hash: f2aceb6d9f4452736351f3d47ff31553
   TypeTreeHash:
     serializedVersion: 2
     Hash: 3aaf6e8846db257e072b00ebd04b770f
@@ -92,4 +93,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-- D:/AppLication/Git/Git9/Eggshell Agent Team/pc/ui
+- D:/git2206/ShiBa/Eggshell Agent Team/PC/ui
