@@ -55,6 +55,7 @@ public class GameMgr : MonoBehaviour
         Game game = new Game();
         SceneControl_Root.dic_scene.Add("11", game);
         dataAnalysis = new DataAnalysis();
+        ReddotManager.Instance.ChangeValue("main/activity",1);
        // AudioMgr.Instance.PlayMusic();
         #region 推入第一个面板
         //UIManager_Root.Push(new StartPanel());

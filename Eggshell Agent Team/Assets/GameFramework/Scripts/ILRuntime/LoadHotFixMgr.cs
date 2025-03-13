@@ -26,7 +26,6 @@ public class LoadHotFixMgr : UnitySingleto<LoadHotFixMgr>
         {
             dll = webRequest.downloadHandler.data;
         }
-
        string UrlPdb= DLLPath + filename + ".pdb";
         UnityWebRequest pdbRequest = UnityWebRequest.Get(UrlPdb);
         yield return pdbRequest.SendWebRequest();
