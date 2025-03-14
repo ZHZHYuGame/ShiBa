@@ -61,13 +61,13 @@ public class CreateMapEditor : EditorWindow
         // 背景图片
         if (!string.IsNullOrEmpty(mapDictionary[mapId].spritePath))
         {
-            sprite = AssetDatabase.LoadAssetAtPath<Sprite>(mapDictionary[mapId].spritePath);
+            sprite = AssetDatabase.LoadAssetAtPath<Sprite>( "Assets/GameMain/GameResources/2DSprits/UI/"+ mapDictionary[mapId].spritePath+".png");
+           // sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/ui",mapDictionary[mapId].spritePath, "ui");
         }
         sprite = (Sprite)EditorGUILayout.ObjectField("背景图片", sprite, typeof(Sprite), false);
         if (sprite != null)
         {
-            string path = AssetDatabase.GetAssetPath(sprite);
-            mapDictionary[mapId].spritePath = path;
+            mapDictionary[mapId].spritePath = sprite.name;
         }
         //地图类型
         mapDictionary[mapId].type = (MapType)EditorGUILayout.EnumPopup("地图类型：", mapDictionary[mapId].type);

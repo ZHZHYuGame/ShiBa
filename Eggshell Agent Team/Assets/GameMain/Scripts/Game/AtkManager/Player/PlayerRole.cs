@@ -14,14 +14,25 @@ public class PlayerRole : MonoSingleton<PlayerRole>
     public ETC etc;
     public float moveSpeed = 0.5f;
     private Vector3 lastMoveDirection = Vector3.forward;
+
+    private float mapWidth=0;
+    private float mapHeight=0;
+    bool isClomp = false;
     // Start is called before the first frame update
     void Start()
     {
         mapScale = MapManager.Instance.oneMapScale * 10;
         pyl = mapScale / 2;
+        GetComponent<BoxCollider>().isTrigger = true;
         MapManager.Instance.CreatMap(x, y);
         GameObject[] etcs = GameObject.FindGameObjectsWithTag("Etc");
         etc = etcs[0].GetComponent<ETC>();
+        mapWidth = MapManager.Instance.mapWidth/2;
+        mapHeight = MapManager.Instance.mapHeight/2;
+        if(mapHeight!=0||mapWidth!=0)
+        {
+            isClomp = true;
+        }
     }
 
     // Update is called once per frame
@@ -48,12 +59,48 @@ public class PlayerRole : MonoSingleton<PlayerRole>
                 MapManager.Instance.CreatMap(x, y);
             }
         }
-
+        // 检查玩家是否超出地图边界
+        if(isClomp)
+        {
+            MapClomp();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //武器等级升级
             transform.GetComponent<WeaponOrbitController>().currentLevel++;
 
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+    }
+    // 检查玩家是否超出地图边界
+    private void MapClomp()
+    {
+        
+        if(mapWidth!=0)
+        {
+            if(transform.position.x<-mapWidth)
+            {
+                transform.position = new Vector3(-mapWidth, transform.position.y, transform.position.z);
+            }
+            else if (transform.position.x > mapWidth)
+            {
+                transform.position = new Vector3(mapWidth, transform.position.y, transform.position.z);
+            }
+        }
+        if(mapHeight!=0)
+        {
+            if (transform.position.y < -mapHeight)
+            {
+                transform.position = new Vector3(transform.position.x, -mapHeight, transform.position.z);
+            }
+            else if (transform.position.y > mapHeight)
+            {
+                transform.position = new Vector3(transform.position.x, mapHeight, transform.position.z);
+            } 
+        }
+
     }
 }

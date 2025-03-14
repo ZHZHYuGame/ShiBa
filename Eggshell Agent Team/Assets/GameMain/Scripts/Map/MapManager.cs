@@ -29,17 +29,30 @@ public class MapManager : MonoSingleton<MapManager>
     public bool isMove = true; // 是否动态生成地图块
     public MapType currType = MapType.One; // 当前地图类型
     GameObject[,] mapPool; // 地图块池
+    //GameObject[] areaPool;
     [SerializeField]
     Sprite sprite; // 地图块精灵
-    public GameObject map; // 地图块预制体
+    [SerializeField]
+    GameObject map; // 地图块预制体
+    //[SerializeField]
+    //GameObject area;
     int mapTileSize = 10; // 每个地图块的大小
+    public float mapWidth=0;
+    public float mapHeight=0;
+    //int areaMapScale;
     public void Init(MapData data)
     {
         mapTileSize = data.mapLength;
         oneMapScale = data.oneMapScale;
+        //areaMapScale = mapTileSize * oneMapScale;
+        //area = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/map", "AreaWall", "map");
+        map = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/map", "Plane", "map");
+        sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/ui",data.spritePath, "ui");
         currType = data.type;
         w = data.mapWidth;
         h = data.mapHeight;
+        mapHeight = h* mapTileSize*oneMapScale;
+        mapWidth = w* mapTileSize*oneMapScale;
         InitMap();
     }
     private void InitMap()
@@ -50,6 +63,25 @@ public class MapManager : MonoSingleton<MapManager>
         renderer.sprite = sprite;
         renderer.size = Vector2.one* mapTileSize;
         mapPool = new GameObject[w, h]; // 初始化地图池  
+       // switch (currType)
+       // {
+        //    case MapType.Two:
+        //        areaPool = new GameObject[2];
+         //       area.GetComponent<BoxCollider>().size = new Vector3(areaMapScale / 2, areaMapScale * 2, 0.2f);
+        //        areaPool[0] = Instantiate(area, transform); // 左侧空气墙
+        //        areaPool[1] = Instantiate(area, transform); // 右侧空气墙
+        //        break;
+        //    case MapType.Three:
+        //        areaPool = new GameObject[4];
+        //        for (int i = 0; i < 4; i++)
+        //        {
+        //            areaPool[i] = Instantiate(area, transform);
+        //            
+        //        }
+        //        break;
+        //}
+        //// 初始化空气墙位置
+        //UpdateAreaWall(currType, 0, 0);
         // 创建地图块并隐藏  
         for (int i = 0; i < w; i++)
         {
@@ -135,11 +167,34 @@ public class MapManager : MonoSingleton<MapManager>
 
         return mapX >= -halfWidth && mapX <= halfWidth && mapY >= -halfHeight && mapY <= halfHeight;
     }
-    private void UpdateMapTile(GameObject tile, int x, int y)
+    private void UpdateMapTile(GameObject tile, float x, float y)
     {
         tile.transform.position = new Vector3(x * 10 * oneMapScale, y * 10 * oneMapScale, 0);
         tile.transform.localScale = Vector3.one * oneMapScale; // 恢复地图块的缩放  
     }
+    //private void UpdateAreaWall(MapType type, int x, int y)
+    //{
+    //    switch (type)
+    //    {
+    //        case MapType.Two:
+    //            // 更新左右空气墙的 y 轴位置
+    //            UpdateMapTile(areaPool[0], -1.5f, y);
+    //            UpdateMapTile(areaPool[1], 1.5f, y);
+    //            break;
+    //
+    //        case MapType.Three:
+    //            // 初始化四个空气墙的位置和大小
+    //            UpdateMapTile(areaPool[0], w, 0);
+    //            UpdateMapTile(areaPool[1], w, 0);
+    //            UpdateMapTile(areaPool[2],  0, h);
+    //            UpdateMapTile(areaPool[3],0, h);
 
+    //            areaPool[0].GetComponent<BoxCollider>().size = new Vector3(oneMapScale, h * oneMapScale, 0.2f); // 左右墙高度
+    //            areaPool[1].GetComponent<BoxCollider>().size = new Vector3(oneMapScale, h * oneMapScale, 0.2f);
+    //            areaPool[2].GetComponent<BoxCollider>().size = new Vector3(w * oneMapScale, oneMapScale, 0.2f); // 上下墙宽度
+    //            areaPool[3].GetComponent<BoxCollider>().size = new Vector3(w * oneMapScale, oneMapScale, 0.2f);
+    //            break;
+    //    }
+    //}
 
 }

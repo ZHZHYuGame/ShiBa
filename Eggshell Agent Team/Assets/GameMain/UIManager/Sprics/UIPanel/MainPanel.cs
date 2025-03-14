@@ -13,6 +13,7 @@ public class MainPanel : BasePanel
     private static LayerType layerType = LayerType.Normal;
     private List<Button>btns= new List<Button>();
     public static readonly UIType uIType = new UIType(path, name, layerType);
+    public GameObject topBtn;//月卡
 
     public MainPanel() : base(uIType)
     {
@@ -25,6 +26,8 @@ public class MainPanel : BasePanel
         base.OnStart();
 
         togglegame=UIMethod.Ins.GetOrAddSingleComponentInChild<ToggleGroup>(ActiveObj, "togglegame").gameObject;
+        topBtn=UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "TopBtn").gameObject;
+        UIMethod.Ins.GetOrAddSingleComponentInChild<Button>(ActiveObj, "TopBtn").onClick.AddListener(Top);
         for (int i = 0; i < togglegame.transform.childCount; i++)
         {
             toggles.Add(UIMethod.Ins.AddOrGetComponent<Toggle>(togglegame.transform.GetChild(i).gameObject));
@@ -78,7 +81,32 @@ public class MainPanel : BasePanel
 
             });
         }
+        int num= ReddotManager.Instance.GetTreeNode("main").Value;
+        if (num == 0)
+        {
+            topBtn.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else
+        {
+            topBtn.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        ReddotManager.Instance.AddListener("main", (s) =>
+        {
+            if (s == 0)
+            {
+                topBtn.transform.GetChild(0).gameObject.SetActive(false);
+            }
+            else
+            {
+                topBtn.transform.GetChild(0).gameObject.SetActive(true);
+            }
+        });
+    }
 
+    private void Top()
+    {
+        GameMgr.GetInstance().UIManager_Root.Pop(false);
+        GameMgr.GetInstance().UIManager_Root.Push(new TopPanel());
     }
 
     private void Load()
