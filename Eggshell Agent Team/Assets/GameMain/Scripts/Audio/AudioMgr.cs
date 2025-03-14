@@ -163,6 +163,8 @@ public class AudioMgr : MonoBehaviour
         }
     }
 
+
+
     // 暂停所有音效
     public void PauseAllSFX()
     {
@@ -202,5 +204,20 @@ public class AudioMgr : MonoBehaviour
         }
         activeSources.Clear();
         audioSourcePool.Clear();
+    }
+
+    /// <summary>
+    /// 简单的音频增益
+    /// </summary>
+    /// <param name="data">音频样本数据，即多个声道的样本交替存储</param>
+    /// <param name="channels">音频的声道数</param>
+    /// <param name="gain">增益倍数</param>
+
+    public void OnAudioFilterRead(float[] data ,int channels,float gain)
+    {
+        for(int i=0;i<data.Length;i++)
+        {
+            data[i]*=gain;//对每个音频样本应用增益
+        }
     }
 }
