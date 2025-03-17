@@ -1,6 +1,8 @@
-﻿using System;
+﻿using StarForce;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 //子弹脚本
@@ -31,7 +33,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     private float distance =50;//消失半径
     float time = 0;
-
+    ActiveSkill weapon;
     private void Start()
     {
         
@@ -108,8 +110,30 @@ public class Projectile : MonoBehaviour
     {
         if (other.collider.tag == "Enemy")
         {
-            ObjectPool.Enqueue(gameObject);
+            Monster moster = other.collider.GetComponent<Monster>();
+            //计算伤害(武器等级*伤害系数*武器初始伤害)
+            int atk = (int)(weapon.Level * weapon.Coefficient*weapon.Skill_hurt);
+            //血量-(武器伤害-防御)
+            int realAtk = (int)(atk - moster.data.Def);
+            moster.data.Blood-=realAtk;
+            //怪物受伤显示
+            //other.collider.GetComponent<SpriteRenderer>().color = Color.red;
+            //飘血提示
+            GameObject hurt=  ObjectPool.GetObject(GameObject.Find("Canvas").transform.GetChild(0).GetChild(0).gameObject);
+            hurt.transform.position=Camera.main.WorldToScreenPoint(transform.position);
+            hurt.GetComponent<HurtItem>().Init(realAtk);//伤害动态更新
         }
     }
 
+    internal void Init(ActiveSkill weapon)
+    {
+        this.weapon = weapon;
+        if (weapon.Level >= 5)
+        {
+            //满级图片
+            string assetName = Path.GetFileNameWithoutExtension(weapon.Slill_AfterIcon);
+            this.GetComponent<SpriteRenderer>().sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/weapon", assetName, "weapon");
+        }
+        
+    }
 }

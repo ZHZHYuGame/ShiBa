@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -32,9 +32,9 @@ public class SkillCell : MonoBehaviour
     internal void Init(PassiveSkill passiveSkill)
     {
         this.passiveSkill = passiveSkill;
-        if (activeSkill != null)
+        if (passiveSkill != null)
         {
-            string assetName = Path.GetFileNameWithoutExtension(activeSkill.Slill_icon);
+            string assetName = Path.GetFileNameWithoutExtension(passiveSkill.Slill_icon);
             icon.sprite = ResourcesLoader.LoadResources<Sprite>(Application.streamingAssetsPath + "/weapon", assetName, "weapon");
             icon.gameObject.SetActive(true);
         }
