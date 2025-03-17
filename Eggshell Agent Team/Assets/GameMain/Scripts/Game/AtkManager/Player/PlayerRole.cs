@@ -64,12 +64,6 @@ public class PlayerRole : MonoSingleton<PlayerRole>
         {
             MapClomp();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //武器等级升级
-            transform.GetComponent<WeaponOrbitController>().currentLevel++;
-
-        }
     }
     private void OnCollisionEnter(Collision collision)
     {

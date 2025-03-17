@@ -92,7 +92,9 @@ public class EnemySpawner : MonoBehaviour
         {
             string assetName = Path.GetFileNameWithoutExtension(roles[i].This_object_path);
             //enemyPrefabs.Add(AssetDatabase.LoadAssetAtPath<GameObject>(roles[i].This_object_path));
-            enemyPrefabs.Add(ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/enemy", assetName, "enemy"));
+           GameObject enemy =  ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/enemy", assetName, "enemy");
+            enemy.transform.localScale = Vector3.one* roles[i].BodySize;
+            enemyPrefabs.Add(enemy);
         }
         waveInterval = map.Enemy_wave_Time;
     }
