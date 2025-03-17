@@ -213,11 +213,11 @@ public class AudioMgr : MonoBehaviour
     /// <param name="channels">音频的声道数</param>
     /// <param name="gain">增益倍数</param>
 
-    public void OnAudioFilterRead(float[] data ,int channels,float gain)
-    {
-        for(int i=0;i<data.Length;i++)
-        {
-            data[i]*=gain;//对每个音频样本应用增益
-        }
-    }
+    //public void OnAudioFilterRead(float[] data ,int channels,float gain)
+    //{
+    //    for(int i=0;i<data.Length;i++)
+    //    {
+    //        data[i]*=gain;//对每个音频样本应用增益
+    //    }
+    //}
 }
