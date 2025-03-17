@@ -1,7 +1,7 @@
 {
-    // ä½¿ç”¨ IntelliSense äº†è§£ç›¸å…³å±æ€§ã€‚ 
-    // æ‚¬åœä»¥æŸ¥çœ‹ç°æœ‰å±æ€§çš„æè¿°ã€‚
-    // æ¬²äº†è§£æ›´å¤šä¿¡æ¯ï¼Œè¯·è®¿é—®: https://go.microsoft.com/fwlink/?linkid=830387
+    // Ê¹ÓÃ IntelliSense ÁË½âÏà¹ØÊôĞÔ¡£ 
+    // ĞüÍ£ÒÔ²é¿´ÏÖÓĞÊôĞÔµÄÃèÊö¡£
+    // ÓûÁË½â¸ü¶àĞÅÏ¢£¬Çë·ÃÎÊ: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         
@@ -12,4 +12,13 @@
             "projectPath": "${workspaceFolder}"
         }
     ]
+}{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Unity",
+            "type": "vstuc",
+            "request": "attach"
+        }
+     ]
 }
