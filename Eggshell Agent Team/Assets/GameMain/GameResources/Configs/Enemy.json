@@ -108,7 +108,7 @@
     "Type": 0,
     "Def": 4.0,
     "Maxboold": 25.0,
-    "BodySize": 0.0,
+    "BodySize": 1.0,
     "BulletPath": null
   },
   "7": {
