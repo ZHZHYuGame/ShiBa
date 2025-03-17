@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 582bdf5841b7a084dbcdba29789968f0
+guid: d24554bbb86e3e54181b1125e5d4403e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,5 +100,5 @@ TextureImporter:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: weapon
   assetBundleVariant: 
