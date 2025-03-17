@@ -42,6 +42,8 @@ public class ChunkController : MonoSingleton<ChunkController>
         m_col = data.mapHeight;
         x = m_row / 2;
         y = m_col / 2;
+        
+        
     }
     private void Start()
     {
@@ -54,6 +56,7 @@ public class ChunkController : MonoSingleton<ChunkController>
     {
         m_currentPos = GetCurrentChunkVector(m_player.position);
         var list = GetActualChunkList(m_currentPos);
+        
         switch (MapManager.Instance.currType)
         {
             case MapType.One:
@@ -82,7 +85,7 @@ public class ChunkController : MonoSingleton<ChunkController>
 
     void Update()
     {
-
+        
         var realtimePos = GetCurrentChunkVector(m_player.position);
         if (IsChange(realtimePos))
         {
@@ -245,7 +248,6 @@ public class ChunkController : MonoSingleton<ChunkController>
                             chunksToRemove.Add(chunk);
                         }
                         break;
-
                     case MapType.One:
                         chunksToRemove.Add(chunk);
                         break;
@@ -296,38 +298,38 @@ public class ChunkController : MonoSingleton<ChunkController>
         return ChunkState.Display;
     }
 
-    private void OnDrawGizmos()
-    {
-        if (m_currentChunkList == null) return;
+    //private void OnDrawGizmos()
+    //{
+    //    if (m_currentChunkList == null) return;
 
-        // 设置绘制颜色为绿色
-        Gizmos.color = Color.green;
+    //    // 设置绘制颜色为绿色
+    //    Gizmos.color = Color.green;
 
-        // 遍历当前加载的地图块
-        foreach (var chunk in m_currentChunkList)
-        {
-            // 计算地图块的中心点
-            Vector3 center = new Vector3(
-               chunk.m_position.rowNum * mapScale, // X 坐标
-               chunk.m_position.colNum * mapScale, // Y 坐标
-                0 // Z 坐标
-            );
+    //    // 遍历当前加载的地图块
+    //    foreach (var chunk in m_currentChunkList)
+    //    {
+    //        // 计算地图块的中心点
+    //        Vector3 center = new Vector3(
+    //           chunk.m_position.rowNum * mapScale, // X 坐标
+    //           chunk.m_position.colNum * mapScale, // Y 坐标
+    //            0 // Z 坐标
+    //        );
 
-            // 绘制地图块的边框
-            Gizmos.DrawWireCube(center, new Vector3(mapScale, mapScale, 0));
-        }
+    //        // 绘制地图块的边框
+    //        Gizmos.DrawWireCube(center, new Vector3(mapScale, mapScale, 0));
+    //    }
 
-        // 设置绘制颜色为红色
-        Gizmos.color = Color.red;
+    //    // 设置绘制颜色为红色
+    //    Gizmos.color = Color.red;
 
-        // 计算玩家所在块的中心点
-        Vector3 playerChunkCenter = new Vector3(
-            m_currentPos.rowNum * mapScale, // X 坐标
-            m_currentPos.colNum * mapScale, // Y 坐标
-            0 // Z 坐标
-        );
+    //    // 计算玩家所在块的中心点
+    //    Vector3 playerChunkCenter = new Vector3(
+    //        m_currentPos.rowNum * mapScale, // X 坐标
+    //        m_currentPos.colNum * mapScale, // Y 坐标
+    //        0 // Z 坐标
+    //    );
 
-        // 绘制玩家所在块的边框
-        Gizmos.DrawWireCube(playerChunkCenter, new Vector3(mapScale, mapScale, 0));
-    }
+    //    // 绘制玩家所在块的边框
+    //    Gizmos.DrawWireCube(playerChunkCenter, new Vector3(mapScale, mapScale, 0));
+    //}
 }
