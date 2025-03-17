@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 2048597792
+CRC: 1459651427
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c0639cc6c93b20f7b9f02362269b5038
+    Hash: b46315322f4bd0c3a6b9141f4dce2c0e
   TypeTreeHash:
     serializedVersion: 2
-    Hash: fc6d82fa62d30eb569116898dbfe475a
+    Hash: 7fff39f229e9061771b72282cee5d0f9
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,6 +23,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb7163b193528994daa83f20c6445f6d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
@@ -41,6 +43,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: f627c32af5133a24f829e711fafe42fc, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 98a9a43be5eb84b4f885cbba353f1d2b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: d44e151cbe0b952418c0e44ff72cfdd1, type: 3}
 - Class: 114
@@ -80,7 +84,10 @@ Assets:
 - Assets/GameMain/GameResources/Panel/ExpForm.prefab
 - Assets/GameMain/GameResources/Panel/StrartForm.prefab
 - Assets/GameMain/GameResources/Prefabs/HurtItem.prefab
+- Assets/GameMain/GameResources/Prefabs/bg.prefab
+- Assets/GameMain/GameResources/Prefabs/StarItem.prefab
 - Assets/GameMain/GameResources/Panel/StartPanel.prefab
+- Assets/GameMain/GameResources/Prefabs/skillItem.prefab
 - Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab
 - Assets/GameMain/GameResources/Panel/PaulePanel.prefab
 - Assets/GameMain/GameResources/2DSprits/UI/a0641706-7ae0-4c5c-ba75-83fa84be4447.jpg
@@ -88,4 +95,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui
+- D:/Git/2206A/Eggshell Agent Team/Assets/StreamingAssets/ui

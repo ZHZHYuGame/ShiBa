@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3908378172
+CRC: 381365515
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fd30b47c391c4e32938a55bfcea0373e
+    Hash: c9cc010f965a733677eaf55951d5e00c
   TypeTreeHash:
     serializedVersion: 2
     Hash: 46bbd9da48cff8d17f0c89eef78da528
@@ -35,15 +35,19 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/96c71a84-67ab-4925-8777-3b8462532536.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/1e8e5cd2-83d6-475a-b89f-2703ccdccb01.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/0dad51e9-28ea-4de3-a5bf-d0e9b4989dfc.png"
+- "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/a8df3dd9-fd5f-4b67-9405-94b090b9ebed.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/0be14581-e73f-49cb-8acb-fb9b435e101e.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/d63a2ab5-d326-4aa4-9b4e-0a92a9d32d6f.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/2d52dde9-b7c3-4da7-ab9c-09b4c257ff43.png"
+- "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/6803335f-f0e5-4d5d-8c8d-f4688d08ae59.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/ceb3e07b-c5b6-46e8-be61-88241004e83d.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/784ac871-10a1-49c2-b9a8-8b72928e9341.png"
+- "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/5898e966-fbd9-4644-a00a-8f6ed3f68ff0.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/989fe5d8-e143-48f3-a688-42e1583be3b9.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/91f49e03-e272-40e3-b068-ede53d3926c0.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/b673668e-f557-4f59-a212-a9195e502379.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/015ed9b1-207a-42ee-a9c4-9b100e0cf9f7.png"
+- "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/5a3b691b-2e7f-44a2-a26f-39eff23c4360.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/93a1ac43-0cee-4106-8c3a-4efd153b8de2.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/01f0f454-4edf-428f-918b-24c3bf879e19.png"
 - "Assets/GameMain/GameResources/2DSprits/\u6B66\u5668/a9ac3c55-d179-4685-846e-936cadde9da9.png"

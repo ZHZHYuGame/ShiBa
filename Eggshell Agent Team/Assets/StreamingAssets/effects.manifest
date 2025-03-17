@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3147615130
+CRC: 2637425113
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 3eaee82fa805e113753534b03ccd6c90
+    Hash: a5f65c22cced486ae5edbea10703057b
   TypeTreeHash:
     serializedVersion: 2
     Hash: 46bbd9da48cff8d17f0c89eef78da528
@@ -93,7 +93,6 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/db6fb5d4-395b-4da5-955e-54fde71e94a0.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/80083ab8-86a8-406b-bd5b-3730f54b46e5.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/e6e76e0a-ea88-4d71-8eb0-1971dd71cd13.png"
-- "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/6803335f-f0e5-4d5d-8c8d-f4688d08ae59.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/909cb2d9-a585-4d01-97b0-ebe9601a4799.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/8906b259-815a-4ecf-8102-286511c8fe6a.png"
 - "Assets/GameMain/GameResources/2DSprits/\u653B\u51FB\u7279\u6548/f41c42b1-bc54-4465-90b2-616f7ad2e3a9.png"

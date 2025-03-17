@@ -32,7 +32,6 @@ public static class ResourcesLoader
         // 先从 LRU 缓存中查找资源
         if (_lruCache.TryGetValue(cacheKey, out var cachedAsset))
         {
-            Debug.Log($"Asset loaded from cache: {assetName} from bundle: {bundlepath}");
             return cachedAsset as T;
         }
         if (!File.Exists(bundlepath))

@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3375544154
+CRC: 216174180
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 90a7b2cc221d93670754937edc1bb7a8
+    Hash: 7ced37bbce0e8d790ad7f442ebc1a9cf
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 2ff7ad2f8eea81f679c2074de298ccb9
+    Hash: c0befe04b2a8620ecf836c248c658080
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -22,11 +22,9 @@ ClassTypes:
 - Class: 65
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: 62d42db250c4ae64581b0cb359eafb30, type: 3}
+- Class: 114
   Script: {fileID: 11500000, guid: fb0430242fd52424aba4543ddd55d80f, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 3bfdbfc5bafe2d343901c5bb37ee8d36, type: 3}
-- Class: 114
-  Script: {fileID: 11500000, guid: 0d8f83c8b387a364d83d1947023e1d8b, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 9dc277de59b41d646bab469d9036d056, type: 3}
 - Class: 115
@@ -44,5 +42,5 @@ Assets:
 - Assets/GameMain/GameResources/Prefabs/sawtoothMax.prefab
 - Assets/GameMain/GameResources/Prefabs/Dan.prefab
 Dependencies:
-- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/ui
-- D:/git2206/ShiBa/Eggshell Agent Team/Assets/StreamingAssets/weapon
+- D:/Git/2206A/Eggshell Agent Team/Assets/StreamingAssets/ui
+- D:/Git/2206A/Eggshell Agent Team/Assets/StreamingAssets/weapon

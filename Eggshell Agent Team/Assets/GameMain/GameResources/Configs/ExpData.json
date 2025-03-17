@@ -4,27 +4,27 @@
     "exp_path": "Assets/GameMain/GameResources/2DSprits/经验/Exp1.png",
     "exp_name": "一级经验",
     "exp_type": 0,
-    "exp_value": 10
+    "exp_value": 50
   },
   {
     "id": 1002,
     "exp_path": "Assets/GameMain/GameResources/2DSprits/经验/Exp2.png",
     "exp_name": "二级经验",
     "exp_type": 1,
-    "exp_value": 20
+    "exp_value": 150
   },
   {
     "id": 1003,
     "exp_path": "Assets/GameMain/GameResources/2DSprits/经验/Exp3.png",
     "exp_name": "三级经验",
     "exp_type": 2,
-    "exp_value": 50
+    "exp_value": 400
   },
   {
     "id": 1004,
     "exp_path": "Assets/GameMain/GameResources/2DSprits/经验/Exp4.png",
     "exp_name": "四级经验",
     "exp_type": 3,
-    "exp_value": 80
+    "exp_value": 240
   }
 ]

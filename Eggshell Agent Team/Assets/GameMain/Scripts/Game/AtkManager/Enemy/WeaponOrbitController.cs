@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
+using System.IO;
 
 public class WeaponOrbitController : MonoBehaviour
 {
@@ -7,14 +9,28 @@ public class WeaponOrbitController : MonoBehaviour
     [SerializeField] private float orbitRadius;    // 当前实际半径（私有但序列化，便于调试）
     public float OrbitRadius => orbitRadius;      // 公共只读属性（可选）
                                                   // [System.Serializable]
+
+    ActiveSkill weaponData;
     public class LevelSettings
     {
         public int level;
         public int weaponCount;
         public float orbitRadius;
         public float rotationSpeed;
-        [Header("武器形态")]
         public GameObject weaponPrefab; // 每个等级独立的武器预制体
+
+        public LevelSettings()
+        {
+        }
+
+        public LevelSettings(int level, int weaponCount, float orbitRadius, float rotationSpeed, GameObject weaponPrefab)
+        {
+            this.level = level;
+            this.weaponCount = weaponCount;
+            this.orbitRadius = orbitRadius;
+            this.rotationSpeed = rotationSpeed;
+            this.weaponPrefab = weaponPrefab;
+        }
     }
 
     [Header("默认武器")]
@@ -27,18 +43,10 @@ public class WeaponOrbitController : MonoBehaviour
                                             //  public GameObject weaponPrefab;        // 武器预制体
                                             //  public GameObject newWeaponPrefab;     //新武器预制体
     public float rotationSpeed = 30f;      // 基础旋转速度
-    public Vector3 rotationAxis = Vector3.up; // 旋转轴
+    public Vector3 rotationAxis = Vector3.forward; // 旋转轴
 
     [Header("等级系统")]
-    public List<LevelSettings> levelConfigs = new List<LevelSettings>()
-    {
-        new LevelSettings { level = 0, weaponCount = 0, orbitRadius = 0,rotationSpeed=0 },
-        new LevelSettings { level = 1, weaponCount = 1, orbitRadius = 2f,rotationSpeed=300 },
-        new LevelSettings { level = 2, weaponCount = 2, orbitRadius = 2f,rotationSpeed=400},
-        new LevelSettings { level = 3, weaponCount = 4, orbitRadius = 3f,rotationSpeed=500 },
-        new LevelSettings { level = 4, weaponCount = 6, orbitRadius = 3f,rotationSpeed=500 },
-        new LevelSettings { level = 5, weaponCount = 6, orbitRadius = 3f,rotationSpeed=600 },
-    };
+    public List<LevelSettings> levelConfigs = new List<LevelSettings>();
 
     [Header("运行时控制")]
     [SerializeField] private int _currentLevel = 0;
@@ -58,7 +66,7 @@ public class WeaponOrbitController : MonoBehaviour
 
     private float targetRadius;
     private int targetWeaponCount;
-
+    ActiveSkill skill;//当前技能信息
 
 
 
@@ -81,14 +89,11 @@ public class WeaponOrbitController : MonoBehaviour
     {
         if (!useObjectPool) return;
 
-        GameObject prefabToUse = _currentWeaponPrefab != null ?
-            _currentWeaponPrefab : defaultWeaponPrefab;
-
         for (int i = 0; i < maxPoolSize; i++)
         {
-            GameObject weapon = Instantiate(prefabToUse);
+            GameObject weapon = Instantiate(defaultWeaponPrefab);
             weapon.SetActive(false);
-            //weapon.transform.SetParent(transform);
+            weapon.transform.SetParent(transform);
             weaponPool.Enqueue(weapon);
         }
     }
@@ -105,19 +110,11 @@ public class WeaponOrbitController : MonoBehaviour
         if (config == null) return;
 
         // 检查是否需要更换武器类型
-        if (config.weaponPrefab != null &&
-            config.weaponPrefab != _currentWeaponPrefab)
+        if (defaultWeaponPrefab != null)
         {
             ClearAllWeapons();
             _currentWeaponPrefab = config.weaponPrefab;
             InitializePool(); // 重新初始化对象池
-        }
-        else if (config.weaponPrefab == null &&
-                defaultWeaponPrefab != _currentWeaponPrefab)
-        {
-            ClearAllWeapons();
-            _currentWeaponPrefab = defaultWeaponPrefab;
-            InitializePool();
         }
 
         targetWeaponCount = config.weaponCount;
@@ -151,6 +148,7 @@ public class WeaponOrbitController : MonoBehaviour
         while (activeWeapons.Count < targetWeaponCount)
         {
             GameObject weapon = GetWeaponFromPool();
+            weapon.GetComponent<Hurtwhele>().Init(weaponData);
             activeWeapons.Add(weapon);
         }
 
@@ -227,5 +225,20 @@ public class WeaponOrbitController : MonoBehaviour
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireSphere(target.position, orbitRadius);
         }
+    }
+
+    internal void Init(ActiveSkill skill)
+    {
+        string assetName = Path.GetFileNameWithoutExtension(skill.This_object_path);
+        defaultWeaponPrefab = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/role", assetName, "role");
+        target = this.transform;
+        for (int i = 1; i <= 5; i++)
+        {
+            levelConfigs.Add(new LevelSettings(skill.Level, skill.Level + 1, (float)(skill.Level * (1 - 0.1 * skill.Level)), (skill.Level + 1) * 100, defaultWeaponPrefab));
+        }
+        weaponData = skill;
+        currentLevel = skill.Level;
+        
+
     }
 }
