@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 1585068744
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ae44990edb4307e8041aa5aaf8e5327a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 46bbd9da48cff8d17f0c89eef78da528
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/49470164-1230-4110-87fc-53018b616017.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/e2beeb3d-70da-4c0c-82f2-099fc016adb0.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/25096ba4-503b-490b-9d05-cbace859836c.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/b4eb99c5-af1d-4259-ae4b-4423368aff44.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/63edbd97-0039-42be-be85-a5d448cf8a41.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/51f0a490-d4a4-497f-88b2-0d50ddafd2c9.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/29a69404-0da1-4006-9e4e-8cfe37eabec9.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/32723ad4-24c7-4598-a5b6-033250eb9f72.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/1d8c5026-329f-44ed-994e-68fb4b3ab7de.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/2c58f24e-728b-4ddf-93dc-238b29caf518.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/b8d25d64-a668-4b72-b836-07e481651359.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/e2c00053-6dd9-4b3e-88ef-df5727ac4cc9.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/bd0ab445-bf33-4858-9e6c-357c723be737.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/80bc9dbf-0e2a-406c-9d6b-b37e87aee77a.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/791eb4e9-9da1-42e0-8047-44697cc93119.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/467c74a9-c7f8-40ea-ba2a-ece236ce9fd4.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/88daabcb-33ca-4700-9fc8-8bb79840ff60.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/be810c37-cfdb-424c-8c3f-346900e1e5cd.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/c430d587-abe0-44df-9573-b1ded0bee779.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/3192521c-1a8b-44ba-ba49-3fa07156f259.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/57f0c2f5-c443-441e-bdbc-281f84e0c253.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/838ad7a0-2d88-43ac-ad6d-9c8ea5cb11cf.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/093e5dc1-b005-4f56-9c52-09b3d308e063.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/b0735216-2441-4ef1-abac-0492373d1678.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/2b9f254a-58f9-4e87-8215-e6acbe129f31.png"
+- "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA\u6B7B\u4EA1/5affb720-0aec-4e72-9c2d-26bfacfddcbc.png"
+Dependencies: []
