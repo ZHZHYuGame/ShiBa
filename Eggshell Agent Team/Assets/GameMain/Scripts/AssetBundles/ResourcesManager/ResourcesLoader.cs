@@ -9,7 +9,7 @@ using UnityEngine;
 public static class ResourcesLoader
 {
     // LRU 缓存实例
-    private static readonly LRUCache<string, UnityEngine.Object> _lruCache = 
+    public static  LRUCache<string, UnityEngine.Object> _lruCache = 
         new LRUCache<string, UnityEngine.Object>(capacity: 100, timeThresHold: TimeSpan.FromMinutes(10));
 
     /// <summary>
