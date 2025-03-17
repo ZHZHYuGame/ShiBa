@@ -1,5 +1,5 @@
 ManifestFileVersion: 0
-CRC: 2441162554
+CRC: 3364777268
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
@@ -33,3 +33,6 @@ AssetBundleManifest:
       Dependencies:
         Dependency_0: ui
         Dependency_1: weapon
+    Info_9:
+      Name: map
+      Dependencies: {}
