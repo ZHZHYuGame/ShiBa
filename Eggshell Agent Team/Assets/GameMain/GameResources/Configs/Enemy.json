@@ -10,7 +10,7 @@
     "Movespeed": 3.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 10.0,
+    "Def": 5.0,
     "Maxboold": 10.0,
     "BodySize": 1.0,
     "BulletPath": null
@@ -19,14 +19,14 @@
     "Id": 1,
     "Name": "蜗牛",
     "This_animator_path": null,
-    "This_object_path": "Assets/GameMain/GameResources/Prefabs/Bullfrog.prefab",
+    "This_object_path": "Assets/GameMain/GameResources/Prefabs/bullfrog.prefab",
     "Lever": 2,
     "Blood": 15.0,
     "Atkspeed": 5.0,
     "Movespeed": 2.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 20.0,
+    "Def": 4.0,
     "Maxboold": 15.0,
     "BodySize": 1.0,
     "BulletPath": "Assets/GameMain/UI/AttackEffect/021788d0-e89b-4df8-8144-6676ac2dcc63.png"
@@ -42,7 +42,7 @@
     "Movespeed": 6.0,
     "Atk": 15.0,
     "Type": 0,
-    "Def": 15.0,
+    "Def": 6.0,
     "Maxboold": 25.0,
     "BodySize": 1.0,
     "BulletPath": "Assets/GameMain/UI/AttackEffect/021788d0-e89b-4df8-8144-6676ac2dcc63.png"
@@ -58,7 +58,7 @@
     "Movespeed": 10.0,
     "Atk": 20.0,
     "Type": 0,
-    "Def": 20.0,
+    "Def": 6.0,
     "Maxboold": 30.0,
     "BodySize": 2.0,
     "BulletPath": "Assets/GameMain/UI/AttackEffect/021788d0-e89b-4df8-8144-6676ac2dcc63.png"
@@ -90,7 +90,7 @@
     "Movespeed": 5.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 15.0,
+    "Def": 6.0,
     "Maxboold": 30.0,
     "BodySize": 1.0,
     "BulletPath": null
@@ -106,7 +106,7 @@
     "Movespeed": 5.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 25.0,
+    "Def": 4.0,
     "Maxboold": 25.0,
     "BodySize": 0.0,
     "BulletPath": null
@@ -122,7 +122,7 @@
     "Movespeed": 10.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 20.0,
+    "Def": 2.0,
     "Maxboold": 20.0,
     "BodySize": 1.0,
     "BulletPath": null
@@ -138,7 +138,7 @@
     "Movespeed": 5.0,
     "Atk": 10.0,
     "Type": 0,
-    "Def": 20.0,
+    "Def": 10.0,
     "Maxboold": 50.0,
     "BodySize": 1.0,
     "BulletPath": null

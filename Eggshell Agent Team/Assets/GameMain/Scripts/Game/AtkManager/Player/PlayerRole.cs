@@ -49,11 +49,5 @@ public class PlayerRole : MonoSingleton<PlayerRole>
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //武器等级升级
-            transform.GetComponent<WeaponOrbitController>().currentLevel++;
-
-        }
     }
 }

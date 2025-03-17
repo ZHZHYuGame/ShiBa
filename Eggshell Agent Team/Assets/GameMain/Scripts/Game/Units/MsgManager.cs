@@ -6,6 +6,7 @@ using UnityEngine;
 public enum MesID
 {
     Exp,
+    SkillUpLevel,
 }
 
 public class MsgManager<T> : Singleton<MsgManager<T>>

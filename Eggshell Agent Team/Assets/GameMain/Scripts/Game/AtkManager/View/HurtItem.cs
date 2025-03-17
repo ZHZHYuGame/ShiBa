@@ -8,10 +8,10 @@ public class HurtItem : MonoBehaviour
   
 
 
-    public void Init(string str)
+    public void Init(int str)
     {
 
-        GetComponent<Text>().text = str;
+        GetComponent<Text>().text = str.ToString();
         Invoke("SaveObjectPool", 0.5f);
     }
     // Start is called before the first frame update

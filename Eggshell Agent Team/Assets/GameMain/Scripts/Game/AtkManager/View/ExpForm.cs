@@ -46,8 +46,8 @@ public class ExpForm : BasePanel
         //攻击力 = 基础值 × (1 + 0.1 × 等级)
         nowExp += exp.Exp_value;
         allExp += exp.Exp_value;
-        nowLevelMaxExp = (int)Mathf.Pow((50 * level), 1.6f);
-        
+        nowLevelMaxExp = (int)Mathf.Pow((50 * level), 1.4f);
+        Debug.Log(exp.Exp_value);
         if (nowExp >= nowLevelMaxExp)
         {
             level++;
