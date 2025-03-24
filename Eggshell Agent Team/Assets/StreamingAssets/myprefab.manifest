@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 4036758362
+CRC: 1115423034
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7304c27c1e5dcab3776e20806c008165
+    Hash: 86d4857107d7d1a2821fd0192cd79b39
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 41365a8a3dd70cc4345d942a64557d26
+    Hash: c3b5f0c4cf16168450808d0a11198a6e
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -23,6 +23,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eb7163b193528994daa83f20c6445f6d, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
 - Class: 114
@@ -86,7 +88,9 @@ Assets:
 - Assets/GameMain/GameResources/Panel/StrartForm.prefab
 - Assets/GameMain/GameResources/Prefabs/HurtItem.prefab
 - Assets/GameMain/GameResources/Prefabs/bg.prefab
+- Assets/GameMain/GameResources/Prefabs/StarItem.prefab
 - Assets/GameMain/GameResources/Panel/StartPanel.prefab
+- Assets/GameMain/GameResources/Prefabs/skillItem.prefab
 - Assets/GameMain/GameResources/Prefabs/ScenePrefab.prefab
 - Assets/GameMain/GameResources/Panel/PaulePanel.prefab
 - Assets/GameMain/GameResources/2DSprits/UI/a0641706-7ae0-4c5c-ba75-83fa84be4447.jpg
@@ -94,4 +98,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-- D:/git2206/ShiBa/Eggshell Agent Team/PC/ui
+- D:/2206Git/Eggshell Agent Team/Assets/StreamingAssets/ui
