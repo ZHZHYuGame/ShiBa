@@ -1,7 +1,10 @@
-{
   "Version": 1,
   "WorkspaceRootPath": "D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\",
   "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
     {
       "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\toppanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\toppanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -9,10 +12,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\scripts\\assetbundles\\gamemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|solutionrelative:assets\\gamemain\\uimanager\\sprics\\uipanel\\mainpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D135F3B-2E4C-ED4B-8639-E61C7501AE40}|Assembly-CSharp.csproj|d:\\application\\git\\git9\\eggshell agent team\\assets\\gamemain\\uimanager\\sprics\\uipanel\\strartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -86,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TopPanel.cs",
               "DocumentMoniker": "D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\TopPanel.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\TopPanel.cs",
@@ -99,13 +98,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainPanel.cs",
               "DocumentMoniker": "D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "ToolTip": "D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
               "RelativeToolTip": "Assets\\GameMain\\UIManager\\Sprics\\UIPanel\\MainPanel.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwFQAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T11:28:45.866Z",
               "EditorCaption": ""
@@ -137,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameMgr.cs",
               "DocumentMoniker": "D:\\AppLication\\Git\\Git9\\Eggshell Agent Team\\Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
               "RelativeDocumentMoniker": "Assets\\GameMain\\Scripts\\AssetBundles\\GameMgr.cs",
