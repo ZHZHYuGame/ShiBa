@@ -39,7 +39,7 @@ public class ResourceManager
         yield return bundleLoadRequest;
         if (bundleLoadRequest.assetBundle == null)
         {
-            Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+            Debug.LogError($"AB包加载失败: {bundlePath}");
             onComplete?.Invoke(null);
         }
         else
@@ -81,7 +81,7 @@ public class ResourceManager
                  yield return LoadAssetBundleAsync(bundlePath, (bundle) => assetBundle = bundle);
         if (assetBundle == null)
         {
-            Debug.LogError($"Failed to load AssetBundle: {bundlePath}");
+            Debug.LogError($"AB包加载失败: {bundlePath}");
             yield break;
         }
         }
@@ -106,7 +106,7 @@ public class ResourceManager
 
         if (assetLoadRequest.asset == null)
         {
-            Debug.LogError($"Failed to load asset: {assetName} from bundle: {ab.name}");
+            Debug.LogError($"资源加载失败: {assetName} AB包: {ab.name}");
         }
         else
         {
@@ -150,11 +150,11 @@ public class ResourceManager
         {
             assetBundle.Unload(unloadAllLoadedObjects);
             _loadedBundles.Remove(bundlePath);
-            Debug.Log($"Unloaded AssetBundle: {bundlePath}");
+            Debug.Log($"卸载失败: {bundlePath}");
         }
         else
         {
-            Debug.LogWarning($"AssetBundle not found: {bundlePath}");
+            Debug.LogWarning($"Ab包未找到: {bundlePath}");
         }
     }
     /// <summary>
