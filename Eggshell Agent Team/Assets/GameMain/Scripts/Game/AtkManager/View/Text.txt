@@ -1,0 +1,211 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Text : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        int a = 1;
+        int b = 1;
+        int c = 1;
+        int d = 1;
+        int e = 1;
+        int f = 1;
+        int g = 1;
+        int h = 1;
+        int i = 1;
+        int j = 1;
+        int k = 1;
+        int l = i;
+        int m = 1;
+        int n = 1;
+        int o = 1;
+        int p = 12;
+        int q = 12;
+        int r = 13;
+        int s = 12;
+        int t = 123;
+        int u = 1;
+        int v = 1;
+        int w = 2;
+        int x = 1;
+        int y = 234;
+        int z = 12;
+        float sdaf = 1234;
+        float fsdaf = 312;
+        float dfas  = 3123;
+        float dsa = 34123;
+        float fsd = 1231;
+        float fsff = 434;
+        float ire32 = 4323;
+        float  itrn = 4;
+        float sdaf = 23423;
+        string dfs = "123";
+        string fadsf = "23123";
+        string sdaf = "32434";
+        string sdfasd = "423";
+        string sfsdf = "2sdfs";
+        string dfasd = "r234234";
+        string fsadfas = "r23rwer";
+        string fsdfsfsfsafdasdf ="fdsfasdfasdf";
+        string fsadfasdfasdffasd = "fsdfadfadfadsf";
+        string fsdfasdfasdfxcvv = "r23342342342";
+        string fsfasdfsadfxcvv = ":423424242";
+        string fsdfasdfasdfcvxv = "234242r2343242";
+        string fsdfasdf = "fsdfasfdasdf";
+        string utn ="fdsafas";但是发射点发射点发
+        fadsffeafasdf
+        fadsffeafasdfas
+        dfasasd
+        fadsffeafasdfassdf
+        asdf
+        asdff
+        asdfasdfasdfasdfasdfasdfas
+        dfasdfasdfasdfasdfasdfasdfasdfasdf
+        dsfasdfasdfasdfasdfasdfasdfasdfasdf
+        asdfasdfasdfadsfasdfasdfadfadf
+        asdfasdfasdfadsfasdfasdfadfadfas
+        dfasdfadsfadfasdfasdfadsfadsfadsfdffafdsfasdfasdfadsfsdaf
+        fasdfasdfasdfsfdasdfasdfasdfasdfasdfasdffassdf
+        fasdfadsfasdfasdfasdfasdfasdfasdfasdfasdfasdfadsfdsf
+        fadsasdfasdfasdfasdfadsfasdfasdfasdfasdfadsfasdfasdfasdfasdfadfasdfadsfasd
+        fasdfasdfasdfasdfasdfsfderwerwer
+        rqwerqwerqwerqwerqwerqwerqwerqwer
+        rqwerqwerqerqwerqwerqwerqwerqwerqwerqwerqwerqwer
+        rqewrqerqwerqwerqewrqwerqwerewqrqwerqwerqwerqwerqwerqwerqwerqwerqwer
+        rqewrqwerqerqwerqwerqewrqewrqwerqewrqwerqwerqwerqwerqwerqwer
+        qwerqerqerqewrqwerqwerqwerqwerqwerqwerqwrqwerqwerqwerqwerqwrqwrqrqrqerqwerwqerqwerqwerqwerqwerqw
+        rweqewrqwerqerqwerqwerqwererdasfdafdasfasfas
+        dffddffassafsfasdfxcvxcvcvzxvcxcvzxcvzxcvcxvxzvzxcvzxcv
+        dfadsfasdfasdfasdfdsfadzxcvzxcvcxv
+        dfsfw3r3erewrwe
+        sdfsdfsffsdfasdfasdfadsfasdfasdfasdfasdf
+        fadsfasdfasdfasdfazxcvcvsvc 
+        qwerwrewqqwerqwerqwerqwerqwerweewradfds
+        fdasfrwerdfasdf3r
+        rwerwsdfserfdsre
+        fdsfsefsdfsfsefsfdfsefsdfdsfsfesf
+        fsdfsefsdfeefsdfesfsdfesfefsdfe
+        fesdfdfggggfggfghfghfhfghfhfghf
+        dweweerrttyhuttfewdsdsfddfsd
+        fsdfsdvcvfrgerefsfd dfefdfd dsad
+        dwqeweqweqeqedfggghhsdfsdfsdfdfsfsfsfsf
+        asdadasdasdasdadasdwqerrertyyuuijytgfedsfrgthjf
+        qe2wdrfgthgytgtgfrfdedsesfr
+        e3wr4tyghgjgtbvfrdeswfrdgthn
+        3456ytutj7hygtfrdedwsqerfgtvfhy
+        e3wdfdrgthnjmhgfvdsafghnj
+        wedsfrgthyjukytrewqesedfrgth
+        e324er4ftgfyhnbfdwe3r4t5ry6uhg
+        wedsrfsdgbvy6thgfvrddecsfg
+        q2we3rdfdtghfrdewswqedrfgthy
+        wesdrfdgthyjkk,mhngbfdsa
+        ewdsrfdgthyjnukm,lmjhngbfvrdess
+        wesdfcrgvthyjuk,il. kmjnkhbgvfdrse
+        q2wesdfrgvthbvnyjmk,lmjhgfdsea
+        awdsxefcvvgthbnynjukmihg
+        dwesfrghnjk,jhgfdsdxfgh
+        w2eqdrfdgthyjukw2edrfdgt
+        w1qsedsfrgthyjuewdrfdtghyj
+        wqsaedfrgvthbnjnwq2edrfdtghyj
+        wqsedfrgthyjnew2drfdtghy
+        wq2edsfrgth
+        ASDFASHFHSUIADFUISAFHDUS HASDFSDAFASDDOFJASDJOPF
+        EQW
+        rqwerqwerqerqwerqwerqwerqwerqwerqwerqwerqwerqwerFQW
+        EFSADF
+        StartFAS
+        fASFASDFASDFASDFASDFASDF d
+        fadsasdfasdfasdfasdfadsfasdfasdfasdfasdfadsfasdfasdfasdfasdfadfasdfadsfasdFDSAFSDF
+        FADSFASDFASDFQWERQWERQWERFDFASFQWEFDASFAWE
+        FASDFQWERFASDFEFDSZAFQ3WEFEAFQW
+        DFWQEFAWSEFDFSDGFGSRDG5RYTRD按省份的人还敢和我的萨芬全微分
+        二分大撒fasedfaefdasfqwefaserrfdasffasdfvadsfadsfaASDFEAWSFASDF
+        SDAFASDFASDFASDFQWERQ23REFDACXCFCDASCDSAFDSAVCAS
+        wedsrfsdgbvy6thgfvrddecsfg
+        DFGG
+        s
+        FESAdffdsadsfdaf饿啊分eSDAOLFKJIMLFDASNIKFKLI/AFKFEGRW
+        Adsfadsfdghtgrefwdassefr
+        fgdhgdfdsafsgdfghjhjhjgfdsafdghjj
+        dfsaghjhgfdsafghjjktgrfefsfrgghffjk
+        fsgdhjjhgjfdsaERTYJUTREWTYUI
+        FGHJJKGFDSGGHJGFDSAFGHJK
+        EWRTYUIYTREWQTYUITREWQTYRYUILKKJKJHGFSDAFFDGHJKKHGFDSFGGHMNBNVCXZCGHTERWRTYJUKJK
+        FDGGHJJGFDSAFGHJJKYYTREWQERTYUKI
+        SDSADNMN,JJTREEFGDHJYUTHGR6Y56YRTHGFBFTTRRTGFDV
+        REFDV4Y5GETRB VFDRFEDSIJKE3RWDSCHUIJKNRWEFDSC
+        WREFDSOIKR43TEFDVIOKLJRW4EFEIOLJKMER4TFDVOLK;
+        RWEFDSCIKJWERFSDVJIOLKMFWEDVJIMKLN.wedsrfsdgbvy6thgfvrddecsfgREIJKFODSVJIOWERSFIKLRGF
+        ERFDIJKVIJWFESOJMIKLERFSMKJOL. FWERSDXDSOKLERFTDVOKLM;PTFERDSVOK,LP;
+        ERFDSOIJTW4FESDVKOPJMLERTGFVDOJKPLRGETDFBKOP;LRGEBKOPLTFWER
+        EFDSDIOJKLMFERDVOJKILMPFTERDDVOKL,P;GRETVKO,LP;REGDTFKOMPL;GREDDF
+        ERFDJIOKMLERFWDVKOILJMERFTWOKJILMERTGGKOPL;MRTEGOKLP;ERTFDOKLP;M;3WREFSDD
+        WEDSXACZ ROLRGEDOKGOERKLDP;GOKRGOKLEGFOKRF
+        EORGOGOEGOOFORRDFOERDOQOP;qwerqerqerqewrqwerqwerqwerqwerqwerqwerqwrqwerqwerqwerqwerqwrqwrqrqrqerqwerwqerqwerqwerqwerqwerqwDFSGIJ
+        FKJJFDJGSJKFJGJKLSDJKFLGKJLSDKJFFJKSADFJKASDKJLFAKDS
+        FJKADSKJFJKADSJFKLASDKJLFKJASDJKLFJKALSDFJKASJDFUIOWERFIUO
+        SCDKMNJLVSFDHJGJKJVKIJOFEKJFFKJLREF
+        VCKJLSJFDKVKJL;SDFKJLVKJFLCXVKJSFDGJKLSDFK
+        FDKJLGSJKDFLFGKJLSDFJKL;GKJLS;DFGKJSDFKJLG
+        VKLJDFSJKLGFKJSL;DFGJKLSDFGKJSDFJKGKLJS
+        FVJKSFDKJGKJSDFJKGLWERUJIIGSDFJKV
+        GFLKSDKJLGFJKSDFGJKFDSGKLFSDJGKJFDS
+        FGKSFKJGKJSDFJKLGKJLSDFGKJLSRDFKJGIJSFD
+        FKJLGKJLSDFGIJWEJRGJKFDSJKLGSFDKJL
+        GKLJ;SDFJKGKJLSDFGKJLSDFKJGKJSFDJKIGSDF
+        FKNLJGVSHJDFGJKHSFJKLGDKSLJDFJKGLSFDJKLGJKSDFG
+        GVKJFDSJGJSKFDGJKL;FSDGJKLSDFKJGJERGIOWERJKL
+        GFDKLJGJSKDFGJKLSDRJFIKGJKSDFGKJLFDSLKMGFDSKLJG
+        'GKJLSDFJKGUWERUIOTWERIUOJKSCVMBSDKL;gGJLKPSFJKGJSJKFD
+        FGKJSJKFGJKLSDFKJLGKJSDFGJKSDFJKGJKSDFKJG
+        GJKSDFJKLGSJKLDFGJKLSDFJKLGJKSDFJKLGJKSLDFG
+        DFGKJLJKSDFGJKLSDFKJGJKSRGJSDFGJKFDSG
+        FJGKLSKJLDFGKSJDFJKGJKLSDFKJGFJKLGJKG
+        GHFJDSOGKHJLSDFKGKJLDSFKJLGKJSDFGJDJSHF
+        JKOPSDFKLJGOISJDFGJKSJKDFL;GKJLSDFJKGJKFDS
+        GKJFDSGJKLSDFKLJGKJLDSFGKJSDFJKLGJKSDFGKJSDFJKG
+        GJKJKSDFGSIEOUJRGIOWRETIOUWEROJGFLKDFSLGKFD
+        FJOIGJSDFJKLGKJLSDFJKVKLVJKMVJFDSIOJHGFODG
+        GFKLLKJSDFJLKGJK;LSDFGJSFKDGKSDFJKGJKSDFGJKSDFG
+        DFKJGJKSDFGJKLSDFGKJKSJDFLGJKSDFJKGJKSDFJGKSJKDFGOIGKLSFG
+        GLKJSDFJKLGKJSDGJHSDFGVG 
+        FDSGKJSFDJKGUSUGSFVGJKGJKFSDGJKL
+        GJKFDSJGJKSDFJKGJKSDFKJVJKLFSDGV
+        GJKSFDGJKLSDFGKLFLMVM,FDSMGVKFSDLGJFDSVMK
+        FDGLKJJKLSFDJKLGJKSLDFGJKLSDFKJGJKSDFGJK
+        FKJGLSJKDFJKLGKJSLDFGKJSDKFJGKJSDFKJG
+        KGJLKJSDFJKL;GKJSLDFGKJLSDFJKGKJLSDFJKG
+        GJKLFDSOIPGIOSERIUGJJKVBFG
+        FGJKSJDFRGIOWERJSGMVSDFLK;g
+        LKGLKFDSKLGFDLSKGKLFDSKGLSKLDFG
+        GL;KFSDKL;GKL;SFDGLKSKDFLGKLSDFLKGKLSFDG
+        ;GFDSLKGKSFDGKL;KLSDFGJISDFGJKSERGJKFDSLG
+        KLGFDSKLJGSERJIGJSDFGKLFDGLKSDFJKGKLSD;FGHJJKGFDSGGHJGFDSAFGHJKLKKLLK
+        LKJGFSDJKLGKLJSDFKGJKLSDFKGLJSDFKJG
+        GLKSDFLKGLKSDFGLK;SDFLGKLSDFLKGLKDSFGLKSDLFKFGLK
+        JGKLFJKLGKJSDFKJLGKLJSDFKGJLKJDSFGSDF
+        GFJHSFDJKLVFDSGJKSDFFJDSFGJK
+        BHJKJKHFGTRDFCVGHB JNM
+        EWFSDRGHJK
+        RESTGHYGJRTEYHR
+        32WR4ETGYHJUHY5EGRSDTGYHY
+        W3ERFSTGYHJUKTREWRFGTHGYJUKILWE
+        DREFGSGRDGTYUTRYRTTERTERWT
+        DRFSTGFRTGHTRDHYGHJJH,hFXCVGBGFDHGHJ
+
+        FGDHDGRDSFGSDFGSEFGSFD
+        FDSGSDFGSFDGSDFGSDFG
+        SDFGBSDFGSFDGSDFGSDFGFGHTYUY
+        
+    
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

@@ -21,7 +21,7 @@ public class LRUCache<Tkey, TValue>
     public LRUCache(int capacity,TimeSpan timeThresHold)
     {
         if (capacity < 0)
-            throw new ArgumentException("Capacity must be greater than 0.");
+            
         _capacity = capacity;
         _timeThreshed = timeThresHold;
         _cacheMap = new Dictionary<Tkey, LinkedListNode<CacheItem>>();

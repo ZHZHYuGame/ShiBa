@@ -9,7 +9,7 @@ using UnityEngine;
 public static class ResourcesLoader
 {
     // LRU 缓存实例
-    private static readonly LRUCache<string, UnityEngine.Object> _lruCache = 
+    public static  LRUCache<string, UnityEngine.Object> _lruCache = 
         new LRUCache<string, UnityEngine.Object>(capacity: 100, timeThresHold: TimeSpan.FromMinutes(10));
 
     /// <summary>
@@ -32,7 +32,6 @@ public static class ResourcesLoader
         // 先从 LRU 缓存中查找资源
         if (_lruCache.TryGetValue(cacheKey, out var cachedAsset))
         {
-            Debug.Log($"Asset loaded from cache: {assetName} from bundle: {bundlepath}");
             return cachedAsset as T;
         }
         if (!File.Exists(bundlepath))

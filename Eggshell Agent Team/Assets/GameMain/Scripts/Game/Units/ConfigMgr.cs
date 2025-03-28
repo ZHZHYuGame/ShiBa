@@ -18,8 +18,8 @@ public class ConfigMgr
         }
         else
         {
-            
-            string assetPath = Application.dataPath + "/GameMain/GameResources/Configs/" + path+".json";
+
+            string assetPath = Application.dataPath + "/GameMain/GameResources/Configs/" + path + ".json";
             if (File.Exists(assetPath))
             {
                 //#if UNITY_EDITOR
@@ -28,13 +28,13 @@ public class ConfigMgr
 
                 //#endif
                 Debug.Log(path);
-                string json = ResourcesLoader.LoadResources<TextAsset>(Application.streamingAssetsPath+"/json",path,"json").text;
-               // string json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/GameMain/GameResources/Configs/" + path + ".json").text;
+                string json = ResourcesLoader.LoadResources<TextAsset>(Application.streamingAssetsPath + "/json", path, "json").text;
+                // string json = AssetDatabase.LoadAssetAtPath<TextAsset>("Assets/GameMain/GameResources/Configs/" + path + ".json").text;
                 T table = JsonConvert.DeserializeObject<T>(json);
                 dic.Add(path, table);
                 return table;
 
-                
+
             }
             else
             {

@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +10,7 @@ public class AutoAttackController : MonoBehaviour
 {
     ActiveSkill weapon;//武器数据
     float attackRange = 5f;    // 攻击范围
-    float attackInterval = 0.5f; // 攻击间隔
+    public float attackInterval = 0.5f; // 攻击间隔
     GameObject projectilePrefab; // 子弹/攻击特效Dan
 
     private Transform nearestEnemy;
@@ -38,7 +38,6 @@ public class AutoAttackController : MonoBehaviour
     Transform FindNearestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        //Debug.Log(enemies.Length);
         List<GameObject> enemyList = new List<GameObject> ();
         for (int i = 0; i < enemies.Length; i++)
         {
@@ -74,6 +73,8 @@ public class AutoAttackController : MonoBehaviour
         {
             //对象池生成子弹
             GameObject projectile = ObjectPool.GetObject(projectilePrefab);//生成子弹
+            projectile.GetComponent<Projectile>().Init(weapon);
+
             Vector3 pos = nearestEnemy.transform.position;
             pos.z = 0;
             projectile.transform.position = transform.position;
@@ -85,8 +86,9 @@ public class AutoAttackController : MonoBehaviour
     //初始武器属性
     internal void Init(ActiveSkill weapon)
     {
+        this.weapon = weapon;
         attackRange = weapon.Skill_hurt;
-        attackInterval = weapon.Rate;
+        attackInterval = (float)(weapon.Rate*(1-0.1*weapon.Level));
         string assetName = Path.GetFileNameWithoutExtension(weapon.This_object_path);
         projectilePrefab = ResourcesLoader.LoadResources<GameObject>(Application.streamingAssetsPath + "/role", assetName, "role");
     }
