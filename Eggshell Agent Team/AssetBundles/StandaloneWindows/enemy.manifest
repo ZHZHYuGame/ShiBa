@@ -3,7 +3,7 @@ CRC: 4284007128
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8af5b0e29bb97e5959a99704c1368a69
+    Hash: 27db9cdb63f26cfca0ccb4a805c4b58d
   TypeTreeHash:
     serializedVersion: 2
     Hash: f6d96d564ff26663525d9f36a99070a5
@@ -136,4 +136,4 @@ Assets:
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/441aed29-a677-4e56-9c8e-5699474bbe84.png"
 - "Assets/GameMain/GameResources/2DSprits/\u654C\u4EBA/11972087-4ede-443e-957b-02921fc97a16.png"
 Dependencies:
-- D:/AppLication/Git/Git10/Eggshell Agent Team/AssetBundles/StandaloneWindows/weapon
+- E:/WUyong/2206A/Eggshell Agent Team/AssetBundles/StandaloneWindows/weapon

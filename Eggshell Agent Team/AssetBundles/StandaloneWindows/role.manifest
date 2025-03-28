@@ -3,7 +3,7 @@ CRC: 3375544154
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 545979303902c2a9ecb38d952aa90e74
+    Hash: 7eb5d4312bb3e677b87cb096a4b935c1
   TypeTreeHash:
     serializedVersion: 2
     Hash: 2ff7ad2f8eea81f679c2074de298ccb9
@@ -44,5 +44,5 @@ Assets:
 - Assets/GameMain/GameResources/Prefabs/sawtoothMax.prefab
 - Assets/GameMain/GameResources/Prefabs/Dan.prefab
 Dependencies:
-- D:/AppLication/Git/Git10/Eggshell Agent Team/AssetBundles/StandaloneWindows/ui
-- D:/AppLication/Git/Git10/Eggshell Agent Team/AssetBundles/StandaloneWindows/weapon
+- E:/WUyong/2206A/Eggshell Agent Team/AssetBundles/StandaloneWindows/ui
+- E:/WUyong/2206A/Eggshell Agent Team/AssetBundles/StandaloneWindows/weapon

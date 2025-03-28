@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3974525564
+CRC: 626208955
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6720c153798c7433459f2575fd8611eb
+    Hash: 4311cbd0c3b394977b165a8c3ba252a8
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 3aaf6e8846db257e072b00ebd04b770f
+    Hash: 41365a8a3dd70cc4345d942a64557d26
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -35,6 +35,8 @@ ClassTypes:
   Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 15b205d7c9566604688dc515b0af1c2c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f947f758e56b30243b918368d868c5d9, type: 3}
 - Class: 114
   Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
 - Class: 114
@@ -92,4 +94,4 @@ Assets:
 - Assets/GameMain/GameResources/2DSprits/UI/7a31bf91-c78c-481c-8e91-a172ae38c7d6.png
 - Assets/GameMain/GameResources/Panel/FightPanel.prefab
 Dependencies:
-- D:/AppLication/Git/Git10/Eggshell Agent Team/AssetBundles/StandaloneWindows/ui
+- E:/WUyong/2206A/Eggshell Agent Team/AssetBundles/StandaloneWindows/ui

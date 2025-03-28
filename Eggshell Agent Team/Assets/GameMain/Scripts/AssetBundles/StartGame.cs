@@ -20,6 +20,7 @@ public class StartGame : MonoBehaviour
     {
         _resourcesManager = new ResourceManager();
         _assetBundleManager = new AssetBundleManager();
+        Debug.Log("开始加载AB包资源");
         StartCoroutine(LoadAssetAsync());
         
         // 异步加载资源
@@ -44,7 +45,7 @@ public class StartGame : MonoBehaviour
 
         if (ui == null)
         {
-            Debug.LogError($"Failed to load AssetBundle: {UI_AB_URL}");
+            Debug.LogError($"AB包加载失败: {UI_AB_URL}");
             yield break;
         }
         ResourceManager._loadedBundles.Add(UI_AB_URL, ui);
@@ -60,7 +61,6 @@ public class StartGame : MonoBehaviour
                 ui, // 直接传入已加载的 AssetBundle
                 UI_AB_URL,
                 item,
-                OnAssetLoaded,
                 loadingProgress,
                 initialProgress,
                 progressRange
@@ -73,21 +73,15 @@ public class StartGame : MonoBehaviour
         ui.Unload(false);
 
     }
-    private void Update()
-    {
-        LoadingProgress.Update();
-    }
-    private void OnAssetLoaded(object asset)
-    {
-        if (asset != null)
-        {
-
-        }
-    }
     void OnDestroy()
     {
         // 释放资源
         string bundlePath = Path.Combine(Application.streamingAssetsPath, "mybundle");
         _resourcesManager.ReleaseResource(bundlePath, "MyPrefab");
     }
+    private void Update()
+    {
+        LoadingProgress.Update();
+    }
+    
 }
