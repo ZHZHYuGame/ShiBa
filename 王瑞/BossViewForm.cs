@@ -17,11 +17,12 @@ public class BossViewForm : UGuiForm
 
     protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
     {
-        base.OnUpdate(elapseSeconds, realElapseSeconds);
+        base.OnUpdate(elapseSeconds , realElapseSeconds);
     }
 
     protected override void OnClose(bool isShutdown, object userData)
     {
-        base.OnClose(isShutdown, userData);
+        base.OnClose(isShutdown , userData);
+
     }
 }

@@ -1,4 +1,4 @@
-using EnhancedUI.EnhancedScroller;
+cuoyao using EnhancedUI.EnhancedScroller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ public class BossScrollerController : MonoBehaviour, IEnhancedScrollerDelegate
         datas.Add(new BossData("落魄将军·国威", 105,0,480, 1739761514));
         datas.Add(new BossData("山大王·国威", 116,1,500, 1739803922));
         enhancedScroller.Delegate = this;
-        enhancedScroller.ReloadData();//数据刷新
+        enhancedScroller.ReloadData();//数据刷新  
     }
 
     
